@@ -69,6 +69,9 @@ GEM
     factory_girl_rails (4.3.0)
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     fitgem (0.8.0)
       oauth
     hashie (2.0.5)
@@ -187,6 +190,7 @@ DEPENDENCIES
   capybara-rails
   coffee-rails (~> 4.0.0)
   factory_girl_rails
+  figaro
   fitgem
   hashie
   jbuilder (~> 1.2)
