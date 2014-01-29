@@ -9,4 +9,8 @@ class FitbitStats
   def sleep_on_date(date = "today")
     client.sleep_on_date(date)["summary"]["totalMinutesAsleep"]
   end
+
+  def activities_on_date(date = "today")
+    client.activities_on_date(date)["summary"]["steps"]
+  end
 end
