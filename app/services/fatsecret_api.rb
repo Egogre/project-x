@@ -18,21 +18,35 @@ class FatsecretAPI
   SITE = "http://platform.fatsecret.com/rest/server.api"
 
   def self.search(expression)
-    params = {
-      :oauth_consumer_key => KEY,
-      :oauth_nonce => Digest::MD5.hexdigest(rand(11).to_s),
-      :oauth_signature_method => SHA1,
-      :oauth_timestamp => Time.now.to_i,
-      :oauth_version => "1.0",
+    new_params = {
       :method => 'foods.search',
-      :search_expression => expression
+      :search_expression => expression,
+      :format => 'json'
     }
+    make_request(new_params)
+  end
+
+  def self.make_request(new_params)
+    Net::HTTP.get(build_uri(new_params))
+  end
+
+  def self.build_uri(new_params)
+    params = new_params.merge(self.common_params)
     sorted_params = params.sort {|a, b| a.first.to_s <=> b.first.to_s}
     base = base_string("GET", sorted_params)
     http_params = http_params("GET", params)
     sig = sign(base).esc
-    uri = uri_for(http_params, sig)
-    results = Net::HTTP.get(uri)
+    uri_for(http_params, sig)
+  end
+
+  def self.common_params
+    {
+      :oauth_consumer_key => KEY,
+      :oauth_nonce => Digest::MD5.hexdigest(rand(11).to_s),
+      :oauth_signature_method => SHA1,
+      :oauth_timestamp => Time.now.to_i,
+      :oauth_version => "1.0"
+    }
   end
 
   def self.base_string(http_method, param_pairs)
