@@ -1,8 +1,4 @@
-<% if current_user %>
   Signed in as <%= current_user.name %>!
   <%= link_to "Sign out", signout_path %>
-<% else %>
-  <%= link_to "Sign in with Fitbit", "/auth/fitbit" %>
-<% end %>
+  <p>Sleep: <%= @stats.sleep_on_date %> minutes today</p>
 
-<p>Sleep: <%= @stats.sleep_on_date %> minutes today</p>

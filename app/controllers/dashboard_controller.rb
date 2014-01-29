@@ -1,5 +1,9 @@
 class DashboardController < ApplicationController
+
   def index
-    @stats = current_user.fitbit_stats
+    redirect_to login_path unless current_user
+    if current_user
+      @stats = current_user.fitbit_stats
+    end
   end
 end
