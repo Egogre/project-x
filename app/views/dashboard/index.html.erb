@@ -4,3 +4,5 @@
 <% else %>
   <%= link_to "Sign in with Fitbit", "/auth/fitbit" %>
 <% end %>
+
+<p>Sleep: <%= @stats.sleep_on_date %> minutes today</p>
