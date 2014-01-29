@@ -1,4 +1,5 @@
-Signed in as <%= current_user.name %>!
+Signed in as <%= @user.name %>!
+<%= link_to "View My Profile", user_path(@user) %>
 <%= link_to "Sign out", signout_path %>
 <p>Sleep: <%= @stats.sleep_on_date %> minutes today</p>
 <p>Steps: <%= @stats.activities_on_date %> steps today</p>
