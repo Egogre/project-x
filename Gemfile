@@ -40,6 +40,12 @@ end
 group :test, :development do 
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'capybara-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'hashie'
 end
 
 # Use ActiveModel has_secure_password
