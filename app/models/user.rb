@@ -17,4 +17,5 @@ class User < ActiveRecord::Base
   def fitbit_stats
     FitbitStats.new(self)
   end
+  
 end

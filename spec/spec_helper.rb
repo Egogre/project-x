@@ -49,7 +49,7 @@ def login_user(user)
     :provider => "fitbit",
     :uid      =>  user.uid,
     :info     => {
-                  "name" => user.name,
+                  "name" => user.name
     },
     :extra    => {
                   "access_token" => Hashie::Mash.new(token: user.token,

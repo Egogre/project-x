@@ -48,6 +48,9 @@ group :test, :development do
   gem 'hashie'
 end
 
+group :test do 
+  gem 'launchy'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "dashboard index" do
+describe "user profile" do
 
   before do
     user = FactoryGirl.build(:user)
@@ -9,7 +9,6 @@ describe "dashboard index" do
     click_on "Sign in with Fitbit"
   end
 
-  it "views steps" do
-    expect(page).to have_content 'steps'
-  end
+ 
+  
 end
