@@ -34,6 +34,7 @@ gem 'omniauth-fitbit'
 gem 'omniauth'
 
 gem "figaro"
+gem 'faraday'
 
 
 group :doc do
@@ -41,7 +42,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test, :development do 
+group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rspec-rails'
@@ -52,7 +53,7 @@ group :test, :development do
   gem 'hashie'
 end
 
-group :test do 
+group :test do
   gem 'launchy'
 end
 # Use ActiveModel has_secure_password
