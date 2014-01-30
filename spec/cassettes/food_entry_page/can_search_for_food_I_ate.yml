@@ -2,7 +2,109 @@
 http_interactions:
 - request:
     method: get
-    uri: http://platform.fatsecret.com/rest/server.api?format=json&method=foods.search&oauth_consumer_key=540c6e3ee26c46b8b0dd303c43da4248&oauth_nonce=c81e728d9d4c2f636f067f89cc14862c&oauth_signature=3B/6dVHzkyPuseGZhhHoKeaW7uI=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391050881&oauth_version=1.0&search_expression=waffle
+    uri: http://api.fitbit.com/1/user/25WQ2X/sleep/date/2014-01-30.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.8.0 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="ypkufDBHio9rz2t74fUdffKUlkV0v3SlYA1sMq77k",
+        oauth_signature="V%2FHOUiLCBz0ITfRLTiyyxB%2FnqU8%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391107306", oauth_token="128e556de6e068c19e29beb380de56f1",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Set-Cookie:
+      - JSESSIONID=1368D88F428FF0E72A933EEC580B4F52.fitbit1; Path=/
+      - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '88'
+      Date:
+      - Thu, 30 Jan 2014 18:41:46 GMT
+    body:
+      encoding: UTF-8
+      string: '{"sleep":[],"summary":{"totalMinutesAsleep":0,"totalSleepRecords":0,"totalTimeInBed":0}}'
+    http_version: 
+  recorded_at: Thu, 30 Jan 2014 18:41:46 GMT
+- request:
+    method: get
+    uri: http://api.fitbit.com/1/user/25WQ2X/activities/date/2014-01-30.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.8.0 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="MrNVs1uyRuGsK1mcu4saORZ1FMTAILfo5yCY7dtsZE",
+        oauth_signature="r26trrD22itCX%2BtHcbyEpZamXTo%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391107306", oauth_token="128e556de6e068c19e29beb380de56f1",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Set-Cookie:
+      - JSESSIONID=0135319AE43566DB3B1EF61A3AAC8EF4.fitbit1; Path=/
+      - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '632'
+      Date:
+      - Thu, 30 Jan 2014 18:41:46 GMT
+    body:
+      encoding: UTF-8
+      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":521,"caloriesBMR":1024,"caloriesOut":1353,"distances":[{"activity":"total","distance":0.85},{"activity":"tracker","distance":0.85},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.13},{"activity":"moderatelyActive","distance":0.51},{"activity":"lightlyActive","distance":0.21},{"activity":"sedentaryActive","distance":0.01}],"fairlyActiveMinutes":24,"lightlyActiveMinutes":109,"marginalCalories":277,"sedentaryMinutes":567,"steps":1836,"veryActiveMinutes":1}}'
+    http_version: 
+  recorded_at: Thu, 30 Jan 2014 18:41:46 GMT
+- request:
+    method: get
+    uri: http://platform.fatsecret.com/rest/server.api?format=json&method=foods.search&oauth_consumer_key=<FS_KEY>&oauth_nonce=e4da3b7fbbce2345d7772b0674a318d5&oauth_signature=Pvq4ljv8gLZDDZ7XruJ1vwoKFWk=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391107306&oauth_version=1.0&search_expression=waffle
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +133,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Thu, 30 Jan 2014 03:01:14 GMT
+      - Thu, 30 Jan 2014 18:41:39 GMT
       Content-Length:
       - '6131'
     body:
@@ -103,5 +205,5 @@ http_interactions:
         "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/stonewall-kitchen\/strawberry-pancake-and-waffle-mix"
         } ], "max_results": "20", "page_number": "0", "total_results": "323" }}'
     http_version: 
-  recorded_at: Thu, 30 Jan 2014 03:01:21 GMT
+  recorded_at: Thu, 30 Jan 2014 18:41:48 GMT
 recorded_with: VCR 2.8.0

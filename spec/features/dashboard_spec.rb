@@ -1,7 +1,6 @@
 require 'spec_helper'
 
-describe "dashboard index" do
-
+describe "dashboard index", :vcr do
   before do
     user = FactoryGirl.create(:user)
     FitbitStats.new(user)
@@ -14,7 +13,7 @@ describe "dashboard index" do
     expect(page).to have_content 'steps'
   end
 
-  it "has views for sleep" do 
+  it "has views for sleep" do
     expect(page).to have_content 'minutes'
   end
 
