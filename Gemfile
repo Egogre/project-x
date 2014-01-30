@@ -34,14 +34,15 @@ gem 'omniauth-fitbit'
 gem 'omniauth'
 
 gem "figaro"
-
+gem 'faraday'
+gem 'json'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-group :test, :development do 
+group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rspec-rails'
@@ -52,7 +53,9 @@ group :test, :development do
   gem 'hashie'
 end
 
-group :test do 
+group :test do
+  gem 'vcr'
+  gem 'webmock'
   gem 'launchy'
 end
 # Use ActiveModel has_secure_password

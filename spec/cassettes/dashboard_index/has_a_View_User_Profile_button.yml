@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.fitbit.com/1/user/25WQ2X/sleep/date/2014-01-30.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.8.0 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="70sFbUbVeFyZNiiOGAMBbrW0g5DCPLv0t9Xkc9oYjpg",
+        oauth_signature="hELEJVigUF%2FO%2BQbfALw9O5g3tUs%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391107263", oauth_token="128e556de6e068c19e29beb380de56f1",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Set-Cookie:
+      - JSESSIONID=667A7B4E511F81AABD7A438AE86DE803.fitbit1; Path=/
+      - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '88'
+      Date:
+      - Thu, 30 Jan 2014 18:41:03 GMT
+    body:
+      encoding: UTF-8
+      string: '{"sleep":[],"summary":{"totalMinutesAsleep":0,"totalSleepRecords":0,"totalTimeInBed":0}}'
+    http_version: 
+  recorded_at: Thu, 30 Jan 2014 18:41:03 GMT
+- request:
+    method: get
+    uri: http://api.fitbit.com/1/user/25WQ2X/activities/date/2014-01-30.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - fitgem gem v0.8.0 (OAuth gem v0.4.7)
+      Accept-Language:
+      - en_US
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      Authorization:
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="8yqfVFC6Ml03zrH9ZSmazna0FQlg1vky7Df4GVDfoBo",
+        oauth_signature="6vRsX0RCFVFVRp4by28fTmz75f0%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391107263", oauth_token="128e556de6e068c19e29beb380de56f1",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Set-Cookie:
+      - JSESSIONID=47B8EB7E91CED21AB8D9A950E4E272C4.fitbit1; Path=/
+      - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '632'
+      Date:
+      - Thu, 30 Jan 2014 18:41:02 GMT
+    body:
+      encoding: UTF-8
+      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":521,"caloriesBMR":1024,"caloriesOut":1353,"distances":[{"activity":"total","distance":0.85},{"activity":"tracker","distance":0.85},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.13},{"activity":"moderatelyActive","distance":0.51},{"activity":"lightlyActive","distance":0.21},{"activity":"sedentaryActive","distance":0.01}],"fairlyActiveMinutes":24,"lightlyActiveMinutes":109,"marginalCalories":277,"sedentaryMinutes":567,"steps":1836,"veryActiveMinutes":1}}'
+    http_version: 
+  recorded_at: Thu, 30 Jan 2014 18:41:03 GMT
+recorded_with: VCR 2.8.0
