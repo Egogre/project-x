@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+.main-stat {
+  text-align: center;
+  border: solid black;
+  padding: 150px;
+}

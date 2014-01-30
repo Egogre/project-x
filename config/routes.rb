@@ -9,4 +9,8 @@ ProjectX::Application.routes.draw do
   get 'food/lookup', to: 'foods#lookup', as: 'food_lookup'
   post 'food/search', to: 'foods#search', as: 'food_search'
 
+
+  resources :users, only: [:show]
+
+
 end
