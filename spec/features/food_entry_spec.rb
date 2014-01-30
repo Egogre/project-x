@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "food entry page" do
+describe "food entry page", :vcr do
   before do
     user = FactoryGirl.build(:user)
     login_user(user)
