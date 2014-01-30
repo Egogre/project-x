@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://platform.fatsecret.com/rest/server.api?format=json&method=foods.search&oauth_consumer_key=540c6e3ee26c46b8b0dd303c43da4248&oauth_nonce=c81e728d9d4c2f636f067f89cc14862c&oauth_signature=3B/6dVHzkyPuseGZhhHoKeaW7uI=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391050881&oauth_version=1.0&search_expression=waffle
+    uri: http://platform.fatsecret.com/rest/server.api?format=json&method=foods.search&oauth_consumer_key=<FS_KEY>&oauth_nonce=a87ff679a2f3e71d9181a67b7542122c&oauth_signature=N/oIU0fbp2%2BNeC27nLFl4oCfWmU=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391106181&oauth_version=1.0&search_expression=waffle
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Thu, 30 Jan 2014 03:01:14 GMT
+      - Thu, 30 Jan 2014 18:22:54 GMT
       Content-Length:
       - '6131'
     body:
@@ -103,5 +103,5 @@ http_interactions:
         "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/stonewall-kitchen\/strawberry-pancake-and-waffle-mix"
         } ], "max_results": "20", "page_number": "0", "total_results": "323" }}'
     http_version: 
-  recorded_at: Thu, 30 Jan 2014 03:01:21 GMT
+  recorded_at: Thu, 30 Jan 2014 18:23:02 GMT
 recorded_with: VCR 2.8.0

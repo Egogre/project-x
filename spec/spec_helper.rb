@@ -19,6 +19,12 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.configure_rspec_metadata!
+  c.filter_sensitive_data('<FS_KEY>') { ENV['FATSECRET_KEY'] }
+  c.default_cassette_options = {
+    :match_requests_on => [:method,
+      VCR.request_matchers.uri_without_param(:oauth_consumer_key, :oauth_nonce, :oauth_signature, :oauth_timestamp)
+    ]
+  }
 end
 
 RSpec.configure do |config|
