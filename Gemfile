@@ -35,6 +35,8 @@ gem 'omniauth'
 
 gem "figaro"
 
+gem 'bootstrap-sass'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -42,6 +44,7 @@ group :doc do
 end
 
 group :test, :development do 
+  gem 'rails_layout'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rspec-rails'
