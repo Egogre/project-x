@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "user profile" do
+describe "user profile", :vcr do
   attr_reader :user
 
   before do
@@ -10,10 +10,10 @@ describe "user profile" do
     click_on "Sign in with Fitbit"
   end
 
-  it "displays information" do 
+  it "displays information" do
     click_link "View My Profile"
     expect(page).to have_content user.name
   end
- 
-  
+
+
 end
