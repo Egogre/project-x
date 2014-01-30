@@ -18,8 +18,8 @@ describe "dashboard index" do
     expect(page).to have_content 'minutes'
   end
 
-  xit "has a View User Profile button" do
-    expect(page).to have_content 'My Profile'
+  it "has a View User Profile button" do
+    expect(page).to have_content 'View My Profile'
   end
 
 end
