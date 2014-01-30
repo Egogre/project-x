@@ -18,6 +18,13 @@ class FatsecretAPI
   SITE = "http://platform.fatsecret.com/rest/server.api"
 
   def self.search(expression)
+    results = JSON.parse(return_json_search(expression))
+    results["foods"]["food"].map do |f|
+      Foods::SearchItem.new(f["food_name"], f["food_id"], f["food_description"])
+    end
+  end
+
+  def self.return_json_search(expression)
     new_params = {
       :method => 'foods.search',
       :search_expression => expression,

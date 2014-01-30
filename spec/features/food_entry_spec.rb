@@ -7,11 +7,12 @@ describe "food entry page" do
     visit login_path
     click_on "Sign in with Fitbit"
   end
-  it "can search for food" do
+  it "can search for food I ate" do
     click_on "Add Food"
-    expect(current_path).to eq new_food_path
-    within('.search-form') do
-      expect(page).to have_content('Search for Food')
+    fill_in 'food_search[food]', :with => "waffle"
+    click_on "Search"
+    within('.search-results') do
+      expect(page).to have_content('Waffles Plain')
     end
   end
   it "can select serving size for chosen food"
