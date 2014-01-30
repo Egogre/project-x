@@ -1,3 +1,7 @@
 <%= @user.name %>
 
-<%= link_to 'Set or Edit Goals', new_goal_path %>
+<% if @user.goals.empty? %>
+  <%= link_to 'Set Goals', new_goal_path %>    
+<% else %>
+  <%= link_to 'View Goals', goals_path %>
+<% end %>

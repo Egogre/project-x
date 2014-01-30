@@ -199,6 +199,7 @@ DEPENDENCIES
   capybara
   capybara-rails
   coffee-rails (~> 4.0.0)
+  database_cleaner
   factory_girl_rails
   faraday
   figaro
