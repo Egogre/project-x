@@ -199,6 +199,7 @@ DEPENDENCIES
   hashie
   jbuilder (~> 1.2)
   jquery-rails
+  json
   launchy
   omniauth
   omniauth-fitbit

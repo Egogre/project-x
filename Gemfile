@@ -35,7 +35,7 @@ gem 'omniauth'
 
 gem "figaro"
 gem 'faraday'
-
+gem 'json'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

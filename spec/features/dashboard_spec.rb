@@ -4,9 +4,6 @@ describe "dashboard index" do
 
   before do
     user = FactoryGirl.create(:user)
-    puts user.valid?
-    puts user.inspect
-
     FitbitStats.new(user)
     login_user(user)
     visit login_path
@@ -17,13 +14,12 @@ describe "dashboard index" do
     expect(page).to have_content 'steps'
   end
 
-  it "has views for sleep" do 
-    save_and_open_page
+  it "has views for sleep" do
     expect(page).to have_content 'minutes'
   end
 
   xit "has a View User Profile button" do
     expect(page).to have_content 'My Profile'
   end
-  
+
 end

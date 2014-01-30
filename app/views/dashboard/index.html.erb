@@ -2,4 +2,4 @@ Signed in as <%= current_user.name %>!
 <%= link_to "Sign out", signout_path %>
 <p>Sleep: <%= @stats.sleep_on_date %> minutes today</p>
 <p>Steps: <%= @stats.activities_on_date %> steps today</p>
-
+<%= link_to "Add Food", new_food_path %>
