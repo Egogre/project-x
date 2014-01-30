@@ -11,4 +11,6 @@ ProjectX::Application.routes.draw do
 
   resources :users, only: [:show]
 
+  resources :goals
+
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "user profile", :vcr do
+describe "goal setting page", :vcr do
   attr_reader :user
 
   before do
@@ -9,14 +9,11 @@ describe "user profile", :vcr do
     visit login_path
     click_on "Sign in with Fitbit"
     click_link "View My Profile"
+    click_link "Set or Edit Goals"
   end
 
-  it "displays information" do 
-    expect(page).to have_content user.name
+  it "displays form to input goals" do 
+    expect(page).to have_content("#{user.name}'s Goals")
   end
- 
-  it "has a button to set or edit goals" do 
-    expect(page).to have_link "Set or Edit Goals"
-  end
-  
+
 end

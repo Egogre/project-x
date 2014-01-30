@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "dashboard index", :vcr do
+
   before do
     user = FactoryGirl.create(:user)
     FitbitStats.new(user)
