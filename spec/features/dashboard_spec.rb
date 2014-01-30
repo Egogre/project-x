@@ -14,12 +14,12 @@ describe "dashboard index" do
     expect(page).to have_content 'steps'
   end
 
-  it "has views for sleep" do 
+  it "has views for sleep" do
     expect(page).to have_content 'minutes'
   end
 
   it "has a View User Profile button" do
     expect(page).to have_content 'View My Profile'
   end
-  
+
 end

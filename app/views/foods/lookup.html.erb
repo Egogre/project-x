@@ -1,0 +1,5 @@
+<%= form_for :food_search, url: food_search_path do |f|%>
+<%= f.label :food %>
+<%= f.text_field :food %>
+<%= f.submit "Search" %>
+<% end %>
