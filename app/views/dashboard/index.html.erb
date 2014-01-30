@@ -1,6 +1,103 @@
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"> <%= link_to 'Project X', root_path %></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li> <%= link_to 'View My Profile', user_path(@user) %>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<br>
+<br>
+<br>
+
 Signed in as <%= @user.name %>!
 <%= link_to "View My Profile", user_path(@user) %>
 <%= link_to "Sign out", signout_path %>
-<p>Sleep: <%= @stats.sleep_on_date %> minutes today</p>
-<p>Steps: <%= @stats.activities_on_date %> steps today</p>
 
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Health Dashboard</h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 portfolio-item">
+                <a href="#project-one">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h3><a href="#project-one">Steps</a>
+                </h3>
+                <p>Steps: <%= @stats.activities_on_date %> steps today</p>
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item">
+                <a href="#project-two">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h3><a href="#project-two">Sleep</a>
+                </h3>
+                <p>Sleep: <%= @stats.sleep_on_date %> minutes today</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 portfolio-item">
+                <a href="#project-three">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h3><a href="#project-three">Project Three</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item">
+                <a href="#project-four">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h3><a href="#project-four">Project Four</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
