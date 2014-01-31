@@ -18,4 +18,9 @@ class User < ActiveRecord::Base
   def fitbit_stats
     FitbitStats.new(self)
   end
+
+  def user_goal
+    Goal.where(user_id: self.id).first
+  end
+
 end

@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :user do
+    id 1
     uid "25WQ2X"
     name "Jonah"
     provider "fitbit"

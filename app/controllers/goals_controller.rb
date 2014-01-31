@@ -1,5 +1,9 @@
 class GoalsController < ApplicationController
 
+  def show
+    @goal = Goal.find(params[:id])
+  end
+
   def new
     @user = current_user
     @goal = Goal.new
