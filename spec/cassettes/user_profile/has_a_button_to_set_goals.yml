@@ -16,9 +16,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="dLAMErY7ngFZO267LnqDiSyumyL0mjXd75zVpJFeHs",
-        oauth_signature="mJNKGGvzdCFou9YD6RyROsxtjmU%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391113552", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="3ysYctOTFvUbq7zjUDqns3fZ9PTsEGTVlRVWsI2sI8",
+        oauth_signature="pF1ulIdA8X6dcJlYimq6h%2FL2PUE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391118626", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -30,7 +30,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=0BBC3E6D75B2162D6E2501E700F927BF.fitbit1; Path=/
+      - JSESSIONID=54C11136315A7C95DFF41925769BF00B.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -43,14 +43,14 @@ http_interactions:
       Content-Language:
       - en-US
       Content-Length:
-      - '626'
+      - '632'
       Date:
-      - Thu, 30 Jan 2014 20:25:49 GMT
+      - Thu, 30 Jan 2014 21:50:25 GMT
     body:
       encoding: UTF-8
-      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":585,"caloriesBMR":1164,"caloriesOut":1542,"distances":[{"activity":"total","distance":1},{"activity":"tracker","distance":1},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.13},{"activity":"moderatelyActive","distance":0.61},{"activity":"lightlyActive","distance":0.25},{"activity":"sedentaryActive","distance":0.01}],"fairlyActiveMinutes":28,"lightlyActiveMinutes":118,"marginalCalories":316,"sedentaryMinutes":656,"steps":2153,"veryActiveMinutes":3}}'
+      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":596,"caloriesBMR":1286,"caloriesOut":1648,"distances":[{"activity":"total","distance":1.01},{"activity":"tracker","distance":1.01},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.13},{"activity":"moderatelyActive","distance":0.61},{"activity":"lightlyActive","distance":0.26},{"activity":"sedentaryActive","distance":0.01}],"fairlyActiveMinutes":28,"lightlyActiveMinutes":121,"marginalCalories":322,"sedentaryMinutes":738,"steps":2176,"veryActiveMinutes":3}}'
     http_version: 
-  recorded_at: Thu, 30 Jan 2014 20:25:52 GMT
+  recorded_at: Thu, 30 Jan 2014 21:50:26 GMT
 - request:
     method: get
     uri: http://api.fitbit.com/1/user/25WQ2X/activities/date/2014-01-30.json
@@ -67,9 +67,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="FjbdRTueNmoaWVIDFP2INROrdxXL5W4U7x2Voxjuw",
-        oauth_signature="UNaPNy2fop2ceVwEKB1G38KlEyY%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391113552", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="b1FmjfFBwF3yX2CIWXfjo6vz8B8Xhr7GWqlEYrmcc",
+        oauth_signature="We2gb4u6sAHxlXHakn6%2Bg4m7nSo%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391118626", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -81,7 +81,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=7833AD03149C660B0B41E27C03E97108.fitbit1; Path=/
+      - JSESSIONID=22F4FFFB09F2658F5C2E6EEC3628C569.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -94,14 +94,14 @@ http_interactions:
       Content-Language:
       - en-US
       Content-Length:
-      - '626'
+      - '632'
       Date:
-      - Thu, 30 Jan 2014 20:25:49 GMT
+      - Thu, 30 Jan 2014 21:50:25 GMT
     body:
       encoding: UTF-8
-      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":585,"caloriesBMR":1164,"caloriesOut":1542,"distances":[{"activity":"total","distance":1},{"activity":"tracker","distance":1},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.13},{"activity":"moderatelyActive","distance":0.61},{"activity":"lightlyActive","distance":0.25},{"activity":"sedentaryActive","distance":0.01}],"fairlyActiveMinutes":28,"lightlyActiveMinutes":118,"marginalCalories":316,"sedentaryMinutes":656,"steps":2153,"veryActiveMinutes":3}}'
+      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":596,"caloriesBMR":1286,"caloriesOut":1648,"distances":[{"activity":"total","distance":1.01},{"activity":"tracker","distance":1.01},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.13},{"activity":"moderatelyActive","distance":0.61},{"activity":"lightlyActive","distance":0.26},{"activity":"sedentaryActive","distance":0.01}],"fairlyActiveMinutes":28,"lightlyActiveMinutes":121,"marginalCalories":322,"sedentaryMinutes":738,"steps":2176,"veryActiveMinutes":3}}'
     http_version: 
-  recorded_at: Thu, 30 Jan 2014 20:25:53 GMT
+  recorded_at: Thu, 30 Jan 2014 21:50:26 GMT
 - request:
     method: get
     uri: http://api.fitbit.com/1/user/25WQ2X/sleep/date/2014-01-30.json
@@ -118,9 +118,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="diy5tY6LIHmJ0lBROZKKjQVcAupjb4oHDTG7qOtBY",
-        oauth_signature="fj3%2FEiIc08AubniHvTwMXAFnVO0%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391113553", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="TR9CwzvM8ilFWFErZJeMCfR9c15Ilm7RWlleJAlqhM",
+        oauth_signature="HLnghRB6iOVen223LZv8%2FzCG%2FpE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391118626", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -132,7 +132,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=4A9B984DC9BADDC9D05192E6ED91C518.fitbit1; Path=/
+      - JSESSIONID=38007380A9A482AF76B1879054045522.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -147,12 +147,12 @@ http_interactions:
       Content-Length:
       - '88'
       Date:
-      - Thu, 30 Jan 2014 20:25:49 GMT
+      - Thu, 30 Jan 2014 21:50:25 GMT
     body:
       encoding: UTF-8
       string: '{"sleep":[],"summary":{"totalMinutesAsleep":0,"totalSleepRecords":0,"totalTimeInBed":0}}'
     http_version: 
-  recorded_at: Thu, 30 Jan 2014 20:25:53 GMT
+  recorded_at: Thu, 30 Jan 2014 21:50:26 GMT
 - request:
     method: get
     uri: http://api.fitbit.com/1/user/25WQ2X/sleep/date/2014-01-30.json
@@ -169,9 +169,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="K3TR3TjnzzeXBbY2UOCAAcNFZzLkCZSF0XLGbqNwLw",
-        oauth_signature="iKvuuxi4TZ%2BFrHcVufn%2FeyPnLLA%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391113553", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="wiLeFm8XNlfdTQB8XNU8yWAlQwx5DVWgomnw2dzokGk",
+        oauth_signature="wWc8LbtZsY8UZrLot7B7lIPJ1yI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391118626", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -183,7 +183,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=F927EBC075B35735902AEA348BCDAE5C.fitbit1; Path=/
+      - JSESSIONID=CADB371BBF17AEFFA322C3062E8D79C6.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -198,10 +198,10 @@ http_interactions:
       Content-Length:
       - '88'
       Date:
-      - Thu, 30 Jan 2014 20:25:49 GMT
+      - Thu, 30 Jan 2014 21:50:26 GMT
     body:
       encoding: UTF-8
       string: '{"sleep":[],"summary":{"totalMinutesAsleep":0,"totalSleepRecords":0,"totalTimeInBed":0}}'
     http_version: 
-  recorded_at: Thu, 30 Jan 2014 20:25:53 GMT
+  recorded_at: Thu, 30 Jan 2014 21:50:26 GMT
 recorded_with: VCR 2.8.0

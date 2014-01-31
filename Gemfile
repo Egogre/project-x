@@ -51,6 +51,7 @@ group :test, :development do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'hashie'
+  gem 'database_cleaner'
 end
 
 group :test do
