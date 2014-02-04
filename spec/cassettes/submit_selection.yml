@@ -16,9 +16,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="J2pdHiWskT9QmIsWUWrkh8Km3zwZDU6RgQ3mA9cwo",
-        oauth_signature="rzx%2FqlXXxq15SwScp2RsGl94pkk%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391478361", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="YFAEYtBnrPMJX9Hd0FJwlc2ztwd5MqbfUHTdHr0PtU",
+        oauth_signature="e5VJek9WSOdztksArEEP9r0%2BJGA%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391479881", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -30,7 +30,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=347567EAC5EFA385D82EC6D89C0A9846.fitbit1; Path=/
+      - JSESSIONID=9E77B0CB51F14A63084358CF61A235A8.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -45,12 +45,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 04 Feb 2014 01:46:01 GMT
+      - Tue, 04 Feb 2014 02:11:21 GMT
     body:
       encoding: UTF-8
       string: '{"sleep":[{"awakeningsCount":5,"duration":14340000,"efficiency":75,"isMainSleep":true,"logId":106447000,"minuteData":[{"dateTime":"04:31:00","value":"3"},{"dateTime":"04:32:00","value":"3"},{"dateTime":"04:33:00","value":"3"},{"dateTime":"04:34:00","value":"3"},{"dateTime":"04:35:00","value":"3"},{"dateTime":"04:36:00","value":"3"},{"dateTime":"04:37:00","value":"3"},{"dateTime":"04:38:00","value":"2"},{"dateTime":"04:39:00","value":"3"},{"dateTime":"04:40:00","value":"3"},{"dateTime":"04:41:00","value":"2"},{"dateTime":"04:42:00","value":"3"},{"dateTime":"04:43:00","value":"2"},{"dateTime":"04:44:00","value":"3"},{"dateTime":"04:45:00","value":"3"},{"dateTime":"04:46:00","value":"2"},{"dateTime":"04:47:00","value":"2"},{"dateTime":"04:48:00","value":"2"},{"dateTime":"04:49:00","value":"2"},{"dateTime":"04:50:00","value":"2"},{"dateTime":"04:51:00","value":"1"},{"dateTime":"04:52:00","value":"1"},{"dateTime":"04:53:00","value":"1"},{"dateTime":"04:54:00","value":"1"},{"dateTime":"04:55:00","value":"1"},{"dateTime":"04:56:00","value":"1"},{"dateTime":"04:57:00","value":"1"},{"dateTime":"04:58:00","value":"1"},{"dateTime":"04:59:00","value":"1"},{"dateTime":"05:00:00","value":"1"},{"dateTime":"05:01:00","value":"1"},{"dateTime":"05:02:00","value":"1"},{"dateTime":"05:03:00","value":"2"},{"dateTime":"05:04:00","value":"2"},{"dateTime":"05:05:00","value":"2"},{"dateTime":"05:06:00","value":"2"},{"dateTime":"05:07:00","value":"2"},{"dateTime":"05:08:00","value":"2"},{"dateTime":"05:09:00","value":"2"},{"dateTime":"05:10:00","value":"2"},{"dateTime":"05:11:00","value":"2"},{"dateTime":"05:12:00","value":"2"},{"dateTime":"05:13:00","value":"2"},{"dateTime":"05:14:00","value":"1"},{"dateTime":"05:15:00","value":"1"},{"dateTime":"05:16:00","value":"1"},{"dateTime":"05:17:00","value":"1"},{"dateTime":"05:18:00","value":"1"},{"dateTime":"05:19:00","value":"1"},{"dateTime":"05:20:00","value":"1"},{"dateTime":"05:21:00","value":"1"},{"dateTime":"05:22:00","value":"1"},{"dateTime":"05:23:00","value":"1"},{"dateTime":"05:24:00","value":"1"},{"dateTime":"05:25:00","value":"1"},{"dateTime":"05:26:00","value":"1"},{"dateTime":"05:27:00","value":"1"},{"dateTime":"05:28:00","value":"1"},{"dateTime":"05:29:00","value":"1"},{"dateTime":"05:30:00","value":"1"},{"dateTime":"05:31:00","value":"1"},{"dateTime":"05:32:00","value":"1"},{"dateTime":"05:33:00","value":"1"},{"dateTime":"05:34:00","value":"1"},{"dateTime":"05:35:00","value":"1"},{"dateTime":"05:36:00","value":"1"},{"dateTime":"05:37:00","value":"1"},{"dateTime":"05:38:00","value":"1"},{"dateTime":"05:39:00","value":"1"},{"dateTime":"05:40:00","value":"1"},{"dateTime":"05:41:00","value":"1"},{"dateTime":"05:42:00","value":"1"},{"dateTime":"05:43:00","value":"1"},{"dateTime":"05:44:00","value":"1"},{"dateTime":"05:45:00","value":"1"},{"dateTime":"05:46:00","value":"1"},{"dateTime":"05:47:00","value":"1"},{"dateTime":"05:48:00","value":"1"},{"dateTime":"05:49:00","value":"1"},{"dateTime":"05:50:00","value":"1"},{"dateTime":"05:51:00","value":"1"},{"dateTime":"05:52:00","value":"1"},{"dateTime":"05:53:00","value":"1"},{"dateTime":"05:54:00","value":"1"},{"dateTime":"05:55:00","value":"1"},{"dateTime":"05:56:00","value":"1"},{"dateTime":"05:57:00","value":"1"},{"dateTime":"05:58:00","value":"1"},{"dateTime":"05:59:00","value":"1"},{"dateTime":"06:00:00","value":"1"},{"dateTime":"06:01:00","value":"2"},{"dateTime":"06:02:00","value":"2"},{"dateTime":"06:03:00","value":"2"},{"dateTime":"06:04:00","value":"2"},{"dateTime":"06:05:00","value":"2"},{"dateTime":"06:06:00","value":"2"},{"dateTime":"06:07:00","value":"2"},{"dateTime":"06:08:00","value":"2"},{"dateTime":"06:09:00","value":"2"},{"dateTime":"06:10:00","value":"2"},{"dateTime":"06:11:00","value":"1"},{"dateTime":"06:12:00","value":"1"},{"dateTime":"06:13:00","value":"1"},{"dateTime":"06:14:00","value":"1"},{"dateTime":"06:15:00","value":"1"},{"dateTime":"06:16:00","value":"1"},{"dateTime":"06:17:00","value":"1"},{"dateTime":"06:18:00","value":"1"},{"dateTime":"06:19:00","value":"1"},{"dateTime":"06:20:00","value":"1"},{"dateTime":"06:21:00","value":"1"},{"dateTime":"06:22:00","value":"1"},{"dateTime":"06:23:00","value":"1"},{"dateTime":"06:24:00","value":"1"},{"dateTime":"06:25:00","value":"1"},{"dateTime":"06:26:00","value":"1"},{"dateTime":"06:27:00","value":"1"},{"dateTime":"06:28:00","value":"1"},{"dateTime":"06:29:00","value":"1"},{"dateTime":"06:30:00","value":"1"},{"dateTime":"06:31:00","value":"1"},{"dateTime":"06:32:00","value":"1"},{"dateTime":"06:33:00","value":"1"},{"dateTime":"06:34:00","value":"1"},{"dateTime":"06:35:00","value":"1"},{"dateTime":"06:36:00","value":"1"},{"dateTime":"06:37:00","value":"1"},{"dateTime":"06:38:00","value":"1"},{"dateTime":"06:39:00","value":"1"},{"dateTime":"06:40:00","value":"2"},{"dateTime":"06:41:00","value":"2"},{"dateTime":"06:42:00","value":"2"},{"dateTime":"06:43:00","value":"2"},{"dateTime":"06:44:00","value":"2"},{"dateTime":"06:45:00","value":"2"},{"dateTime":"06:46:00","value":"2"},{"dateTime":"06:47:00","value":"2"},{"dateTime":"06:48:00","value":"2"},{"dateTime":"06:49:00","value":"2"},{"dateTime":"06:50:00","value":"2"},{"dateTime":"06:51:00","value":"1"},{"dateTime":"06:52:00","value":"1"},{"dateTime":"06:53:00","value":"1"},{"dateTime":"06:54:00","value":"2"},{"dateTime":"06:55:00","value":"2"},{"dateTime":"06:56:00","value":"2"},{"dateTime":"06:57:00","value":"2"},{"dateTime":"06:58:00","value":"2"},{"dateTime":"06:59:00","value":"2"},{"dateTime":"07:00:00","value":"2"},{"dateTime":"07:01:00","value":"2"},{"dateTime":"07:02:00","value":"2"},{"dateTime":"07:03:00","value":"2"},{"dateTime":"07:04:00","value":"2"},{"dateTime":"07:05:00","value":"1"},{"dateTime":"07:06:00","value":"1"},{"dateTime":"07:07:00","value":"1"},{"dateTime":"07:08:00","value":"1"},{"dateTime":"07:09:00","value":"2"},{"dateTime":"07:10:00","value":"2"},{"dateTime":"07:11:00","value":"2"},{"dateTime":"07:12:00","value":"2"},{"dateTime":"07:13:00","value":"2"},{"dateTime":"07:14:00","value":"2"},{"dateTime":"07:15:00","value":"2"},{"dateTime":"07:16:00","value":"2"},{"dateTime":"07:17:00","value":"2"},{"dateTime":"07:18:00","value":"2"},{"dateTime":"07:19:00","value":"2"},{"dateTime":"07:20:00","value":"1"},{"dateTime":"07:21:00","value":"1"},{"dateTime":"07:22:00","value":"1"},{"dateTime":"07:23:00","value":"1"},{"dateTime":"07:24:00","value":"1"},{"dateTime":"07:25:00","value":"1"},{"dateTime":"07:26:00","value":"1"},{"dateTime":"07:27:00","value":"1"},{"dateTime":"07:28:00","value":"1"},{"dateTime":"07:29:00","value":"1"},{"dateTime":"07:30:00","value":"1"},{"dateTime":"07:31:00","value":"1"},{"dateTime":"07:32:00","value":"1"},{"dateTime":"07:33:00","value":"1"},{"dateTime":"07:34:00","value":"1"},{"dateTime":"07:35:00","value":"1"},{"dateTime":"07:36:00","value":"1"},{"dateTime":"07:37:00","value":"1"},{"dateTime":"07:38:00","value":"1"},{"dateTime":"07:39:00","value":"1"},{"dateTime":"07:40:00","value":"1"},{"dateTime":"07:41:00","value":"1"},{"dateTime":"07:42:00","value":"1"},{"dateTime":"07:43:00","value":"1"},{"dateTime":"07:44:00","value":"1"},{"dateTime":"07:45:00","value":"1"},{"dateTime":"07:46:00","value":"1"},{"dateTime":"07:47:00","value":"1"},{"dateTime":"07:48:00","value":"1"},{"dateTime":"07:49:00","value":"1"},{"dateTime":"07:50:00","value":"1"},{"dateTime":"07:51:00","value":"1"},{"dateTime":"07:52:00","value":"1"},{"dateTime":"07:53:00","value":"1"},{"dateTime":"07:54:00","value":"1"},{"dateTime":"07:55:00","value":"1"},{"dateTime":"07:56:00","value":"1"},{"dateTime":"07:57:00","value":"1"},{"dateTime":"07:58:00","value":"1"},{"dateTime":"07:59:00","value":"1"},{"dateTime":"08:00:00","value":"1"},{"dateTime":"08:01:00","value":"1"},{"dateTime":"08:02:00","value":"1"},{"dateTime":"08:03:00","value":"1"},{"dateTime":"08:04:00","value":"1"},{"dateTime":"08:05:00","value":"1"},{"dateTime":"08:06:00","value":"1"},{"dateTime":"08:07:00","value":"1"},{"dateTime":"08:08:00","value":"1"},{"dateTime":"08:09:00","value":"1"},{"dateTime":"08:10:00","value":"1"},{"dateTime":"08:11:00","value":"1"},{"dateTime":"08:12:00","value":"1"},{"dateTime":"08:13:00","value":"1"},{"dateTime":"08:14:00","value":"1"},{"dateTime":"08:15:00","value":"1"},{"dateTime":"08:16:00","value":"1"},{"dateTime":"08:17:00","value":"1"},{"dateTime":"08:18:00","value":"1"},{"dateTime":"08:19:00","value":"1"},{"dateTime":"08:20:00","value":"1"},{"dateTime":"08:21:00","value":"1"},{"dateTime":"08:22:00","value":"1"},{"dateTime":"08:23:00","value":"1"},{"dateTime":"08:24:00","value":"1"},{"dateTime":"08:25:00","value":"1"},{"dateTime":"08:26:00","value":"1"},{"dateTime":"08:27:00","value":"1"},{"dateTime":"08:28:00","value":"1"},{"dateTime":"08:29:00","value":"1"}],"minutesAfterWakeup":0,"minutesAsleep":165,"minutesAwake":54,"minutesToFallAsleep":20,"startTime":"2014-02-03T04:31:00.000","timeInBed":239}],"summary":{"totalMinutesAsleep":165,"totalSleepRecords":1,"totalTimeInBed":239}}'
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 01:46:02 GMT
+  recorded_at: Tue, 04 Feb 2014 02:11:21 GMT
 - request:
     method: get
     uri: http://api.fitbit.com/1/user/25WQ2X/activities/date/2014-02-03.json
@@ -67,9 +67,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="fYWC5WJTSFOabd3L9Ub0JUJi9WaLBAYW344RVYi3js",
-        oauth_signature="i%2B9oQscCRVLq2SeIQbDQu4TQStk%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391478362", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="v21Xl9cG1ijUz93qXpcxxla7CryJkssl9JHhDLlCbU",
+        oauth_signature="Zy9n1YOGm%2Bxu%2B%2FdMIm5teY%2B%2F5TU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391479881", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -81,7 +81,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=D1BA7AE33CBF2838AF08B7D00D47CE64.fitbit1; Path=/
+      - JSESSIONID=A8B135175E423EE72B1977979B0C6F44.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -96,10 +96,10 @@ http_interactions:
       Content-Length:
       - '629'
       Date:
-      - Tue, 04 Feb 2014 01:46:02 GMT
+      - Tue, 04 Feb 2014 02:11:20 GMT
     body:
       encoding: UTF-8
-      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":892,"caloriesBMR":1628,"caloriesOut":2327,"distances":[{"activity":"total","distance":2.58},{"activity":"tracker","distance":2.58},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.81},{"activity":"moderatelyActive","distance":1.33},{"activity":"lightlyActive","distance":0.44},{"activity":"sedentaryActive","distance":0}],"fairlyActiveMinutes":74,"lightlyActiveMinutes":92,"marginalCalories":561,"sedentaryMinutes":704,"steps":5547,"veryActiveMinutes":17}}'
+      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":903,"caloriesBMR":1664,"caloriesOut":2377,"distances":[{"activity":"total","distance":2.59},{"activity":"tracker","distance":2.59},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.81},{"activity":"moderatelyActive","distance":1.33},{"activity":"lightlyActive","distance":0.45},{"activity":"sedentaryActive","distance":0}],"fairlyActiveMinutes":74,"lightlyActiveMinutes":95,"marginalCalories":566,"sedentaryMinutes":726,"steps":5572,"veryActiveMinutes":17}}'
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 01:46:02 GMT
+  recorded_at: Tue, 04 Feb 2014 02:11:21 GMT
 recorded_with: VCR 2.8.0
