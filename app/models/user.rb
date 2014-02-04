@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :foods
+  has_many :goals
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
@@ -18,4 +19,9 @@ class User < ActiveRecord::Base
   def fitbit_stats
     FitbitStats.new(self)
   end
+
+  def user_goal
+    Goal.where(user_id: self.id).first
+  end
+
 end

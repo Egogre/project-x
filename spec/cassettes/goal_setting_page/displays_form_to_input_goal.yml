@@ -16,9 +16,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="xxaYafj4ePqN2dyhZsV5Phtimqs2WUYzIhff50d3Rg",
-        oauth_signature="uOswzpKPUHEJpvMA%2FY1%2FmgBfCCw%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391478614", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="1WVw1bpBoDzBwXqh49QqgWky3TaYMJXsHZXWnKCOw",
+        oauth_signature="WbDa%2BHhBhlwm9y2YD3IiWG8W2f4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391479318", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -30,7 +30,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=4C68A6B073BFC0CDD33E7A8647E403A3.fitbit1; Path=/
+      - JSESSIONID=8C6F90564DFC749F1AC5F85A966FC031.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -45,12 +45,12 @@ http_interactions:
       Content-Length:
       - '629'
       Date:
-      - Tue, 04 Feb 2014 01:50:14 GMT
+      - Tue, 04 Feb 2014 02:01:57 GMT
     body:
       encoding: UTF-8
-      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":892,"caloriesBMR":1633,"caloriesOut":2332,"distances":[{"activity":"total","distance":2.58},{"activity":"tracker","distance":2.58},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.81},{"activity":"moderatelyActive","distance":1.33},{"activity":"lightlyActive","distance":0.44},{"activity":"sedentaryActive","distance":0}],"fairlyActiveMinutes":74,"lightlyActiveMinutes":92,"marginalCalories":561,"sedentaryMinutes":708,"steps":5547,"veryActiveMinutes":17}}'
+      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":903,"caloriesBMR":1649,"caloriesOut":2362,"distances":[{"activity":"total","distance":2.59},{"activity":"tracker","distance":2.59},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.81},{"activity":"moderatelyActive","distance":1.33},{"activity":"lightlyActive","distance":0.45},{"activity":"sedentaryActive","distance":0}],"fairlyActiveMinutes":74,"lightlyActiveMinutes":95,"marginalCalories":566,"sedentaryMinutes":716,"steps":5572,"veryActiveMinutes":17}}'
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 01:50:14 GMT
+  recorded_at: Tue, 04 Feb 2014 02:01:58 GMT
 - request:
     method: get
     uri: http://api.fitbit.com/1/user/25WQ2X/activities/date/2014-02-03.json
@@ -67,9 +67,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="d1yNFgPNqmC4RAHXwnY2CLTLIPuR5ZvF8IW9vlP7sNI",
-        oauth_signature="u%2BY1kkih0iNuFB1btvGU3gFY2w8%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391478614", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="X79DYBaQjFoYOkiVgcorNvRgqRvlRthTdp5402vhs",
+        oauth_signature="2SqNW%2B36tQDcY0mcObdej%2BoXTKY%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391479318", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -81,7 +81,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=7E48FF152435570F859F3DA951628435.fitbit1; Path=/
+      - JSESSIONID=BF131F9BC6A996CFB6E225760D2A9CE5.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -96,12 +96,12 @@ http_interactions:
       Content-Length:
       - '629'
       Date:
-      - Tue, 04 Feb 2014 01:50:13 GMT
+      - Tue, 04 Feb 2014 02:01:57 GMT
     body:
       encoding: UTF-8
-      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":892,"caloriesBMR":1633,"caloriesOut":2332,"distances":[{"activity":"total","distance":2.58},{"activity":"tracker","distance":2.58},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.81},{"activity":"moderatelyActive","distance":1.33},{"activity":"lightlyActive","distance":0.44},{"activity":"sedentaryActive","distance":0}],"fairlyActiveMinutes":74,"lightlyActiveMinutes":92,"marginalCalories":561,"sedentaryMinutes":708,"steps":5547,"veryActiveMinutes":17}}'
+      string: '{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":3377,"distance":5,"steps":10000},"summary":{"activeScore":-1,"activityCalories":903,"caloriesBMR":1649,"caloriesOut":2362,"distances":[{"activity":"total","distance":2.59},{"activity":"tracker","distance":2.59},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.81},{"activity":"moderatelyActive","distance":1.33},{"activity":"lightlyActive","distance":0.45},{"activity":"sedentaryActive","distance":0}],"fairlyActiveMinutes":74,"lightlyActiveMinutes":95,"marginalCalories":566,"sedentaryMinutes":716,"steps":5572,"veryActiveMinutes":17}}'
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 01:50:14 GMT
+  recorded_at: Tue, 04 Feb 2014 02:01:58 GMT
 - request:
     method: get
     uri: http://api.fitbit.com/1/user/25WQ2X/sleep/date/2014-02-03.json
@@ -118,9 +118,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="6396WzCJ78LGblzOUoAxsXGSBmaMOKxSqC9XuwEcHsE",
-        oauth_signature="3BiBfldG2ES7B47cHaNStsRMJw4%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391478614", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="j7Tr7ibK3liXG8LgsbbcJpG34DEUGbIziCovp1b1Ug",
+        oauth_signature="8XIVTnTo5691pH6RLMI%2B3PW1xws%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391479318", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -132,7 +132,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=551143307C0D5FC6F8AB42A285A4E085.fitbit1; Path=/
+      - JSESSIONID=863E7B33F00C0062074544150211F461.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -147,12 +147,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 04 Feb 2014 01:50:14 GMT
+      - Tue, 04 Feb 2014 02:01:58 GMT
     body:
       encoding: UTF-8
       string: '{"sleep":[{"awakeningsCount":5,"duration":14340000,"efficiency":75,"isMainSleep":true,"logId":106447000,"minuteData":[{"dateTime":"04:31:00","value":"3"},{"dateTime":"04:32:00","value":"3"},{"dateTime":"04:33:00","value":"3"},{"dateTime":"04:34:00","value":"3"},{"dateTime":"04:35:00","value":"3"},{"dateTime":"04:36:00","value":"3"},{"dateTime":"04:37:00","value":"3"},{"dateTime":"04:38:00","value":"2"},{"dateTime":"04:39:00","value":"3"},{"dateTime":"04:40:00","value":"3"},{"dateTime":"04:41:00","value":"2"},{"dateTime":"04:42:00","value":"3"},{"dateTime":"04:43:00","value":"2"},{"dateTime":"04:44:00","value":"3"},{"dateTime":"04:45:00","value":"3"},{"dateTime":"04:46:00","value":"2"},{"dateTime":"04:47:00","value":"2"},{"dateTime":"04:48:00","value":"2"},{"dateTime":"04:49:00","value":"2"},{"dateTime":"04:50:00","value":"2"},{"dateTime":"04:51:00","value":"1"},{"dateTime":"04:52:00","value":"1"},{"dateTime":"04:53:00","value":"1"},{"dateTime":"04:54:00","value":"1"},{"dateTime":"04:55:00","value":"1"},{"dateTime":"04:56:00","value":"1"},{"dateTime":"04:57:00","value":"1"},{"dateTime":"04:58:00","value":"1"},{"dateTime":"04:59:00","value":"1"},{"dateTime":"05:00:00","value":"1"},{"dateTime":"05:01:00","value":"1"},{"dateTime":"05:02:00","value":"1"},{"dateTime":"05:03:00","value":"2"},{"dateTime":"05:04:00","value":"2"},{"dateTime":"05:05:00","value":"2"},{"dateTime":"05:06:00","value":"2"},{"dateTime":"05:07:00","value":"2"},{"dateTime":"05:08:00","value":"2"},{"dateTime":"05:09:00","value":"2"},{"dateTime":"05:10:00","value":"2"},{"dateTime":"05:11:00","value":"2"},{"dateTime":"05:12:00","value":"2"},{"dateTime":"05:13:00","value":"2"},{"dateTime":"05:14:00","value":"1"},{"dateTime":"05:15:00","value":"1"},{"dateTime":"05:16:00","value":"1"},{"dateTime":"05:17:00","value":"1"},{"dateTime":"05:18:00","value":"1"},{"dateTime":"05:19:00","value":"1"},{"dateTime":"05:20:00","value":"1"},{"dateTime":"05:21:00","value":"1"},{"dateTime":"05:22:00","value":"1"},{"dateTime":"05:23:00","value":"1"},{"dateTime":"05:24:00","value":"1"},{"dateTime":"05:25:00","value":"1"},{"dateTime":"05:26:00","value":"1"},{"dateTime":"05:27:00","value":"1"},{"dateTime":"05:28:00","value":"1"},{"dateTime":"05:29:00","value":"1"},{"dateTime":"05:30:00","value":"1"},{"dateTime":"05:31:00","value":"1"},{"dateTime":"05:32:00","value":"1"},{"dateTime":"05:33:00","value":"1"},{"dateTime":"05:34:00","value":"1"},{"dateTime":"05:35:00","value":"1"},{"dateTime":"05:36:00","value":"1"},{"dateTime":"05:37:00","value":"1"},{"dateTime":"05:38:00","value":"1"},{"dateTime":"05:39:00","value":"1"},{"dateTime":"05:40:00","value":"1"},{"dateTime":"05:41:00","value":"1"},{"dateTime":"05:42:00","value":"1"},{"dateTime":"05:43:00","value":"1"},{"dateTime":"05:44:00","value":"1"},{"dateTime":"05:45:00","value":"1"},{"dateTime":"05:46:00","value":"1"},{"dateTime":"05:47:00","value":"1"},{"dateTime":"05:48:00","value":"1"},{"dateTime":"05:49:00","value":"1"},{"dateTime":"05:50:00","value":"1"},{"dateTime":"05:51:00","value":"1"},{"dateTime":"05:52:00","value":"1"},{"dateTime":"05:53:00","value":"1"},{"dateTime":"05:54:00","value":"1"},{"dateTime":"05:55:00","value":"1"},{"dateTime":"05:56:00","value":"1"},{"dateTime":"05:57:00","value":"1"},{"dateTime":"05:58:00","value":"1"},{"dateTime":"05:59:00","value":"1"},{"dateTime":"06:00:00","value":"1"},{"dateTime":"06:01:00","value":"2"},{"dateTime":"06:02:00","value":"2"},{"dateTime":"06:03:00","value":"2"},{"dateTime":"06:04:00","value":"2"},{"dateTime":"06:05:00","value":"2"},{"dateTime":"06:06:00","value":"2"},{"dateTime":"06:07:00","value":"2"},{"dateTime":"06:08:00","value":"2"},{"dateTime":"06:09:00","value":"2"},{"dateTime":"06:10:00","value":"2"},{"dateTime":"06:11:00","value":"1"},{"dateTime":"06:12:00","value":"1"},{"dateTime":"06:13:00","value":"1"},{"dateTime":"06:14:00","value":"1"},{"dateTime":"06:15:00","value":"1"},{"dateTime":"06:16:00","value":"1"},{"dateTime":"06:17:00","value":"1"},{"dateTime":"06:18:00","value":"1"},{"dateTime":"06:19:00","value":"1"},{"dateTime":"06:20:00","value":"1"},{"dateTime":"06:21:00","value":"1"},{"dateTime":"06:22:00","value":"1"},{"dateTime":"06:23:00","value":"1"},{"dateTime":"06:24:00","value":"1"},{"dateTime":"06:25:00","value":"1"},{"dateTime":"06:26:00","value":"1"},{"dateTime":"06:27:00","value":"1"},{"dateTime":"06:28:00","value":"1"},{"dateTime":"06:29:00","value":"1"},{"dateTime":"06:30:00","value":"1"},{"dateTime":"06:31:00","value":"1"},{"dateTime":"06:32:00","value":"1"},{"dateTime":"06:33:00","value":"1"},{"dateTime":"06:34:00","value":"1"},{"dateTime":"06:35:00","value":"1"},{"dateTime":"06:36:00","value":"1"},{"dateTime":"06:37:00","value":"1"},{"dateTime":"06:38:00","value":"1"},{"dateTime":"06:39:00","value":"1"},{"dateTime":"06:40:00","value":"2"},{"dateTime":"06:41:00","value":"2"},{"dateTime":"06:42:00","value":"2"},{"dateTime":"06:43:00","value":"2"},{"dateTime":"06:44:00","value":"2"},{"dateTime":"06:45:00","value":"2"},{"dateTime":"06:46:00","value":"2"},{"dateTime":"06:47:00","value":"2"},{"dateTime":"06:48:00","value":"2"},{"dateTime":"06:49:00","value":"2"},{"dateTime":"06:50:00","value":"2"},{"dateTime":"06:51:00","value":"1"},{"dateTime":"06:52:00","value":"1"},{"dateTime":"06:53:00","value":"1"},{"dateTime":"06:54:00","value":"2"},{"dateTime":"06:55:00","value":"2"},{"dateTime":"06:56:00","value":"2"},{"dateTime":"06:57:00","value":"2"},{"dateTime":"06:58:00","value":"2"},{"dateTime":"06:59:00","value":"2"},{"dateTime":"07:00:00","value":"2"},{"dateTime":"07:01:00","value":"2"},{"dateTime":"07:02:00","value":"2"},{"dateTime":"07:03:00","value":"2"},{"dateTime":"07:04:00","value":"2"},{"dateTime":"07:05:00","value":"1"},{"dateTime":"07:06:00","value":"1"},{"dateTime":"07:07:00","value":"1"},{"dateTime":"07:08:00","value":"1"},{"dateTime":"07:09:00","value":"2"},{"dateTime":"07:10:00","value":"2"},{"dateTime":"07:11:00","value":"2"},{"dateTime":"07:12:00","value":"2"},{"dateTime":"07:13:00","value":"2"},{"dateTime":"07:14:00","value":"2"},{"dateTime":"07:15:00","value":"2"},{"dateTime":"07:16:00","value":"2"},{"dateTime":"07:17:00","value":"2"},{"dateTime":"07:18:00","value":"2"},{"dateTime":"07:19:00","value":"2"},{"dateTime":"07:20:00","value":"1"},{"dateTime":"07:21:00","value":"1"},{"dateTime":"07:22:00","value":"1"},{"dateTime":"07:23:00","value":"1"},{"dateTime":"07:24:00","value":"1"},{"dateTime":"07:25:00","value":"1"},{"dateTime":"07:26:00","value":"1"},{"dateTime":"07:27:00","value":"1"},{"dateTime":"07:28:00","value":"1"},{"dateTime":"07:29:00","value":"1"},{"dateTime":"07:30:00","value":"1"},{"dateTime":"07:31:00","value":"1"},{"dateTime":"07:32:00","value":"1"},{"dateTime":"07:33:00","value":"1"},{"dateTime":"07:34:00","value":"1"},{"dateTime":"07:35:00","value":"1"},{"dateTime":"07:36:00","value":"1"},{"dateTime":"07:37:00","value":"1"},{"dateTime":"07:38:00","value":"1"},{"dateTime":"07:39:00","value":"1"},{"dateTime":"07:40:00","value":"1"},{"dateTime":"07:41:00","value":"1"},{"dateTime":"07:42:00","value":"1"},{"dateTime":"07:43:00","value":"1"},{"dateTime":"07:44:00","value":"1"},{"dateTime":"07:45:00","value":"1"},{"dateTime":"07:46:00","value":"1"},{"dateTime":"07:47:00","value":"1"},{"dateTime":"07:48:00","value":"1"},{"dateTime":"07:49:00","value":"1"},{"dateTime":"07:50:00","value":"1"},{"dateTime":"07:51:00","value":"1"},{"dateTime":"07:52:00","value":"1"},{"dateTime":"07:53:00","value":"1"},{"dateTime":"07:54:00","value":"1"},{"dateTime":"07:55:00","value":"1"},{"dateTime":"07:56:00","value":"1"},{"dateTime":"07:57:00","value":"1"},{"dateTime":"07:58:00","value":"1"},{"dateTime":"07:59:00","value":"1"},{"dateTime":"08:00:00","value":"1"},{"dateTime":"08:01:00","value":"1"},{"dateTime":"08:02:00","value":"1"},{"dateTime":"08:03:00","value":"1"},{"dateTime":"08:04:00","value":"1"},{"dateTime":"08:05:00","value":"1"},{"dateTime":"08:06:00","value":"1"},{"dateTime":"08:07:00","value":"1"},{"dateTime":"08:08:00","value":"1"},{"dateTime":"08:09:00","value":"1"},{"dateTime":"08:10:00","value":"1"},{"dateTime":"08:11:00","value":"1"},{"dateTime":"08:12:00","value":"1"},{"dateTime":"08:13:00","value":"1"},{"dateTime":"08:14:00","value":"1"},{"dateTime":"08:15:00","value":"1"},{"dateTime":"08:16:00","value":"1"},{"dateTime":"08:17:00","value":"1"},{"dateTime":"08:18:00","value":"1"},{"dateTime":"08:19:00","value":"1"},{"dateTime":"08:20:00","value":"1"},{"dateTime":"08:21:00","value":"1"},{"dateTime":"08:22:00","value":"1"},{"dateTime":"08:23:00","value":"1"},{"dateTime":"08:24:00","value":"1"},{"dateTime":"08:25:00","value":"1"},{"dateTime":"08:26:00","value":"1"},{"dateTime":"08:27:00","value":"1"},{"dateTime":"08:28:00","value":"1"},{"dateTime":"08:29:00","value":"1"}],"minutesAfterWakeup":0,"minutesAsleep":165,"minutesAwake":54,"minutesToFallAsleep":20,"startTime":"2014-02-03T04:31:00.000","timeInBed":239}],"summary":{"totalMinutesAsleep":165,"totalSleepRecords":1,"totalTimeInBed":239}}'
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 01:50:14 GMT
+  recorded_at: Tue, 04 Feb 2014 02:01:58 GMT
 - request:
     method: get
     uri: http://api.fitbit.com/1/user/25WQ2X/sleep/date/2014-02-03.json
@@ -169,9 +169,9 @@ http_interactions:
       Accept:
       - '*/*'
       Authorization:
-      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="OcIVURZFbURV2FFalQKP7D8xa5Z4f2tDWT13AuW0dI",
-        oauth_signature="5Nmia192G2zcgRvMtuACNgjbd3U%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1391478614", oauth_token="128e556de6e068c19e29beb380de56f1",
+      - OAuth oauth_consumer_key="ee59ac70ceb04f2c90fb103d3f0ac969", oauth_nonce="EgkgDRUtzJJomjUAvTxXCeGTTBzE9fypKNghOibe0",
+        oauth_signature="fyVoCZPSFmiXT%2B7YDPRqxtaCMxA%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391479318", oauth_token="128e556de6e068c19e29beb380de56f1",
         oauth_version="1.0"
   response:
     status:
@@ -183,7 +183,7 @@ http_interactions:
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Set-Cookie:
-      - JSESSIONID=99879A6B4C2878DE06309B718B2E30AA.fitbit1; Path=/
+      - JSESSIONID=B027DA407217DE66C72810FFCB22781B.fitbit1; Path=/
       - fhttps=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
@@ -198,113 +198,10 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 04 Feb 2014 01:50:14 GMT
+      - Tue, 04 Feb 2014 02:01:58 GMT
     body:
       encoding: UTF-8
       string: '{"sleep":[{"awakeningsCount":5,"duration":14340000,"efficiency":75,"isMainSleep":true,"logId":106447000,"minuteData":[{"dateTime":"04:31:00","value":"3"},{"dateTime":"04:32:00","value":"3"},{"dateTime":"04:33:00","value":"3"},{"dateTime":"04:34:00","value":"3"},{"dateTime":"04:35:00","value":"3"},{"dateTime":"04:36:00","value":"3"},{"dateTime":"04:37:00","value":"3"},{"dateTime":"04:38:00","value":"2"},{"dateTime":"04:39:00","value":"3"},{"dateTime":"04:40:00","value":"3"},{"dateTime":"04:41:00","value":"2"},{"dateTime":"04:42:00","value":"3"},{"dateTime":"04:43:00","value":"2"},{"dateTime":"04:44:00","value":"3"},{"dateTime":"04:45:00","value":"3"},{"dateTime":"04:46:00","value":"2"},{"dateTime":"04:47:00","value":"2"},{"dateTime":"04:48:00","value":"2"},{"dateTime":"04:49:00","value":"2"},{"dateTime":"04:50:00","value":"2"},{"dateTime":"04:51:00","value":"1"},{"dateTime":"04:52:00","value":"1"},{"dateTime":"04:53:00","value":"1"},{"dateTime":"04:54:00","value":"1"},{"dateTime":"04:55:00","value":"1"},{"dateTime":"04:56:00","value":"1"},{"dateTime":"04:57:00","value":"1"},{"dateTime":"04:58:00","value":"1"},{"dateTime":"04:59:00","value":"1"},{"dateTime":"05:00:00","value":"1"},{"dateTime":"05:01:00","value":"1"},{"dateTime":"05:02:00","value":"1"},{"dateTime":"05:03:00","value":"2"},{"dateTime":"05:04:00","value":"2"},{"dateTime":"05:05:00","value":"2"},{"dateTime":"05:06:00","value":"2"},{"dateTime":"05:07:00","value":"2"},{"dateTime":"05:08:00","value":"2"},{"dateTime":"05:09:00","value":"2"},{"dateTime":"05:10:00","value":"2"},{"dateTime":"05:11:00","value":"2"},{"dateTime":"05:12:00","value":"2"},{"dateTime":"05:13:00","value":"2"},{"dateTime":"05:14:00","value":"1"},{"dateTime":"05:15:00","value":"1"},{"dateTime":"05:16:00","value":"1"},{"dateTime":"05:17:00","value":"1"},{"dateTime":"05:18:00","value":"1"},{"dateTime":"05:19:00","value":"1"},{"dateTime":"05:20:00","value":"1"},{"dateTime":"05:21:00","value":"1"},{"dateTime":"05:22:00","value":"1"},{"dateTime":"05:23:00","value":"1"},{"dateTime":"05:24:00","value":"1"},{"dateTime":"05:25:00","value":"1"},{"dateTime":"05:26:00","value":"1"},{"dateTime":"05:27:00","value":"1"},{"dateTime":"05:28:00","value":"1"},{"dateTime":"05:29:00","value":"1"},{"dateTime":"05:30:00","value":"1"},{"dateTime":"05:31:00","value":"1"},{"dateTime":"05:32:00","value":"1"},{"dateTime":"05:33:00","value":"1"},{"dateTime":"05:34:00","value":"1"},{"dateTime":"05:35:00","value":"1"},{"dateTime":"05:36:00","value":"1"},{"dateTime":"05:37:00","value":"1"},{"dateTime":"05:38:00","value":"1"},{"dateTime":"05:39:00","value":"1"},{"dateTime":"05:40:00","value":"1"},{"dateTime":"05:41:00","value":"1"},{"dateTime":"05:42:00","value":"1"},{"dateTime":"05:43:00","value":"1"},{"dateTime":"05:44:00","value":"1"},{"dateTime":"05:45:00","value":"1"},{"dateTime":"05:46:00","value":"1"},{"dateTime":"05:47:00","value":"1"},{"dateTime":"05:48:00","value":"1"},{"dateTime":"05:49:00","value":"1"},{"dateTime":"05:50:00","value":"1"},{"dateTime":"05:51:00","value":"1"},{"dateTime":"05:52:00","value":"1"},{"dateTime":"05:53:00","value":"1"},{"dateTime":"05:54:00","value":"1"},{"dateTime":"05:55:00","value":"1"},{"dateTime":"05:56:00","value":"1"},{"dateTime":"05:57:00","value":"1"},{"dateTime":"05:58:00","value":"1"},{"dateTime":"05:59:00","value":"1"},{"dateTime":"06:00:00","value":"1"},{"dateTime":"06:01:00","value":"2"},{"dateTime":"06:02:00","value":"2"},{"dateTime":"06:03:00","value":"2"},{"dateTime":"06:04:00","value":"2"},{"dateTime":"06:05:00","value":"2"},{"dateTime":"06:06:00","value":"2"},{"dateTime":"06:07:00","value":"2"},{"dateTime":"06:08:00","value":"2"},{"dateTime":"06:09:00","value":"2"},{"dateTime":"06:10:00","value":"2"},{"dateTime":"06:11:00","value":"1"},{"dateTime":"06:12:00","value":"1"},{"dateTime":"06:13:00","value":"1"},{"dateTime":"06:14:00","value":"1"},{"dateTime":"06:15:00","value":"1"},{"dateTime":"06:16:00","value":"1"},{"dateTime":"06:17:00","value":"1"},{"dateTime":"06:18:00","value":"1"},{"dateTime":"06:19:00","value":"1"},{"dateTime":"06:20:00","value":"1"},{"dateTime":"06:21:00","value":"1"},{"dateTime":"06:22:00","value":"1"},{"dateTime":"06:23:00","value":"1"},{"dateTime":"06:24:00","value":"1"},{"dateTime":"06:25:00","value":"1"},{"dateTime":"06:26:00","value":"1"},{"dateTime":"06:27:00","value":"1"},{"dateTime":"06:28:00","value":"1"},{"dateTime":"06:29:00","value":"1"},{"dateTime":"06:30:00","value":"1"},{"dateTime":"06:31:00","value":"1"},{"dateTime":"06:32:00","value":"1"},{"dateTime":"06:33:00","value":"1"},{"dateTime":"06:34:00","value":"1"},{"dateTime":"06:35:00","value":"1"},{"dateTime":"06:36:00","value":"1"},{"dateTime":"06:37:00","value":"1"},{"dateTime":"06:38:00","value":"1"},{"dateTime":"06:39:00","value":"1"},{"dateTime":"06:40:00","value":"2"},{"dateTime":"06:41:00","value":"2"},{"dateTime":"06:42:00","value":"2"},{"dateTime":"06:43:00","value":"2"},{"dateTime":"06:44:00","value":"2"},{"dateTime":"06:45:00","value":"2"},{"dateTime":"06:46:00","value":"2"},{"dateTime":"06:47:00","value":"2"},{"dateTime":"06:48:00","value":"2"},{"dateTime":"06:49:00","value":"2"},{"dateTime":"06:50:00","value":"2"},{"dateTime":"06:51:00","value":"1"},{"dateTime":"06:52:00","value":"1"},{"dateTime":"06:53:00","value":"1"},{"dateTime":"06:54:00","value":"2"},{"dateTime":"06:55:00","value":"2"},{"dateTime":"06:56:00","value":"2"},{"dateTime":"06:57:00","value":"2"},{"dateTime":"06:58:00","value":"2"},{"dateTime":"06:59:00","value":"2"},{"dateTime":"07:00:00","value":"2"},{"dateTime":"07:01:00","value":"2"},{"dateTime":"07:02:00","value":"2"},{"dateTime":"07:03:00","value":"2"},{"dateTime":"07:04:00","value":"2"},{"dateTime":"07:05:00","value":"1"},{"dateTime":"07:06:00","value":"1"},{"dateTime":"07:07:00","value":"1"},{"dateTime":"07:08:00","value":"1"},{"dateTime":"07:09:00","value":"2"},{"dateTime":"07:10:00","value":"2"},{"dateTime":"07:11:00","value":"2"},{"dateTime":"07:12:00","value":"2"},{"dateTime":"07:13:00","value":"2"},{"dateTime":"07:14:00","value":"2"},{"dateTime":"07:15:00","value":"2"},{"dateTime":"07:16:00","value":"2"},{"dateTime":"07:17:00","value":"2"},{"dateTime":"07:18:00","value":"2"},{"dateTime":"07:19:00","value":"2"},{"dateTime":"07:20:00","value":"1"},{"dateTime":"07:21:00","value":"1"},{"dateTime":"07:22:00","value":"1"},{"dateTime":"07:23:00","value":"1"},{"dateTime":"07:24:00","value":"1"},{"dateTime":"07:25:00","value":"1"},{"dateTime":"07:26:00","value":"1"},{"dateTime":"07:27:00","value":"1"},{"dateTime":"07:28:00","value":"1"},{"dateTime":"07:29:00","value":"1"},{"dateTime":"07:30:00","value":"1"},{"dateTime":"07:31:00","value":"1"},{"dateTime":"07:32:00","value":"1"},{"dateTime":"07:33:00","value":"1"},{"dateTime":"07:34:00","value":"1"},{"dateTime":"07:35:00","value":"1"},{"dateTime":"07:36:00","value":"1"},{"dateTime":"07:37:00","value":"1"},{"dateTime":"07:38:00","value":"1"},{"dateTime":"07:39:00","value":"1"},{"dateTime":"07:40:00","value":"1"},{"dateTime":"07:41:00","value":"1"},{"dateTime":"07:42:00","value":"1"},{"dateTime":"07:43:00","value":"1"},{"dateTime":"07:44:00","value":"1"},{"dateTime":"07:45:00","value":"1"},{"dateTime":"07:46:00","value":"1"},{"dateTime":"07:47:00","value":"1"},{"dateTime":"07:48:00","value":"1"},{"dateTime":"07:49:00","value":"1"},{"dateTime":"07:50:00","value":"1"},{"dateTime":"07:51:00","value":"1"},{"dateTime":"07:52:00","value":"1"},{"dateTime":"07:53:00","value":"1"},{"dateTime":"07:54:00","value":"1"},{"dateTime":"07:55:00","value":"1"},{"dateTime":"07:56:00","value":"1"},{"dateTime":"07:57:00","value":"1"},{"dateTime":"07:58:00","value":"1"},{"dateTime":"07:59:00","value":"1"},{"dateTime":"08:00:00","value":"1"},{"dateTime":"08:01:00","value":"1"},{"dateTime":"08:02:00","value":"1"},{"dateTime":"08:03:00","value":"1"},{"dateTime":"08:04:00","value":"1"},{"dateTime":"08:05:00","value":"1"},{"dateTime":"08:06:00","value":"1"},{"dateTime":"08:07:00","value":"1"},{"dateTime":"08:08:00","value":"1"},{"dateTime":"08:09:00","value":"1"},{"dateTime":"08:10:00","value":"1"},{"dateTime":"08:11:00","value":"1"},{"dateTime":"08:12:00","value":"1"},{"dateTime":"08:13:00","value":"1"},{"dateTime":"08:14:00","value":"1"},{"dateTime":"08:15:00","value":"1"},{"dateTime":"08:16:00","value":"1"},{"dateTime":"08:17:00","value":"1"},{"dateTime":"08:18:00","value":"1"},{"dateTime":"08:19:00","value":"1"},{"dateTime":"08:20:00","value":"1"},{"dateTime":"08:21:00","value":"1"},{"dateTime":"08:22:00","value":"1"},{"dateTime":"08:23:00","value":"1"},{"dateTime":"08:24:00","value":"1"},{"dateTime":"08:25:00","value":"1"},{"dateTime":"08:26:00","value":"1"},{"dateTime":"08:27:00","value":"1"},{"dateTime":"08:28:00","value":"1"},{"dateTime":"08:29:00","value":"1"}],"minutesAfterWakeup":0,"minutesAsleep":165,"minutesAwake":54,"minutesToFallAsleep":20,"startTime":"2014-02-03T04:31:00.000","timeInBed":239}],"summary":{"totalMinutesAsleep":165,"totalSleepRecords":1,"totalTimeInBed":239}}'
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 01:50:14 GMT
-- request:
-    method: get
-    uri: http://platform.fatsecret.com/rest/server.api?format=json&method=foods.search&oauth_consumer_key=<FS_KEY>&oauth_nonce=45c48cce2e2d7fbdea1afc51c7c6ad26&oauth_signature=ls3MROEq3d4VVpGCBMZVGiUc6HU=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391478615&oauth_version=1.0&search_expression=waffle
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-      Host:
-      - platform.fatsecret.com
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Type:
-      - application/json; charset=utf-8
-      Server:
-      - Microsoft-IIS/7.5
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Tue, 04 Feb 2014 01:50:11 GMT
-      Content-Length:
-      - '6130'
-    body:
-      encoding: UTF-8
-      string: '{ "foods": { "food": [ {"food_description": "Per 100g - Calories: 310kcal
-        | Fat: 9.55g | Carbs: 48.84g | Protein: 7.30g", "food_id": "4374", "food_name":
-        "Plain Waffle", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/waffle-plain"
-        }, {"food_description": "Per 100g - Calories: 291kcal | Fat: 14.10g | Carbs:
-        32.90g | Protein: 7.90g", "food_id": "39070", "food_name": "Plain Waffles",
-        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/plain-waffles"
-        }, {"brand_name": "Krusteaz", "food_description": "Per 1\/2 cup mix (7\" waffle)
-        - Calories: 200kcal | Fat: 9.00g | Carbs: 26.00g | Protein: 4.00g", "food_id":
-        "46095", "food_name": "Belgian Waffle Mix", "food_type": "Brand", "food_url":
-        "http:\/\/www.fatsecret.com\/calories-nutrition\/krusteaz\/belgian-waffle-mix"
-        }, {"brand_name": "Eggo", "food_description": "Per 2 waffles - Calories: 190kcal
-        | Fat: 7.00g | Carbs: 27.00g | Protein: 4.00g", "food_id": "59737", "food_name":
-        "Homestyle Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/homestyle-waffles"
-        }, {"brand_name": "IHOP", "food_description": "Per 1 serving - Calories: 360kcal
-        | Fat: 15.00g | Carbs: 47.00g | Protein: 8.00g", "food_id": "54927", "food_name":
-        "Belgian Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/ihop\/belgian-waffles"
-        }, {"food_description": "Per 1042g - Calories: 2781kcal | Fat: 116.87g | Carbs:
-        347.18g | Protein: 96.04g", "food_id": "4379", "food_name": "100% Whole Wheat
-        or 100% Whole Grain Waffle", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/waffle-100%25-whole-wheat-or-100%25-whole-grain"
-        }, {"food_description": "Per 100g - Calories: 312kcal | Fat: 9.61g | Carbs:
-        49.29g | Protein: 7.19g", "food_id": "39094", "food_name": "Toasted Plain
-        Waffles (Frozen)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/toasted-plain-waffles-(frozen)"
-        }, {"brand_name": "Publix", "food_description": "Per 2 waffles - Calories:
-        180kcal | Fat: 6.00g | Carbs: 26.00g | Protein: 4.00g", "food_id": "75625",
-        "food_name": "Buttermilk Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/publix\/buttermilk-waffles"
-        }, {"brand_name": "Great Value", "food_description": "Per 2 waffles - Calories:
-        220kcal | Fat: 7.00g | Carbs: 33.00g | Protein: 4.00g", "food_id": "61253",
-        "food_name": "Blueberry Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/great-value\/blueberry-waffles"
-        }, {"brand_name": "IHOP", "food_description": "Per 1 waffle - Calories: 310kcal
-        | Fat: 15.00g | Carbs: 37.00g | Protein: 7.00g", "food_id": "60900", "food_name":
-        "Plain Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/ihop\/plain-waffles"
-        }, {"brand_name": "Eggo", "food_description": "Per 2 waffles - Calories: 140kcal
-        | Fat: 2.50g | Carbs: 27.00g | Protein: 5.00g", "food_id": "52607", "food_name":
-        "Nutri-Grain Low Fat Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/nutri-grain-low-fat-waffles"
-        }, {"brand_name": "Eggo", "food_description": "Per 2 waffles - Calories: 170kcal
-        | Fat: 4.50g | Carbs: 27.00g | Protein: 4.00g", "food_id": "46870", "food_name":
-        "Nutri-Grain Cinnamon Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/nutri-grain-cinnamon-waffles"
-        }, {"brand_name": "Wegmans", "food_description": "Per 2 waffles - Calories:
-        170kcal | Fat: 2.50g | Carbs: 30.00g | Protein: 5.00g", "food_id": "82660",
-        "food_name": "Homestyle Waffle", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/wegmans\/homestyle-waffle"
-        }, {"food_description": "Per 100g - Calories: 289kcal | Fat: 9.40g | Carbs:
-        44.16g | Protein: 6.92g", "food_id": "39286", "food_name": "Microwaved Buttermilk
-        Waffle (Frozen)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/microwaved-buttermilk-waffle-(frozen)"
-        }, {"food_description": "Per 101g - Calories: 259kcal | Fat: 9.00g | Carbs:
-        41.39g | Protein: 8.03g", "food_id": "4380", "food_name": "Oat Bran Waffle",
-        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/waffle-oat-bran"
-        }, {"brand_name": "Dunkin\u0027 Donuts", "food_description": "Per 2 waffles
-        - Calories: 190kcal | Fat: 8.00g | Carbs: 24.00g | Protein: 4.00g", "food_id":
-        "112330", "food_name": "Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/dunkin-donuts\/waffles"
-        }, {"brand_name": "Maple Grove Farms", "food_description": "Per 1\/3 cup dry
-        mix - Calories: 130kcal | Fat: 2.50g | Carbs: 11.00g | Protein: 15.00g", "food_id":
-        "65513", "food_name": "Belgian Pancake & Waffle Mix", "food_type": "Brand",
-        "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/maple-grove-farms\/belgian-pancake-and-waffle-mix"
-        }, {"brand_name": "Stonewall Kitchen", "food_description": "Per 1\/3 cup dry
-        mix - Calories: 150kcal | Fat: 0.50g | Carbs: 32.00g | Protein: 5.00g", "food_id":
-        "91079", "food_name": "Strawberry Pancake and Waffle Mix", "food_type": "Brand",
-        "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/stonewall-kitchen\/strawberry-pancake-and-waffle-mix"
-        }, {"brand_name": "Van\u0027s", "food_description": "Per 2 waffles - Calories:
-        210kcal | Fat: 9.00g | Carbs: 29.00g | Protein: 3.00g", "food_id": "65219",
-        "food_name": "Gourmet Original Belgian Waffles", "food_type": "Brand", "food_url":
-        "http:\/\/www.fatsecret.com\/calories-nutrition\/vans\/gourmet-original-belgian-waffles"
-        }, {"brand_name": "Eggo", "food_description": "Per 2 waffles - Calories: 200kcal
-        | Fat: 7.00g | Carbs: 31.00g | Protein: 4.00g", "food_id": "244506", "food_name":
-        "Chocolate Chip Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/chocolate-chip-waffles"
-        } ], "max_results": "20", "page_number": "0", "total_results": "329" }}'
-    http_version: 
-  recorded_at: Tue, 04 Feb 2014 01:50:15 GMT
+  recorded_at: Tue, 04 Feb 2014 02:01:58 GMT
 recorded_with: VCR 2.8.0

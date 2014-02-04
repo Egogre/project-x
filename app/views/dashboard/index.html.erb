@@ -64,11 +64,13 @@ Signed in as <%= @user.name %>!
 
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <a href="#project-three">
-                    <div class="main-stat"></div>
+                    <div class="main-stat">
+                        <p id='add-food-button'><%= link_to "Add Food", foods_path %></p>
+                    </div>
                 </a>
                 <h3><a href="#project-three">Food</a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item">
@@ -98,4 +100,4 @@ Signed in as <%= @user.name %>!
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-<%= link_to "Add Food", foods_path %>
+

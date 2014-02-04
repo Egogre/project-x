@@ -8,12 +8,15 @@ describe "user profile", :vcr do
     login_user(user)
     visit login_path
     click_on "Sign in with Fitbit"
+    click_link "View My Profile"
   end
 
-  it "displays information" do
-    click_link "View My Profile"
+  it "displays information" do 
     expect(page).to have_content user.name
   end
-
-
+ 
+  it "has a button to set goals" do 
+    expect(page).to have_link "Set Goal"
+  end
+  
 end
