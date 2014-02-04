@@ -16,7 +16,7 @@ describe "dashboard index", :vcr do
   end
 
   it "has views for sleep" do
-    expect(page).to have_content 'minutes'
+    expect(page).to have_content 'hours'
   end
 
   it "has a View User Profile button" do

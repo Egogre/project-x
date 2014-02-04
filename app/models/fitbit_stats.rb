@@ -12,7 +12,7 @@ class FitbitStats
   end
 
   def sleep_on_date(date = "today")
-    client.sleep_on_date(date)["summary"]["totalMinutesAsleep"]
+    (client.sleep_on_date(date)["summary"]["totalMinutesAsleep"]) / 60
   end
 
   def activities_on_date(date = "today")

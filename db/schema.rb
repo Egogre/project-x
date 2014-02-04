@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204010328) do
+ActiveRecord::Schema.define(version: 20140204222047) do
 
   create_table "foods", force: true do |t|
     t.integer  "user_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140204010328) do
     t.float   "protein"
     t.float   "carbohydrates"
     t.integer "user_id"
+    t.float   "fiber"
   end
 
   create_table "users", force: true do |t|
