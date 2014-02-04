@@ -3,25 +3,42 @@ require "base64"
 require "digest/md5"
 require "net/http"
 
-class String
-  def esc
-      CGI.escape(self).gsub("%7E", "~").gsub("+", "%20")
-  end
-end
-
 class FatsecretAPI
-  # attr_accessible :title, :body
 
   KEY = ENV["FATSECRET_KEY"]
   SECRET = ENV["FATSECRET_SECRET"]
   SHA1 = "HMAC-SHA1"
   SITE = "http://platform.fatsecret.com/rest/server.api"
 
+  def self.food
+    @food
+  end
+
   def self.search(expression)
     results = JSON.parse(return_json_search(expression))
     results["foods"]["food"].map do |f|
       Foods::SearchItem.new(f["food_name"], f["food_id"], f["food_description"])
     end
+  end
+
+  def self.get(food_id)
+    results = JSON.parse(return_json_get(food_id))
+    f = results["food"]
+    @food = Foods::SearchItem.new(
+      f["food_name"],
+      f["food_id"],
+      f["food_description"],
+      f["servings"]["serving"]
+    )
+  end
+
+  def self.return_json_get(food_id)
+    new_params = {
+      :method => 'food.get',
+      :food_id => food_id,
+      :format => 'json'
+    }
+    make_request(new_params)
   end
 
   def self.return_json_search(expression)
@@ -80,4 +97,10 @@ class FatsecretAPI
     URI.parse("#{SITE}?#{parts.join('&')}")
   end
 
+end
+
+class String
+  def esc
+      CGI.escape(self).gsub("%7E", "~").gsub("+", "%20")
+  end
 end

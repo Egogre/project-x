@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :foods
   has_many :goals
 
   def self.from_omniauth(auth)
