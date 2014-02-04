@@ -1,7 +1,9 @@
 <p><%= @food.name %></p>
-<%= form_for :food, url: food_path(@food.id), method: "put" do |f|%>
-<%= f.label :serving_size %>
-<%= select_tag(:serving_size, options_for_select(@food.servings_array)) %>
+<%= form_for :food, url: foods_path do |f|%>
+<%= f.label :consumed_on %>
+<%= f.date_select :consumed_on %>
+<%= f.label :serving_id %>
+<%= select_tag(:serving_id, options_for_select(@food.servings_array)) %>
 <%= f.label :quantity %>
 <% qty_array = 100.times.map { |i| [i, i] } %>
 <%= select_tag(:quantity, options_for_select(qty_array, 1)) %>

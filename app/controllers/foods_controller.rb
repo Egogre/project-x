@@ -16,10 +16,30 @@ class FoodsController < ApplicationController
     @foods = FatsecretAPI.search(params["food_search"]["food"])
   end
 
-  def update
-    binding.pry
-    #use food_id to use FatSecret get method for food
-    #update food table for current user
+  def create
+    #params has quantity, serving_size (id) and id (food_id)
+    food = Food.new
+    food.user_id = current_user.id
+    # food.consumed_on = params['food']['consumed_on(1i)']
+    food.quantity = params['quantity']
+    search_item = FatsecretAPI.food
+    food.food_id = search_item.id.to_i
+    food.name  = search_item.name
+    serving = search_item.find_serving(params['serving_id'])
+    food.serving_id = serving['serving_id']
+    food.serving_description = serving['serving_description']
+    food.calories = serving["calories"].to_i
+    food.protein = serving["protein"].to_f
+    food.fat = serving["fat"].to_f
+    food.carbs = serving["carbohydrate"].to_f
+    food.fiber = serving["fiber"].to_f
+    if food.save
+      flash[:notice] = "Food saved!"
+      redirect_to root_path
+    else
+      flash[:notice] = "Food NOT saved! Please try again."
+      render 'foods#show'
+    end
   end
 
   def update_params
