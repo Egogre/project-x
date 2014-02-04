@@ -1,1 +1,9 @@
-<div class="search-results"></div>
+<div class="search-results">
+  <ul>
+  <% @foods.each do |food| %>
+    <li>
+    <%= link_to "#{food.name}", food_path(food.id) %>
+    </li>
+  <% end %>
+  </ul>
+</div>
