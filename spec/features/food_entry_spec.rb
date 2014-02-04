@@ -13,7 +13,6 @@ describe "food entry page" do
 
   it "can search, select serving and qty and add food to profile" do
     VCR.use_cassette('add_food') do
-      save_and_open_page
       within("#add-food-button") do 
         click_on "Add Food"
       end
@@ -32,6 +31,11 @@ describe "food entry page" do
     end
     expect(page).to have_content('Steps')
     # expect(page).to have_content('miniature')
+    expect(page).to have_content('calories')
+    expect(page).to have_content('carbohydrates')
+    expect(page).to have_content('fat')
+    expect(page).to have_content('protein')
+    expect(page).to have_content('fiber')
   end
 
 end
