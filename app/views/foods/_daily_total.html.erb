@@ -1,0 +1,8 @@
+
+<% if @user.foods.any? %>
+  carbohydrates: <%= @user.daily_carb_total %> grams</br>
+  calories: <%= @user.daily_calorie_total %></br>
+  fat: <%= @user.daily_fat_total %> grams</br>
+  protein: <%= @user.daily_protein_total %> grams</br>
+  fiber: <%= @user.daily_fiber_total %> grams</br>
+<% end %>

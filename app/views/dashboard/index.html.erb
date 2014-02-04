@@ -66,6 +66,7 @@ Signed in as <%= @user.name %>!
                 <a href="#project-three">
                     <div class="main-stat">
                         <p id='add-food-button'><%= link_to "Add Food", foods_path %></p>
+                        <%= render partial: 'foods/daily_total' %>
                     </div>
                 </a>
                 <h3><a href="#project-three">Food</a>

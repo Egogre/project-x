@@ -24,4 +24,24 @@ class User < ActiveRecord::Base
     Goal.where(user_id: self.id).first
   end
 
+  def daily_calorie_total
+    (foods.collect { |food| food.calories }.inject(:+)).round(0)
+  end
+
+  def daily_protein_total
+    (foods.collect { |food| food.protein }.inject(:+)).round(0)
+  end
+
+  def daily_fat_total
+    (foods.collect { |food| food.fat }.inject(:+)).round(0)
+  end
+
+  def daily_carb_total
+    (foods.collect { |food| food.carbs }.inject(:+)).round(0)
+  end
+
+  def daily_fiber_total
+    (foods.collect { |food| food.fiber }.inject(:+)).round(0)
+  end
+
 end

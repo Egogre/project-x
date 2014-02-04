@@ -2,10 +2,9 @@
 
 FactoryGirl.define do
   factory :food do
-    user nil
+    user_id 1
     consumed_on "2014-02-03"
     name "MyString"
-    description "MyText"
     quantity 1
     serving_description "MyString"
     serving_id "MyString"
