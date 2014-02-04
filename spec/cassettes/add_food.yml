@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://platform.fatsecret.com/rest/server.api?format=json&method=foods.search&oauth_consumer_key=<FS_KEY>&oauth_nonce=c9f0f895fb98ab9159f51fd0297e236d&oauth_signature=PU52h0MnCMVET5klVqRTqBF4tGI=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391547549&oauth_version=1.0&search_expression=waffle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - platform.fatsecret.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 04 Feb 2014 20:59:05 GMT
+      Content-Length:
+      - '6130'
+    body:
+      encoding: UTF-8
+      string: '{ "foods": { "food": [ {"food_description": "Per 100g - Calories: 310kcal
+        | Fat: 9.55g | Carbs: 48.84g | Protein: 7.30g", "food_id": "4374", "food_name":
+        "Plain Waffle", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/waffle-plain"
+        }, {"food_description": "Per 100g - Calories: 291kcal | Fat: 14.10g | Carbs:
+        32.90g | Protein: 7.90g", "food_id": "39070", "food_name": "Plain Waffles",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/plain-waffles"
+        }, {"brand_name": "Krusteaz", "food_description": "Per 1\/2 cup mix (7\" waffle)
+        - Calories: 200kcal | Fat: 9.00g | Carbs: 26.00g | Protein: 4.00g", "food_id":
+        "46095", "food_name": "Belgian Waffle Mix", "food_type": "Brand", "food_url":
+        "http:\/\/www.fatsecret.com\/calories-nutrition\/krusteaz\/belgian-waffle-mix"
+        }, {"brand_name": "Eggo", "food_description": "Per 2 waffles - Calories: 190kcal
+        | Fat: 7.00g | Carbs: 27.00g | Protein: 4.00g", "food_id": "59737", "food_name":
+        "Homestyle Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/homestyle-waffles"
+        }, {"brand_name": "IHOP", "food_description": "Per 1 serving - Calories: 360kcal
+        | Fat: 15.00g | Carbs: 47.00g | Protein: 8.00g", "food_id": "54927", "food_name":
+        "Belgian Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/ihop\/belgian-waffles"
+        }, {"food_description": "Per 1042g - Calories: 2781kcal | Fat: 116.87g | Carbs:
+        347.18g | Protein: 96.04g", "food_id": "4379", "food_name": "100% Whole Wheat
+        or 100% Whole Grain Waffle", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/waffle-100%25-whole-wheat-or-100%25-whole-grain"
+        }, {"food_description": "Per 100g - Calories: 312kcal | Fat: 9.61g | Carbs:
+        49.29g | Protein: 7.19g", "food_id": "39094", "food_name": "Toasted Plain
+        Waffles (Frozen)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/toasted-plain-waffles-(frozen)"
+        }, {"brand_name": "Publix", "food_description": "Per 2 waffles - Calories:
+        180kcal | Fat: 6.00g | Carbs: 26.00g | Protein: 4.00g", "food_id": "75625",
+        "food_name": "Buttermilk Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/publix\/buttermilk-waffles"
+        }, {"brand_name": "Great Value", "food_description": "Per 2 waffles - Calories:
+        220kcal | Fat: 7.00g | Carbs: 33.00g | Protein: 4.00g", "food_id": "61253",
+        "food_name": "Blueberry Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/great-value\/blueberry-waffles"
+        }, {"brand_name": "IHOP", "food_description": "Per 1 waffle - Calories: 310kcal
+        | Fat: 15.00g | Carbs: 37.00g | Protein: 7.00g", "food_id": "60900", "food_name":
+        "Plain Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/ihop\/plain-waffles"
+        }, {"brand_name": "Eggo", "food_description": "Per 2 waffles - Calories: 140kcal
+        | Fat: 2.50g | Carbs: 27.00g | Protein: 5.00g", "food_id": "52607", "food_name":
+        "Nutri-Grain Low Fat Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/nutri-grain-low-fat-waffles"
+        }, {"brand_name": "Eggo", "food_description": "Per 2 waffles - Calories: 170kcal
+        | Fat: 4.50g | Carbs: 27.00g | Protein: 4.00g", "food_id": "46870", "food_name":
+        "Nutri-Grain Cinnamon Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/nutri-grain-cinnamon-waffles"
+        }, {"brand_name": "Wegmans", "food_description": "Per 2 waffles - Calories:
+        170kcal | Fat: 2.50g | Carbs: 30.00g | Protein: 5.00g", "food_id": "82660",
+        "food_name": "Homestyle Waffle", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/wegmans\/homestyle-waffle"
+        }, {"food_description": "Per 100g - Calories: 289kcal | Fat: 9.40g | Carbs:
+        44.16g | Protein: 6.92g", "food_id": "39286", "food_name": "Microwaved Buttermilk
+        Waffle (Frozen)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/microwaved-buttermilk-waffle-(frozen)"
+        }, {"food_description": "Per 101g - Calories: 259kcal | Fat: 9.00g | Carbs:
+        41.39g | Protein: 8.03g", "food_id": "4380", "food_name": "Oat Bran Waffle",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/waffle-oat-bran"
+        }, {"brand_name": "Dunkin\u0027 Donuts", "food_description": "Per 2 waffles
+        - Calories: 190kcal | Fat: 8.00g | Carbs: 24.00g | Protein: 4.00g", "food_id":
+        "112330", "food_name": "Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/dunkin-donuts\/waffles"
+        }, {"brand_name": "Maple Grove Farms", "food_description": "Per 1\/3 cup dry
+        mix - Calories: 130kcal | Fat: 2.50g | Carbs: 11.00g | Protein: 15.00g", "food_id":
+        "65513", "food_name": "Belgian Pancake & Waffle Mix", "food_type": "Brand",
+        "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/maple-grove-farms\/belgian-pancake-and-waffle-mix"
+        }, {"brand_name": "Stonewall Kitchen", "food_description": "Per 1\/3 cup dry
+        mix - Calories: 150kcal | Fat: 0.50g | Carbs: 32.00g | Protein: 5.00g", "food_id":
+        "91079", "food_name": "Strawberry Pancake and Waffle Mix", "food_type": "Brand",
+        "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/stonewall-kitchen\/strawberry-pancake-and-waffle-mix"
+        }, {"brand_name": "Van\u0027s", "food_description": "Per 2 waffles - Calories:
+        210kcal | Fat: 9.00g | Carbs: 29.00g | Protein: 3.00g", "food_id": "65219",
+        "food_name": "Gourmet Original Belgian Waffles", "food_type": "Brand", "food_url":
+        "http:\/\/www.fatsecret.com\/calories-nutrition\/vans\/gourmet-original-belgian-waffles"
+        }, {"brand_name": "Eggo", "food_description": "Per 2 waffles - Calories: 200kcal
+        | Fat: 7.00g | Carbs: 31.00g | Protein: 4.00g", "food_id": "244506", "food_name":
+        "Chocolate Chip Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/chocolate-chip-waffles"
+        } ], "max_results": "20", "page_number": "0", "total_results": "329" }}'
+    http_version: 
+  recorded_at: Tue, 04 Feb 2014 20:59:10 GMT
+recorded_with: VCR 2.8.0
