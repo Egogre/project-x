@@ -16,6 +16,19 @@ class GoalsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def update
+    @user = current_user
+    @goal = Goal.find(params[:id])
+    @goal.update_attributes(goal_params)
+    redirect_to goal_path(@goal)
+  end
+
+  def edit
+    @user = current_user
+    @goal = Goal.find(params[:id])
+    render :new
+  end
+
   private
 
   def goal_params

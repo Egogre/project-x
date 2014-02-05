@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://platform.fatsecret.com/rest/server.api?format=json&method=foods.search&oauth_consumer_key=<FS_KEY>&oauth_nonce=c9f0f895fb98ab9159f51fd0297e236d&oauth_signature=PU52h0MnCMVET5klVqRTqBF4tGI=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391547549&oauth_version=1.0&search_expression=waffle
+    uri: http://platform.fatsecret.com/rest/server.api?format=json&method=foods.search&oauth_consumer_key=<FS_KEY>&oauth_nonce=a87ff679a2f3e71d9181a67b7542122c&oauth_signature=BnHSYj6WmAJqEaVLbrADiCnqtjE=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391625480&oauth_version=1.0&search_expression=waffle
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 04 Feb 2014 20:59:05 GMT
+      - Wed, 05 Feb 2014 18:37:53 GMT
       Content-Length:
       - '6130'
     body:
@@ -102,5 +102,5 @@ http_interactions:
         "Chocolate Chip Waffles", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/eggo\/chocolate-chip-waffles"
         } ], "max_results": "20", "page_number": "0", "total_results": "329" }}'
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 20:59:10 GMT
+  recorded_at: Wed, 05 Feb 2014 18:38:00 GMT
 recorded_with: VCR 2.8.0
