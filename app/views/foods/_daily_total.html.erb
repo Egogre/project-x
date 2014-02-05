@@ -1,8 +1,12 @@
 
 <% if @user.foods.any? %>
-  carbohydrates: <%= @user.daily_carb_total %> grams</br>
-  calories: <%= @user.daily_calorie_total %></br>
-  fat: <%= @user.daily_fat_total %> grams</br>
-  protein: <%= @user.daily_protein_total %> grams</br>
-  fiber: <%= @user.daily_fiber_total %> grams</br>
+  calories: <%= @user.daily_calorie_total %> (<%=(@user.daily_calorie_total.to_f / @goal.calories.to_f * 100).round(0)%>%).</br>Your goal: <%= @goal.calories %>.</br>
+  </br>
+  carbohydrates: <%= @user.daily_carb_total %> grams (<%=(@user.daily_carb_total.to_f / @goal.carbohydrates.to_f * 100).round(0)%>%).</br>Your goal: <%= @goal.carbohydrates %>grams.</br>
+  </br>
+  fat: <%= @user.daily_fat_total %> grams (<%=(@user.daily_fat_total.to_f / @goal.fat.to_f * 100).round(0)%>%).</br>Your goal: <%= @goal.fat %> grams.</br>
+  </br>
+  protein: <%= @user.daily_protein_total %> grams (<%=(@user.daily_protein_total.to_f / @goal.protein.to_f * 100).round(0)%>%).</br>Your goal: <%= @goal.protein %> grams.</br>
+  </br>
+  fiber: <%= @user.daily_fiber_total %> grams (<%=(@user.daily_fiber_total.to_f / @goal.fiber.to_f * 100).round(0)%>%).</br>Your goal: <%= @goal.fiber %> grams.</br>
 <% end %>
