@@ -6,7 +6,7 @@ FactoryGirl.define do
     calories 1
     protein 1
     fat 1
-    carbs 1
+    carbohydrates 1
     fiber 1
   end
 end

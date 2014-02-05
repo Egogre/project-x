@@ -5,6 +5,7 @@ describe "user profile", :vcr do
 
   before do
     @user = FactoryGirl.build(:user)
+    @goal = FactoryGirl.build(:goal)
     login_user(user)
     visit login_path
     click_on "Sign in with Fitbit"

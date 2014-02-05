@@ -41,21 +41,50 @@ Signed in as <%= @user.name %>!
         <div class="row">
 
             <div class="col-lg-6 col-md-6 portfolio-item">
-                <a href="#project-one">
-                    <div class="main-stat"><%= (@stats.activities_on_date.to_f / @goal.steps.to_f * 100).round(1) %>%</div>
-                </a>
                 <h3><a href="#project-one">Steps</a>
                 </h3>
-                <p>Steps: <%= @stats.activities_on_date %> steps today. Your goal is <%= @goal.steps %> steps.</p>
+                <p>Steps: <%= @stats.activities_on_date %> steps today. 
+                    <%if @goal.steps.to_f == 0%>
+                        You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
+                    <%else%>
+                        Your goal is <%= @goal.steps %> steps.
+                    <%end%>
+                </p>
+                <a href="#project-one">
+                    <div class="main-stat">
+                        <h1>
+                            <%if @goal.steps.to_f == 0%>
+                                <%= link_to "Add Goal", edit_goal_path(@goal) %>
+                            <%else%>
+                                <%= (@stats.activities_on_date.to_f / @goal.steps.to_f * 100).round(1) %>%
+                            <%end%>
+                        </h1>
+                    </div>
+                </a>
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item">
-                <a href="#project-two">
-                    <div class="main-stat"><%= (@stats.sleep_on_date.to_f / @goal.sleep.to_f * 100).round(1) %>%</div>
-                </a>
                 <h3><a href="#project-two">Sleep</a>
                 </h3>
-                <p>Sleep: <%= @stats.sleep_on_date %> hours last night. Your goal is <%= @goal.sleep %> hours.</p>
+                <p>Sleep: <%= @stats.sleep_on_date %> hours last night. 
+                    <%if @goal.sleep.to_f == 0%>
+                        You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
+                    <%else%>
+                        Your goal is <%= @goal.sleep %> hours.
+                    <%end%>
+                </p>
+                <a href="#project-two">
+                    <div class="main-stat">
+                        <h1>
+                            <%if @goal.sleep.to_f == 0%>
+                                <%= link_to "Add Goal", edit_goal_path(@goal) %>
+                            <%else%>
+                                <%= (@stats.sleep_on_date.to_f / @goal.sleep.to_f * 100).round(1) %>%
+                            <%end%>
+                        </h1>
+                    </div>
+                </a>
+
             </div>
 
         </div>
@@ -63,24 +92,30 @@ Signed in as <%= @user.name %>!
         <div class="row">
 
             <div class="col-lg-6 col-md-6 portfolio-item">
+                <h3><a href="#project-three">Food</a>
+                </h3>
+                <p>A Summary of your total nutritional intake for today.</p>
                 <a href="#project-three">
                     <div class="main-stat">
                         <p id='add-food-button'><%= link_to "Add Food", foods_path %></p>
                         <%= render partial: 'foods/daily_total' %>
                     </div>
                 </a>
-                <h3><a href="#project-three">Food</a>
-                </h3>
                 
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item">
-                <a href="#project-four">
-                    <div class="main-stat"></div>
-                </a>
                 <h3><a href="#project-four">Water</a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#project-four">
+                    <div class="main-stat">
+                        <h4>Did you drink enough water today?</h4>
+                        </br>
+                        <button onclick="alert('YAY! Good for you!');">Yes :-)</button>
+                        <button onclick="alert('Oh no! Drink more water!');">No  :-(</button>
+                    </div>
+                </a>
             </div>
 
         </div>

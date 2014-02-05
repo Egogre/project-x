@@ -6,7 +6,7 @@ class DashboardController < ApplicationController
     else
       @stats = current_user.fitbit_stats
       @user = current_user
-      @goal = current_user.goals[0]
+      @goal = current_user.goals[0] || Goal.new
     end
   end
 
