@@ -14,6 +14,20 @@ class FatsecretAPI
     @food
   end
 
+  def self.food_create_params(serving_id)
+    search_item = @food
+    serving = search_item.find_serving(serving_id)
+    
+    { food_id: search_item.id,
+      name: search_item.name,
+      serving_description: serving['serving_description'],
+      calories: serving["calories"],
+      protein: serving["protein"],
+      fat: serving["fat"],
+      carbs: serving["carbohydrate"],
+      fiber: serving["fiber"] }
+  end
+
   def self.search(expression)
     results = JSON.parse(return_json_search(expression))
     results["foods"]["food"].map do |f|
