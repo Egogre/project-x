@@ -38,7 +38,8 @@ class GoalsController < ApplicationController
                                     :calories,
                                     :carbohydrates,
                                     :fat,
-                                    :protein)
+                                    :protein,
+                                    :fiber)
   end
 
 end
