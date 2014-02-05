@@ -5,7 +5,6 @@ describe "dashboard index", :vcr do
   before do
     @user = FactoryGirl.create(:user)
     food = FactoryGirl.create(:food, user_id: @user.id, calories: 34532349)
-    FitbitStats.new(@user)
     login_user(@user)
     visit login_path
     click_on "Sign in with Fitbit"

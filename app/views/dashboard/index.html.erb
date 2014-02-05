@@ -42,20 +42,20 @@ Signed in as <%= @user.name %>!
 
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <a href="#project-one">
-                    <div class="main-stat"><%= @stats.activities_on_date %></div>
+                    <div class="main-stat"><%= @stats.steps %></div>
                 </a>
                 <h3><a href="#project-one">Steps</a>
                 </h3>
-                <p>Steps: <%= @stats.activities_on_date %> steps today</p>
+                <p>Steps: <%= @stats.steps %> steps today</p>
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <a href="#project-two">
-                    <div class="main-stat"><%= @stats.sleep_on_date %></div>
+                    <div class="main-stat"><%= @stats.sleep %></div>
                 </a>
                 <h3><a href="#project-two">Sleep</a>
                 </h3>
-                <p>Sleep: <%= @stats.sleep_on_date %> hours last night</p>
+                <p>Sleep: <%= @stats.sleep %> hours last night</p>
             </div>
 
         </div>
