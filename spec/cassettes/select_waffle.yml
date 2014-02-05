@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://platform.fatsecret.com/rest/server.api?food_id=4374&format=json&method=food.get&oauth_consumer_key=<FS_KEY>&oauth_nonce=45c48cce2e2d7fbdea1afc51c7c6ad26&oauth_signature=vqKRgevdC4P83Q77hWzpLQ9YumM=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391640672&oauth_version=1.0
+    uri: http://platform.fatsecret.com/rest/server.api?food_id=4374&format=json&method=food.get&oauth_consumer_key=<FS_KEY>&oauth_nonce=eccbc87e4b5ce2fe28308fd9f2a7baf3&oauth_signature=xgGolthu1vrs/ZKVBXb8jeQZFjQ=&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1391641981&oauth_version=1.0
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Wed, 05 Feb 2014 22:51:05 GMT
+      - Wed, 05 Feb 2014 23:12:55 GMT
       Content-Length:
       - '10250'
     body:
@@ -153,5 +153,5 @@ http_interactions:
         "sodium": "720", "sugar": "4.72", "vitamin_a": "0", "vitamin_c": "0" } ] }
         }}'
     http_version: 
-  recorded_at: Wed, 05 Feb 2014 22:51:12 GMT
+  recorded_at: Wed, 05 Feb 2014 23:13:01 GMT
 recorded_with: VCR 2.8.0
