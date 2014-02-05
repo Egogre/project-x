@@ -17,22 +17,8 @@ class FoodsController < ApplicationController
   end
 
   def create
-    #params has quantity, serving_size (id) and id (food_id)
-    food = Food.new
-    food.user_id = current_user.id
-    # food.consumed_on = params['food']['consumed_on(1i)']
-    food.quantity = params['quantity']
-    search_item = FatsecretAPI.food
-    food.food_id = search_item.id.to_i
-    food.name  = search_item.name
-    serving = search_item.find_serving(params['serving_id'])
-    food.serving_id = serving['serving_id']
-    food.serving_description = serving['serving_description']
-    food.calories = serving["calories"].to_i
-    food.protein = serving["protein"].to_f
-    food.fat = serving["fat"].to_f
-    food.carbs = serving["carbohydrate"].to_f
-    food.fiber = serving["fiber"].to_f
+    food = Food.new(create_food_params)
+    
     if food.save
       flash[:notice] = "Food saved!"
       redirect_to root_path
@@ -54,6 +40,14 @@ class FoodsController < ApplicationController
       "controller"=>"foods",
       "id"=>"4374"
     }
+  end
+
+  def food_params
+    params.permit(:serving_id, :quantity).merge(user_id: current_user.id)
+  end
+
+  def create_food_params
+    food_params.merge(FatsecretAPI.food_create_params(food_params[:serving_id]))
   end
 
 end
