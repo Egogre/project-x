@@ -1,7 +1,8 @@
 class Activity 
   include ActiveModel::Model
 
-  def self.make_request(user, date = DateTime.now)
+  def self.make_request(user, date_time = DateTime.now)
+    date = date_time.strftime("%Y-%m-%d")
     params = {
       "request" => {
       "uid" => user.uid,
@@ -12,7 +13,9 @@ class Activity
     connection = Faraday.new
     response = connection.get "http://localhost:9292/api/v1/activity?#{params}"
     data = JSON.parse(response.body)
-    Stats.new(user_id: user.id, steps: data["steps_on_date"], sleep: data["sleep_on_date"], date: date)
+    stat = user.stats.find_or_create_by(date: date)
+    stat.update(steps: data["steps_on_date"], sleep: data["sleep_on_date"])
+    stat
   end
 
 end

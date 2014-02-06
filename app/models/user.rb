@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :foods
   has_many :goals
+  has_many :stats
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
@@ -17,7 +18,7 @@ class User < ActiveRecord::Base
   end
 
   def fitbit_stats
-    Activity.make_request(self)
+    Activity.make_request(self)    
   end
 
   def user_goal
@@ -34,7 +35,6 @@ class User < ActiveRecord::Base
   # end
 
   def protein_total_for(date)
-
     todays_foods = foods.where(consumed_on: date)
     unless todays_foods.nil?
       (todays_foods.collect { |food| food.protein }.inject(:+)).round(0)
@@ -60,6 +60,14 @@ class User < ActiveRecord::Base
     unless todays_foods.nil?
       (todays_foods.collect { |food| food.carbs }.inject(:+)).round(0)
     end
+  end
+
+  def average_steps
+    stats.average('steps').to_f
+  end
+
+  def average_sleep
+    stats.average('sleep').to_f
   end
 
 end
