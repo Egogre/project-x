@@ -44,7 +44,7 @@ Signed in as <%= @user.name %>!
                 <h3><a href="#project-one">Steps</a>
                 </h3>
                 <p>Steps: <%= @stats.steps %> steps today. 
-                    <%if @goal.steps.to_f == 0%>
+                    <%if @no_steps_goal%>
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
                         Your goal is <%= @goal.steps %> steps.
@@ -53,10 +53,10 @@ Signed in as <%= @user.name %>!
                 <a href="#project-one">
                     <div class="main-stat">
                         <h1>
-                            <%if @goal.steps.to_f == 0%>
+                            <%if @no_steps_goal%>
                                 <%= link_to "Add Goal", edit_goal_path(@goal) %>
                             <%else%>
-                                <%= (@stats.steps.to_f / @goal.steps.to_f * 100).round(1) %>%
+                                <%= @step_percentage %>%
                             <%end%>
                         </h1>
                     </div>
@@ -67,7 +67,7 @@ Signed in as <%= @user.name %>!
                 <h3><a href="#project-two">Sleep</a>
                 </h3>
                 <p>Sleep: <%= @stats.sleep %> hours last night. 
-                    <%if @goal.sleep.to_f == 0%>
+                    <%if @no_sleep_goal%>
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
                         Your goal is <%= @goal.sleep %> hours.
@@ -76,10 +76,10 @@ Signed in as <%= @user.name %>!
                 <a href="#project-two">
                     <div class="main-stat">
                         <h1>
-                            <%if @goal.sleep.to_f == 0%>
+                            <%if @no_sleep_goal%>
                                 <%= link_to "Add Goal", edit_goal_path(@goal) %>
                             <%else%>
-                                <%= (@stats.sleep.to_f / @goal.sleep.to_f * 100).round(1) %>%
+                                <%= @sleep_percentage %>%
                             <%end%>
                         </h1>
                     </div>

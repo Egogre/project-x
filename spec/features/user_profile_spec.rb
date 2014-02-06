@@ -6,9 +6,11 @@ describe "user profile", :vcr do
   before do
     @user = FactoryGirl.build(:user)
     @goal = FactoryGirl.create(:goal)
+    @food = FactoryGirl.create(:food)
     login_user(user)
     visit login_path
     click_on "Sign in with Fitbit"
+    save_and_open_page
     click_link "View My Profile"
   end
 
