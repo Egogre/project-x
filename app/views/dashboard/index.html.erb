@@ -43,7 +43,7 @@ Signed in as <%= @user.name %>!
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <h3><a href="#project-one">Steps</a>
                 </h3>
-                <p>Steps: <%= @stats.activities_on_date %> steps today. 
+                <p>Steps: <%= @stats.steps %> steps today. 
                     <%if @goal.steps.to_f == 0%>
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
@@ -56,7 +56,7 @@ Signed in as <%= @user.name %>!
                             <%if @goal.steps.to_f == 0%>
                                 <%= link_to "Add Goal", edit_goal_path(@goal) %>
                             <%else%>
-                                <%= (@stats.activities_on_date.to_f / @goal.steps.to_f * 100).round(1) %>%
+                                <%= (@stats.steps.to_f / @goal.steps.to_f * 100).round(1) %>%
                             <%end%>
                         </h1>
                     </div>
@@ -66,7 +66,7 @@ Signed in as <%= @user.name %>!
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <h3><a href="#project-two">Sleep</a>
                 </h3>
-                <p>Sleep: <%= @stats.sleep_on_date %> hours last night. 
+                <p>Sleep: <%= @stats.sleep %> hours last night. 
                     <%if @goal.sleep.to_f == 0%>
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
@@ -79,7 +79,7 @@ Signed in as <%= @user.name %>!
                             <%if @goal.sleep.to_f == 0%>
                                 <%= link_to "Add Goal", edit_goal_path(@goal) %>
                             <%else%>
-                                <%= (@stats.sleep_on_date.to_f / @goal.sleep.to_f * 100).round(1) %>%
+                                <%= (@stats.sleep.to_f / @goal.sleep.to_f * 100).round(1) %>%
                             <%end%>
                         </h1>
                     </div>
