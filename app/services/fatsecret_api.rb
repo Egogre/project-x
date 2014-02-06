@@ -25,7 +25,7 @@ class FatsecretAPI
       protein: serving["protein"],
       fat: serving["fat"],
       carbs: serving["carbohydrate"],
-      fiber: serving["fiber"] }
+      fiber: serving["fiber"] || 0 }
   end
 
   def self.search(expression)

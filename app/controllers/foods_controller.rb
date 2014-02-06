@@ -18,7 +18,6 @@ class FoodsController < ApplicationController
 
   def create
     food = Food.new(create_food_params)
-    
     if food.save
       flash[:notice] = "Food saved!"
       redirect_to root_path
@@ -42,8 +41,12 @@ class FoodsController < ApplicationController
     }
   end
 
+  def consumed_on_date
+    Date.new(params["food"]["consumed_on(1i)"].to_i,params["food"]["consumed_on(2i)"].to_i,params["food"]["consumed_on(3i)"].to_i)
+  end
+
   def food_params
-    params.permit(:serving_id, :quantity).merge(user_id: current_user.id)
+    params.permit(:serving_id, :quantity).merge(user_id: current_user.id, consumed_on: consumed_on_date)
   end
 
   def create_food_params

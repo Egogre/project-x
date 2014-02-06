@@ -9,10 +9,10 @@ describe User do
   end
 
   it "can have a total for each food category" do
-    expect(@user.daily_calorie_total).to eq 6
-    expect(@user.daily_protein_total).to eq 5
-    expect(@user.daily_fat_total).to eq 4
-    expect(@user.daily_carb_total).to eq 3
-    expect(@user.daily_fiber_total).to eq 2
+    expect(@user.calorie_total_for(Date.today)).to eq 6
+    expect(@user.protein_total_for(Date.today)).to eq 5
+    expect(@user.fat_total_for(Date.today)).to eq 4
+    expect(@user.carb_total_for(Date.today)).to eq 3
+    expect(@user.fiber_total_for(Date.today)).to eq 2
   end
 end

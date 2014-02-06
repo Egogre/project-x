@@ -1,8 +1,8 @@
 
 <% if @user.foods.any? %>
-  carbohydrates: <%= @user.daily_carb_total %> grams</br>
-  calories: <%= @user.daily_calorie_total %></br>
-  fat: <%= @user.daily_fat_total %> grams</br>
-  protein: <%= @user.daily_protein_total %> grams</br>
-  fiber: <%= @user.daily_fiber_total %> grams</br>
+  carbohydrates: <%= @user.carb_total_for(Date.today) %> grams</br>
+  calories: <%= @user.calorie_total_for(Date.today) %></br>
+  fat: <%= @user.fat_total_for(Date.today) %> grams</br>
+  protein: <%= @user.protein_total_for(Date.today) %> grams</br>
+  fiber: <%= @user.fiber_total_for(Date.today) %> grams</br>
 <% end %>
