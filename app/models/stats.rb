@@ -1,9 +1,5 @@
-class Stats
-  attr_reader :steps, :sleep
+class Stats < ActiveRecord::Base
+  belongs_to :user
 
-  def initialize(steps, sleep)
-    @steps = steps
-    @sleep = sleep
-  end
-
+  
 end

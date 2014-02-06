@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   end
 
   def fitbit_stats
-    Activity.make_request(uid, secret, token)
+    Activity.make_request(self)
   end
 
   def user_goal
