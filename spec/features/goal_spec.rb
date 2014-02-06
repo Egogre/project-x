@@ -5,15 +5,18 @@ describe "goal setting page", :vcr do
 
   before do
     @user = FactoryGirl.build(:user)
+    @goal = FactoryGirl.create(:goal, user_id: user.id)
+    @food = FactoryGirl.create(:food)
     login_user(user)
     visit login_path
     click_on "Sign in with Fitbit"
     click_link "View My Profile"
-    click_link "Set Goal"
+    click_link "View Goal"
+    click_link "Edit Goals"
   end
 
   it "displays form to input goal" do 
-    expect(page).to have_content("#{user.name}'s Goal")
+    expect(page).to have_content("#{user.name}'s Goals")
   end
 
   it "user can input and view goal" do 
@@ -23,11 +26,10 @@ describe "goal setting page", :vcr do
     fill_in 'Carbohydrates', with: 40
     fill_in 'Fat', with: 20
     fill_in 'Protein', with: 20
-    click_on 'Create Goal'
-    expect(page).to have_content("View Goal")
-    click_on("View Goal")
+    click_on 'Update Goal'
+    expect(page).to have_content("Your Goals")
     within('.current-goal') do
-      expect(page).to have_content(user.goals.first.steps)
+      expect(page).to have_content(@goal.steps)
     end
   end
 

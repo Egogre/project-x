@@ -5,6 +5,8 @@ describe "food entry page" do
   before do
     VCR.use_cassette('login') do
       user = FactoryGirl.build(:user)
+      @goals = FactoryGirl.create(:goal)
+      @food = FactoryGirl.create(:food)
       login_user(user)
       visit login_path
       click_on "Sign in with Fitbit"

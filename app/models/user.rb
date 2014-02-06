@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :foods
-  has_many :goals
   has_many :stats
+  has_one :goal
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
