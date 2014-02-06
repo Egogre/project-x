@@ -1,8 +1,52 @@
 
 <% if @user.foods.any? %>
-  carbohydrates: <%= @user.daily_carb_total %> grams</br>
-  calories: <%= @user.daily_calorie_total %></br>
-  fat: <%= @user.daily_fat_total %> grams</br>
-  protein: <%= @user.daily_protein_total %> grams</br>
-  fiber: <%= @user.daily_fiber_total %> grams</br>
+  calories: <%= @user.daily_calorie_total %>
+  	<%if @goal.calories.to_f == 0%>
+  		(no goal set)
+  		</br>
+        <%= link_to "Add Goal", edit_goal_path(@goal) %>
+    	</br>
+    <%else%>
+    	(<%= unless @goal.calories.to_f == 0 then(@user.daily_calorie_total.to_f / @goal.calories.to_f * 100).round(0) end%>%).	</br>Your goal: <%= @goal.calories %>.</br>
+    <%end%>
+  </br>
+  carbohydrates: <%= @user.daily_carb_total %> grams 
+  	<%if @goal.carbohydrates.to_f == 0%>
+  		(no goal set)
+  		</br>
+        <%= link_to "Add Goal", edit_goal_path(@goal) %>
+    	</br>
+    <%else%>
+    	(<%= unless @goal.carbohydrates.to_f == 0 then (@user.daily_carb_total.to_f / @goal.carbohydrates.to_f * 100).round(0) end %>%).</br>Your goal: <%= @goal.carbohydrates %>grams.</br>
+    <%end%>
+  </br>
+  fat: <%= @user.daily_fat_total %> grams 
+  	<%if @goal.calories.to_f == 0%>
+  		(no goal set)
+  		</br>
+        <%= link_to "Add Goal", edit_goal_path(@goal) %>
+    	</br>
+    <%else%>
+    	(<%= unless @goal.fat.to_f == 0 then (@user.daily_fat_total.to_f / @goal.fat.to_f * 100).round(0) end %>%).</br>Your goal: <%= @goal.fat %> grams.</br>
+    <%end%>
+  </br>
+  protein: <%= @user.daily_protein_total %> grams 
+  	<%if @goal.calories.to_f == 0%>
+  		(no goal set)
+  		</br>
+        <%= link_to "Add Goal", edit_goal_path(@goal) %>
+    	</br>
+    <%else%>
+    	(<%= unless @goal.protein.to_f == 0 then (@user.daily_protein_total.to_f / @goal.protein.to_f * 100).round(0) end %>%).</br>Your goal: <%= @goal.protein %> grams.</br>
+    	<%end%>
+  </br>
+  fiber: <%= @user.daily_fiber_total %> grams 
+  	<%if @goal.calories.to_f == 0%>
+  		(no goal set)
+  		</br>
+        <%= link_to "Add Goal", edit_goal_path(@goal) %>
+    	</br>
+    <%else%>
+    	(<%= unless @goal.fiber.to_f == 0 then (@user.daily_fiber_total.to_f / @goal.fiber.to_f * 100).round(0) end %>%).</br>Your goal: <%= @goal.fiber %> grams.</br>
+    <%end%>
 <% end %>

@@ -5,6 +5,7 @@ describe "user profile", :vcr do
 
   before do
     @user = FactoryGirl.build(:user)
+    @goal = FactoryGirl.create(:goal)
     login_user(user)
     visit login_path
     click_on "Sign in with Fitbit"
@@ -15,8 +16,8 @@ describe "user profile", :vcr do
     expect(page).to have_content user.name
   end
  
-  it "has a button to set goals" do 
-    expect(page).to have_link "Set Goal"
+  it "has a button to set goals" do
+    expect(page).to have_link "View Goal"
   end
   
 end
