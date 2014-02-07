@@ -18,7 +18,7 @@ class Achievement
   end
 
   def sleep_percentage
-    goal.sleep == 0 ? 0 : (todays_stats.sleep.to_f / goal.sleep.to_f) * 100
+    goal.sleep == 0 ? 0 : (todays_stats.sleep / goal.sleep) * 100
   end
 
 end

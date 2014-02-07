@@ -76,10 +76,10 @@ Signed in as <%= @user.name %>!
                 <a href="#project-two">
                     <div class="main-stat">
                         <h1>
-                            <%if @no_sleep_goal%>
+                            <%if @goal.sleep == 0 %>
                                 <%= link_to "Add Goal", edit_goal_path(@goal) %>
                             <%else%>
-                                <%= @sleep_percentage %>%
+                                <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>
                             <%end%>
                         </h1>
                     </div>
