@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   end
 
   def fitbit_stats
-    Activity.make_request(self)    
+    Activity.make_request(self)
   end
 
   def user_goal
@@ -68,6 +68,10 @@ class User < ActiveRecord::Base
 
   def average_sleep
     stats.average('sleep').to_f
+  end
+
+  def achievement
+    Achievement.new(self)
   end
 
 end

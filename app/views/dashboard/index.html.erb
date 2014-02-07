@@ -44,7 +44,7 @@ Signed in as <%= @user.name %>!
                 <h3><a href="#project-one">Steps</a>
                 </h3>
                 <p>Steps: <%= @stats.steps %> steps today. 
-                    <%if @no_steps_goal%>
+                    <%if @goal.steps == 0 %>
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
                         Your goal is <%= @goal.steps %> steps.
@@ -56,7 +56,7 @@ Signed in as <%= @user.name %>!
                             <%if @no_steps_goal%>
                                 <%= link_to "Add Goal", edit_goal_path(@goal) %>
                             <%else%>
-                                <%= @steps_percentage %>%
+                                <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>
                             <%end%>
                         </h1>
                     </div>
