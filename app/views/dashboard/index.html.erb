@@ -56,7 +56,7 @@ Signed in as <%= @user.name %>!
                             <%if @no_steps_goal%>
                                 <%= link_to "Add Goal", edit_goal_path(@goal) %>
                             <%else%>
-                                <%= @step_percentage %>%
+                                <%= @steps_percentage %>%
                             <%end%>
                         </h1>
                     </div>
