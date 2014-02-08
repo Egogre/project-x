@@ -23,8 +23,9 @@
 <body>
 
 <!-- <div class="container"> -->
-
-<%= render partial: 'layouts/navbar' %>
+<% if current_user %>
+  <%= render partial: 'layouts/navbar' %> 
+<% end %>
 
   <%= yield %>
 
