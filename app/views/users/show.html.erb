@@ -1,8 +1,16 @@
-<%= @user.name %>
+<br>
+<br>
+<br>
+<br>
 
-<% if @goal.empty? %>
-  <%= link_to 'Set Goal', new_goal_path %>    
-<% else %>
-  <%= link_to 'View Goal', goal_path(@goal.id) %>
-<% end %>
-<p><%= link_to 'Home', root_path %></p>
+<div class="container">
+
+  <%= @user.name %><br>
+
+  <% if @goal.empty? %>
+    <%= link_to 'Set Goal', new_goal_path %>    
+  <% else %>
+    <%= link_to 'View Goal', goal_path(@goal.id) %>
+  <% end %>
+
+</div>

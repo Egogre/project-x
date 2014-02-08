@@ -11,9 +11,45 @@
  *= require_self
  *= require_tree .
  */
+* {
+  font-family: 'Muli', sans-serif;
+ }
+
 
 .main-stat {
   text-align: center;
   border: solid black;
-  padding: 150px;
+  width:500px; 
+  height:400px;
+}
+
+#fitbit-button {
+  margin-top: 5px;
+  color: #fff;
+  background-color: #3b5998;
+  border-color: rgba(0,0,0,0.2);
+  position: relative;
+  text-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4285;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#sign-in-status {
+  color: white;
+  vertical-align: middle;
+  text-align: middle;
 }

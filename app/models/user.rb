@@ -27,7 +27,9 @@ class User < ActiveRecord::Base
 
   def calorie_total_for(date)
     todays_foods = foods.where(consumed_on: date)
-    (todays_foods.collect { |food| food.calories }.inject(:+)).round(0)
+    unless todays_foods.empty?
+      (todays_foods.collect { |food| food.calories }.inject(:+)).round(0)
+    end
   end
 
   # def daily_calorie_total
@@ -36,28 +38,28 @@ class User < ActiveRecord::Base
 
   def protein_total_for(date)
     todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.nil?
+    unless todays_foods.empty?
       (todays_foods.collect { |food| food.protein }.inject(:+)).round(0)
     end
   end
 
   def fiber_total_for(date)
     todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.nil?
+    unless todays_foods.empty?
       (todays_foods.collect { |food| food.fiber }.inject(:+)).round(0)
     end
   end
 
   def fat_total_for(date)
     todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.nil?
+    unless todays_foods.empty?
       (todays_foods.collect { |food| food.fat }.inject(:+)).round(0)
     end
   end
 
   def carb_total_for(date)
     todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.nil?
+    unless todays_foods.empty?
       (todays_foods.collect { |food| food.carbs }.inject(:+)).round(0)
     end
   end
