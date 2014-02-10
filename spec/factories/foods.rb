@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :food do
     user_id 1
-    consumed_on "2014-02-03"
+    consumed_on Date.today
     name "MyString"
     quantity 1
     serving_description "MyString"

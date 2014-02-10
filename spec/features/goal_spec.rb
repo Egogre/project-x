@@ -5,7 +5,7 @@ describe "goal setting page", :vcr do
 
   before do
     @user = FactoryGirl.build(:user)
-    @goal = FactoryGirl.create(:goal)
+    @goal = FactoryGirl.create(:goal, user_id: user.id)
     @food = FactoryGirl.create(:food)
     login_user(user)
     visit login_path
@@ -29,7 +29,7 @@ describe "goal setting page", :vcr do
     click_on 'Update Goal'
     expect(page).to have_content("Your Goals")
     within('.current-goal') do
-      expect(page).to have_content(user.goals.first.steps)
+      expect(page).to have_content(@goal.steps)
     end
   end
 
