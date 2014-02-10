@@ -78,7 +78,7 @@ class User < ActiveRecord::Base
   end
 
   def achievement
-    Achievement.new(self)
+    @achievement ||= Achievement.new(self)
   end
 
   def todays_foods(date)
