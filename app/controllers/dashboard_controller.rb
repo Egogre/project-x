@@ -7,6 +7,7 @@ class DashboardController < ApplicationController
       @stats = current_user.fitbit_stats
       @user = current_user
       @goal = Goal.first_or_create(user_id: @user.id)
+      @json = current_user.json
     end
   end
 

@@ -18,11 +18,11 @@ class User < ActiveRecord::Base
   end
 
   def fitbit_stats
-    Activity.make_request(self)
+    @fitbit_status ||= Activity.make_request(self)
   end
 
   def user_goal
-    Goal.where(user_id: self.id).first
+    @goal ||= Goal.where(user_id: self.id).first
   end
 
   def calorie_total_for(date)
@@ -83,6 +83,22 @@ class User < ActiveRecord::Base
 
   def todays_foods(date)
     foods.where(consumed_on: date)
+  end
+
+  def json
+    {
+      "steps" => steps_array
+    }.to_json
+  end
+
+  def steps_array
+    if user_goal.steps == 0
+      [0,0]
+    elsif user_goal.steps < fitbit_stats.steps
+      [fitbit_stats.steps, 0]
+    else
+      [fitbit_stats.steps, (user_goal.steps - fitbit_stats.steps)]
+    end
   end
 
 end
