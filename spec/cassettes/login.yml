@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:9292/api/v1/activity?request%5Bdate%5D=2014-02-08&request%5Bsecret%5D=5a1c57cc622397a4ccd2fe3c42a24917&request%5Btoken%5D=128e556de6e068c19e29beb380de56f1&request%5Buid%5D=25WQ2X
+    uri: http://localhost:9292/api/v1/activity?request%5Bdate%5D=2014-02-10&request%5Bsecret%5D=5a1c57cc622397a4ccd2fe3c42a24917&request%5Btoken%5D=128e556de6e068c19e29beb380de56f1&request%5Buid%5D=25WQ2X
     body:
       encoding: US-ASCII
       string: ''
@@ -29,17 +29,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"461a1a3550c046fdb9806e9da154c6cf"'
+      - '"752328e2571aa1314702d592278df85d"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 756676ee-a179-4e9c-af3e-4123202b27e5
+      - ac62f5d2-4179-41c9-b5c7-e414f91300e0
       X-Runtime:
-      - '0.379837'
+      - '0.772804'
       Server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-06-27)
       Date:
-      - Sat, 08 Feb 2014 20:14:53 GMT
+      - Mon, 10 Feb 2014 23:19:15 GMT
       Content-Length:
       - '59'
       Connection:
@@ -48,7 +48,7 @@ http_interactions:
       - request_method=GET; path=/
     body:
       encoding: UTF-8
-      string: '{"sleep_on_date":0,"steps_on_date":4735,"status":"success"}'
+      string: '{"sleep_on_date":4,"steps_on_date":3422,"status":"success"}'
     http_version: 
-  recorded_at: Sat, 08 Feb 2014 20:14:53 GMT
+  recorded_at: Mon, 10 Feb 2014 23:19:15 GMT
 recorded_with: VCR 2.8.0

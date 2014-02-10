@@ -23,19 +23,9 @@
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
                         Your goal is <%= @goal.steps %> steps.
+                        Acheivement <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>
                     <%end%>
                 </p>
-                <a href="#project-one">
-                    <div class="main-stat">
-                        <h1>
-                            <%if @no_steps_goal%>
-                                <%= link_to "Add Goal", edit_goal_path(@goal) %>
-                            <%else%>
-                                <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>
-                            <%end%>
-                        </h1>
-                    </div>
-                </a>
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item">
@@ -45,20 +35,9 @@
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
                         Your goal is <%= @goal.sleep %> hours.
+                        Achievement <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>
                     <%end%>
                 </p>
-                <a href="#project-two">
-                    <div class="main-stat">
-                        <h1>
-                            <%if @goal.sleep == 0 %>
-                                <%= link_to "Add Goal", edit_goal_path(@goal) %>
-                            <%else%>
-                                <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>
-                            <%end%>
-                        </h1>
-                    </div>
-                </a>
-
             </div>
 
         </div>
@@ -68,12 +47,8 @@
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <h3>Food</h3>
                 <p>A Summary of your total nutritional intake for today.</p>
-                <a href="#project-three">
-                    <div class="main-stat">
-                        <h4><p id='add-food-button'><%= link_to "Add Food", foods_path %></p></h4>
-                        <%= render partial: 'foods/daily_total' %>
-                    </div>
-                </a>
+                    <h4><p id='add-food-button'><%= link_to "Add Food", foods_path %></p></h4>
+                    <%= render partial: 'foods/daily_total' %>
                 
             </div>
 

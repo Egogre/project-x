@@ -13,11 +13,19 @@ module Foods
     end
 
     def servings_array
-      @servings.map { |serving| [serving["serving_description"], serving["serving_id"]] }
+      if servings.kind_of?(Array)
+        servings.map { |serving| [serving["serving_description"], serving["serving_id"]] }
+      else
+        [[servings["serving_description"], servings["serving_id"]]]
+      end
     end
 
     def find_serving(id)
-      servings.find { |serving| serving['serving_id'] == id }
+      if servings.kind_of?(Array)
+        servings.find { |serving| serving['serving_id'] == id }
+      else
+        servings
+      end
     end
 
   end

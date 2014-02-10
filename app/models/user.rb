@@ -26,41 +26,42 @@ class User < ActiveRecord::Base
   end
 
   def calorie_total_for(date)
-    todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.empty?
-      (todays_foods.collect { |food| food.calories }.inject(:+)).round(0)
+    if todays_foods(date).empty?
+      0
+    else
+      (todays_foods(date).collect { |food| food.calories }.inject(:+)).round(0)
     end
   end
 
-  # def daily_calorie_total
-  #   (foods.collect { |food| food.calories }.inject(:+)).round(0)
-  # end
-
   def protein_total_for(date)
-    todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.empty?
-      (todays_foods.collect { |food| food.protein }.inject(:+)).round(0)
+    if todays_foods(date).empty?
+      0
+    else
+      (todays_foods(date).collect { |food| food.protein }.inject(:+)).round(0)
     end
   end
 
   def fiber_total_for(date)
-    todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.empty?
-      (todays_foods.collect { |food| food.fiber }.inject(:+)).round(0)
+    if todays_foods(date).empty?
+      0
+    else
+      (todays_foods(date).collect { |food| food.fiber }.inject(:+)).round(0)
     end
   end
 
   def fat_total_for(date)
-    todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.empty?
-      (todays_foods.collect { |food| food.fat }.inject(:+)).round(0)
+    if todays_foods(date).empty?
+      0
+    else
+      (todays_foods(date).collect { |food| food.fat }.inject(:+)).round(0)
     end
   end
 
   def carb_total_for(date)
-    todays_foods = foods.where(consumed_on: date)
-    unless todays_foods.empty?
-      (todays_foods.collect { |food| food.carbs }.inject(:+)).round(0)
+    if todays_foods(date).empty?
+      0
+    else
+      (todays_foods(date).collect { |food| food.carbs }.inject(:+)).round(0)
     end
   end
 
@@ -73,7 +74,11 @@ class User < ActiveRecord::Base
   end
 
   def achievement
-    Achievement.new(self)
+    @achievement ||= Achievement.new(self)
+  end
+
+  def todays_foods(date)
+    foods.where(consumed_on: date)
   end
 
 end
