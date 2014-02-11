@@ -18,11 +18,11 @@ class User < ActiveRecord::Base
   end
 
   def fitbit_stats
-    Activity.make_request(self)
+    @fitbit_status ||= Activity.make_request(self)
   end
 
   def user_goal
-    Goal.where(user_id: self.id).first
+    @goal ||= Goal.where(user_id: self.id).first
   end
 
   def calorie_total_for(date)
@@ -79,6 +79,33 @@ class User < ActiveRecord::Base
 
   def todays_foods(date)
     foods.where(consumed_on: date)
+  end
+
+  def data
+    {
+      "steps" => steps_array,
+      "sleep" => [0.01,7]
+    }
+  end
+
+  def steps_array
+    if user_goal.steps == 0
+      [0,0]
+    elsif user_goal.steps < fitbit_stats.steps
+      [fitbit_stats.steps, 1]
+    else
+      [fitbit_stats.steps, (user_goal.steps - fitbit_stats.steps)]
+    end
+  end
+
+  def sleep_array
+    if user_goal.sleep == 0
+      [0,0]
+    elsif user_goal.sleep < fitbit_stats.sleep
+      [fitbit_stats.sleep, 1]
+    else
+      [fitbit_stats.sleep + 0.01, (user_goal.sleep - fitbit_stats.sleep)]
+    end
   end
 
 end

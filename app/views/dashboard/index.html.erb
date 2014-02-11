@@ -17,25 +17,70 @@
         <div class="row">
 
             <div class="col-lg-6 col-md-6 portfolio-item">
+
                 <h3>Steps</h3>
-                <p>Steps: <%= @stats.steps %> steps today. 
+                <div id="step-chart" style="
+                margin-top: -150px;
+                margin-left: -150px;
+                ">
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            var steps = new Raphael("step-chart");
+                                steps.piechart(
+                                    320, 
+                                    240, 
+                                    100, 
+                                    <%= @user.data["steps"] %>,
+                                    {
+                                        legend: [
+                                            "Steps Taken - <%= @stats.steps %>", 
+                                            "Remaining - <%= @user.data["steps"][1] -1 %>"
+                                            ],
+                                        colors: ["#76FA11", "#1E8CFA"]
+                                    });
+                            });
+                    </script>
+                </div>
+                <p><%= @stats.steps %> steps today.
                     <%if @goal.steps == 0 %>
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
-                        Your goal is <%= @goal.steps %> steps.
-                        Acheivement <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>
+                        <%= @goal.steps %> is your goal.
+                        <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>Achievement
                     <%end%>
                 </p>
             </div>
 
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <h3>Sleep</h3>
-                <p>Sleep: <%= @stats.sleep %> hours last night. 
+                <div id="sleep-chart" style="
+                margin-top: -150px;
+                margin-left: -150px;
+                ">
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            var sleep = new Raphael("sleep-chart");
+                                sleep.piechart(
+                                    320, 
+                                    240, 
+                                    100, 
+                                    <%= @user.data["sleep"] %>,
+                                    {
+                                        legend: [
+                                            "Sleep last night - <%= @stats.sleep %>", 
+                                            "Remaining - <%= @user.data["sleep"][1] %>"
+                                            ],
+                                        colors: ["#76FA11", "#1E8CFA"]
+                                    });
+                            });
+                    </script>
+                </div>
+                <p><%= @stats.sleep %> hours of sleep last night.
                     <%if @no_sleep_goal%>
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
                     <%else%>
-                        Your goal is <%= @goal.sleep %> hours.
-                        Achievement <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>
+                        <%= @goal.sleep %> hours is your goal.
+                        <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>Achvievement. 
                     <%end%>
                 </p>
             </div>
@@ -52,18 +97,6 @@
                 
             </div>
 
-            <div class="col-lg-6 col-md-6 portfolio-item">
-                <h3>Water</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#project-four">
-                    <div class="main-stat">
-                        <h4>Did you drink enough water today?</h4>
-                        </br>
-                        <button onclick="alert('YAY! Good for you!');">Yes :-)</button>
-                        <button onclick="alert('Oh no! Drink more water!');">No  :-(</button>
-                    </div>
-                </a>
-            </div>
 
         </div>
 
@@ -81,6 +114,4 @@
     <!-- /.container -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
 

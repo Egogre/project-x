@@ -17,7 +17,7 @@ class FatsecretAPI
   def self.food_create_params(serving_id)
     search_item = @food
     serving = search_item.find_serving(serving_id)
-    
+
     { food_id: search_item.id,
       name: search_item.name,
       serving_description: serving['serving_description'],
