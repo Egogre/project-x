@@ -53,3 +53,13 @@
   vertical-align: middle;
   text-align: middle;
 }
+
+/*------------Custom CSS-------------*/
+
+#logo {
+  margin-left: -55px;
+}
+
+#title-name {
+  font-weight: lighter;
+}

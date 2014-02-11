@@ -92,9 +92,11 @@ class User < ActiveRecord::Base
 
   def steps_array
     if user_goal.steps == 0
-      [0,0]
+      [0.01,0.01]
     elsif user_goal.steps < fitbit_stats.steps
-      [fitbit_stats.steps, 1]
+      [fitbit_stats.steps, 0.01]
+    elsif fitbit_stats.steps == 0
+      [0.01, (user_goal.steps - fitbit_stats.steps)]
     else
       [fitbit_stats.steps, (user_goal.steps - fitbit_stats.steps)]
     end
