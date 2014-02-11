@@ -21,6 +21,11 @@ class Achievement
     goal.sleep == 0 ? 0 : (todays_stats.sleep / goal.sleep * 100).round(1)
   end
 
+  def sleep_short_pretty
+    sec_short = (goal.sleep - todays_stats.sleep)*3600
+    Time.at(sec_short).utc.strftime("%k:%M")
+  end
+
   def calories_percentage
     goal.calories == 0 ? 0 : (@user.calorie_total_for(Date.today).to_f / goal.calories * 100).round(1)
   end

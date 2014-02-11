@@ -73,15 +73,15 @@
                 sleep_array,
                 {
                   legend: [
-                    "Sleep last night - <%= @stats.sleep %>", 
-                    "Short of Goal - <%= @user.sleep_array[1].round(1) %>"
+                    "Sleep last night - <%= @stats.sleep_pretty %>", 
+                    "Short of Goal - <%= @user.achievement.sleep_short_pretty %>"
                   ],
                 colors: colors(sleep_array)
               });
             });
           </script>
         </div>
-        <p><%= @stats.sleep %> hours of sleep last night.
+        <p><%= @stats.sleep_pretty %> of sleep last night.
           <%if @no_sleep_goal%>
             You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
           <%else%>
