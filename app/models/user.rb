@@ -82,12 +82,12 @@ class User < ActiveRecord::Base
   end
 
 
-  def steps_color_array
+  def goal_color
     if steps_array.first > steps_array.last
-      ["#76FA11", "#1E8CFA"]
+      ['#76FA11', '#1E8CFA']
     else
-       ["#1E8CFA", "#76FA11"]
-     end
+      ['#1E8CFA', '#76FA11']
+    end
   end
 
   def steps_array
@@ -103,8 +103,8 @@ class User < ActiveRecord::Base
   def sleep_array
     if user_goal.sleep == 0
       [0,0]
-    elsif user_goal.sleep < fitbit_stats.sleep
-      [fitbit_stats.sleep, 1]
+    elsif user_goal.sleep <= fitbit_stats.sleep
+      [fitbit_stats.sleep, 0.01]
     else
       [fitbit_stats.sleep + 0.01, (user_goal.sleep - fitbit_stats.sleep)]
     end

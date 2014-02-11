@@ -27,18 +27,27 @@
                 ">
                     <script type="text/javascript">
                         $(document).ready(function(){
+                            var steps_array = <%= @user.steps_array %>;
+
+                            var colors = function(steps_array){
+                                if(steps_array[0] > steps_array[1]){
+                                    return ["#76FA11", "#1E8CFA"];
+                                }else{
+                                    return ["#1E8CFA", "#76FA11"];
+                                };
+                            };
                             var steps = new Raphael("step-chart");
                                 steps.piechart(
                                     320, 
                                     240, 
                                     100, 
-                                    <%= @user.steps_array %>,
+                                    steps_array,
                                     {
                                         legend: [
                                             "Steps Taken - <%= @stats.steps %>", 
                                             "Remaining - <%= @user.steps_array[1] -1 %>"
                                             ],
-                                        colors: ["#76FA11", "#1E8CFA"]
+                                        colors: colors(steps_array)
                                     });
                             });
                     </script>
@@ -70,7 +79,7 @@
                                     {
                                         legend: [
                                             "Sleep last night - <%= @stats.sleep %>", 
-                                            "Remaining - <%= @user.sleep_array[1] %>"
+                                            "Remaining - <%= @user.sleep_array[1].round(1) %>"
                                             ],
                                         colors: ["#76FA11", "#1E8CFA"]
                                     });
@@ -141,7 +150,11 @@
                                 }
                                 var ctx = document.getElementById("calorie-chart").getContext("2d");
                                 var myNewChart = new Chart(ctx).Bar(data, { 
-                                    barValueSpacing : 150
+                                    barValueSpacing : 150,
+                                    scaleOverride : true,
+                                    scaleSteps : 10,
+                                    scaleStepWidth : <%= @goal.calories / 5 %>,
+                                    scaleStartValue : 0
                                 });
                             });
                     </script>
