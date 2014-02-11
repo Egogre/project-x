@@ -85,17 +85,17 @@ class User < ActiveRecord::Base
     foods.where(consumed_on: date)
   end
 
-  def json
+  def data
     {
       "steps" => steps_array
-    }.to_json
+    }
   end
 
   def steps_array
     if user_goal.steps == 0
       [0,0]
     elsif user_goal.steps < fitbit_stats.steps
-      [fitbit_stats.steps, 0]
+      [fitbit_stats.steps, 1]
     else
       [fitbit_stats.steps, (user_goal.steps - fitbit_stats.steps)]
     end

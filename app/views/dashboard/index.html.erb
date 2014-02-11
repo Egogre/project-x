@@ -28,14 +28,6 @@
 
 Signed in as <%= @user.name %>!
 
-<script type="text/javascript">
-    // Creates canvas 640 × 480 at 10, 50
-    var r = Raphael(10, 50, 640, 480);
-    // Creates pie chart at with center at 320, 200,
-    // radius 100 and data: [55, 20, 13, 32, 5, 1, 2]
-    r.piechart(320, 240, 100, [55, 20, 13, 32, 5, 1, 2]);
-</script>
-
     <div class="container">
 
         <div class="row">
@@ -51,6 +43,28 @@ Signed in as <%= @user.name %>!
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <h3><a href="#project-one">Steps</a>
                 </h3>
+                <div id="step-chart" style="
+                margin-top: -150px;
+                margin-left: -150px;
+                ">
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            var steps = new Raphael("step-chart");
+                                steps.piechart(
+                                    320, 
+                                    240, 
+                                    100, 
+                                    <%= @user.data["steps"] %>,
+                                    {
+                                        legend: [
+                                            "Steps Taken - <%= @stats.steps %>", 
+                                            "Remaining - <%= @user.data["steps"][1] -1 %>"
+                                            ],
+                                        colors: ["#76FA11", "#1E8CFA"]
+                                    });
+                            });
+                    </script>
+                </div>
                 <p>Steps: <%= @stats.steps %> steps today. 
                     <%if @goal.steps == 0 %>
                         You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
@@ -86,21 +100,6 @@ Signed in as <%= @user.name %>!
                     <%= render partial: 'foods/daily_total' %>
                 
             </div>
-
-            <div class="col-lg-6 col-md-6 portfolio-item">
-                <h3><a href="#project-four">Water</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#project-four">
-                    <div class="main-stat">
-                        <h4>Did you drink enough water today?</h4>
-                        </br>
-                        <button onclick="alert('YAY! Good for you!');">Yes :-)</button>
-                        <button onclick="alert('Oh no! Drink more water!');">No  :-(</button>
-                    </div>
-                </a>
-            </div>
-
         </div>
 
         <hr>
@@ -117,6 +116,4 @@ Signed in as <%= @user.name %>!
     <!-- /.container -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
 
