@@ -9,7 +9,9 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">Health Dashboard</h1>
+                <h1>Health Dashboard</h1>
+                <h4><span style="color: #1E8CFA">Goal</span> vs. <span style="color: #76FA11">Actual</span></h4>
+                <hr />
             </div>
 
         </div>
@@ -30,11 +32,11 @@
                                     320, 
                                     240, 
                                     100, 
-                                    <%= @user.data["steps"] %>,
+                                    <%= @user.steps_array %>,
                                     {
                                         legend: [
                                             "Steps Taken - <%= @stats.steps %>", 
-                                            "Remaining - <%= @user.data["steps"][1] -1 %>"
+                                            "Remaining - <%= @user.steps_array[1] -1 %>"
                                             ],
                                         colors: ["#76FA11", "#1E8CFA"]
                                     });
@@ -64,11 +66,11 @@
                                     320, 
                                     240, 
                                     100, 
-                                    <%= @user.data["sleep"] %>,
+                                    <%= @user.sleep_array %>,
                                     {
                                         legend: [
                                             "Sleep last night - <%= @stats.sleep %>", 
-                                            "Remaining - <%= @user.data["sleep"][1] %>"
+                                            "Remaining - <%= @user.sleep_array[1] %>"
                                             ],
                                         colors: ["#76FA11", "#1E8CFA"]
                                     });
@@ -90,33 +92,71 @@
         <div class="row">
 
             <div class="col-lg-6 col-md-6 portfolio-item">
-                <h3>Food</h3>
-                <div id="food-chart" style="
-                margin-top: -150px;
-                margin-left: -150px;
-                ">
+                <h3>Nutrition</h3>
+                <canvas id="food-chart" width="500" height="300">
 
-                <script type="text/javascript">
-                        $(document).ready(function(){
-                            var food = new Raphael("food-chart");
-                                food.barchart(
-                                    320, 
-                                    240, 
-                                    100,
-                                    100, 
-                                    [<%= @user.food_goal_data %>],
-                                    {});
+                    <script type="text/javascript">
+                            $(document).ready(function(){
+                                var data = {
+                                    labels : ["Carbs", "Fat", "Protein", "Fiber"],
+                                    datasets : [
+                                        {
+                                            fillColor : "rgba(30,140,250,0.9)",
+                                            strokeColor : "rgba(220,220,220,1)",
+                                            data : <%= @user.food_goals_array %>
+                                        },
+                                        {
+                                            fillColor : "rgba(118,250,17, 0.9)",
+                                            strokeColor : "rgba(151,187,205,1)",
+                                            data : <%= @user.food_eaten_array %>                                    }
+                                    ]
+                                }
+                                var ctx = document.getElementById("food-chart").getContext("2d");
+                                var myNewChart = new Chart(ctx).Bar(data);
                             });
-                </script>
-                </div>
-                <p>A Summary of your total nutritional intake for today.</p>
-                    <h4><p id='add-food-button'><%= link_to "Add Food", foods_path %></p></h4>
-                    <%= render partial: 'foods/daily_total' %>
+                    </script>
+                </canvas>
+                     
+            </div>
+
+            <div class="col-lg-6 col-md-6 portfolio-item">
+                <h3>Calories</h3>
+                <canvas id="calorie-chart" width="500" height="300">
+
+                    <script type="text/javascript">
+                            $(document).ready(function(){
+                                var data = {
+                                    labels : ["Calories"],
+                                    datasets : [
+                                        {
+                                            fillColor : "rgba(30,140,250,0.9)",
+                                            strokeColor : "rgba(220,220,220,1)",
+                                            data : [<%= @goal.calories %>]
+                                        },
+                                        {
+                                            fillColor : "rgba(118,250,17, 0.9)",
+                                            strokeColor : "rgba(151,187,205,1)",
+                                            data : [<%= @user.calorie_total_for(Date.today) %>]                                    }
+                                    ]
+                                }
+                                var ctx = document.getElementById("calorie-chart").getContext("2d");
+                                var myNewChart = new Chart(ctx).Bar(data, { 
+                                    barValueSpacing : 150
+                                });
+                            });
+                    </script>
+                </canvas>
+            </div>
+
+            <div>
+                <h3>Today's foods (<%= link_to "Add Food", foods_path, id:"add-food-button"  %>)</h3>
+                <%= render @food %>
                 
             </div>
 
 
-        </div>
+
+    </div>
 
         <hr>
 

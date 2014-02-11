@@ -33,13 +33,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b79d1082-d22d-48ee-be21-7e3d542cf9de
+      - 7cd5a2bf-578d-44b7-aac3-4f840be70809
       X-Runtime:
-      - '0.402081'
+      - '0.414003'
       Server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-06-27)
       Date:
-      - Mon, 10 Feb 2014 23:19:16 GMT
+      - Tue, 11 Feb 2014 03:54:44 GMT
       Content-Length:
       - '59'
       Connection:
@@ -50,5 +50,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"sleep_on_date":4,"steps_on_date":3422,"status":"success"}'
     http_version: 
-  recorded_at: Mon, 10 Feb 2014 23:19:16 GMT
+  recorded_at: Tue, 11 Feb 2014 03:54:44 GMT
 recorded_with: VCR 2.8.0

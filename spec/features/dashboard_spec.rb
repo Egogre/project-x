@@ -23,14 +23,6 @@ describe "dashboard index", :vcr do
     expect(page).to have_content 'View My Profile'
   end
 
-  it "has a User's food daily food info" do 
-    expect(page).to have_content(@user.calorie_total_for(Date.today))
-    expect(page).to have_content(@user.protein_total_for(Date.today))
-    expect(page).to have_content(@user.fiber_total_for(Date.today))
-    expect(page).to have_content(@user.fat_total_for(Date.today))
-    expect(page).to have_content(@user.carb_total_for(Date.today))
-  end
-
   it "has a User's goals" do
     expect(page).to have_content(@goal.steps)
     expect(page).to have_content(@goal.sleep)

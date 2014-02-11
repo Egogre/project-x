@@ -81,13 +81,6 @@ class User < ActiveRecord::Base
     foods.where(consumed_on: date)
   end
 
-  def data
-    {
-      "steps" => steps_array,
-      "sleep" => sleep_array,
-      "steps_color" => ["#76FA11", "#1E8CFA"]
-    }
-  end
 
   def steps_color_array
     if steps_array.first > steps_array.last
@@ -117,8 +110,13 @@ class User < ActiveRecord::Base
     end
   end
 
-  def food_goal_data
-    [user_goal.fiber, user_goal.fat, user_goal.protein, user_goal.protein]
+  def food_goals_array
+    [user_goal.carbohydrates, user_goal.fat, user_goal.protein, user_goal.fiber]
   end
+
+  def food_eaten_array
+    [self.carb_total_for(Date.today), self.fat_total_for(Date.today), self.protein_total_for(Date.today), self.fiber_total_for(Date.today)]
+  end
+
 
 end
