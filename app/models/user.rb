@@ -84,8 +84,17 @@ class User < ActiveRecord::Base
   def data
     {
       "steps" => steps_array,
-      "sleep" => [0.01,7]
+      "sleep" => sleep_array,
+      "steps_color" => ["#76FA11", "#1E8CFA"]
     }
+  end
+
+  def steps_color_array
+    if steps_array.first > steps_array.last
+      ["#76FA11", "#1E8CFA"]
+    else
+       ["#1E8CFA", "#76FA11"]
+     end
   end
 
   def steps_array
@@ -106,6 +115,10 @@ class User < ActiveRecord::Base
     else
       [fitbit_stats.sleep + 0.01, (user_goal.sleep - fitbit_stats.sleep)]
     end
+  end
+
+  def food_goal_data
+    [user_goal.fiber, user_goal.fat, user_goal.protein, user_goal.protein]
   end
 
 end

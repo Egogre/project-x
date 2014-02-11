@@ -91,6 +91,24 @@
 
             <div class="col-lg-6 col-md-6 portfolio-item">
                 <h3>Food</h3>
+                <div id="food-chart" style="
+                margin-top: -150px;
+                margin-left: -150px;
+                ">
+
+                <script type="text/javascript">
+                        $(document).ready(function(){
+                            var food = new Raphael("food-chart");
+                                food.barchart(
+                                    320, 
+                                    240, 
+                                    100,
+                                    100, 
+                                    [<%= @user.food_goal_data %>],
+                                    {});
+                            });
+                </script>
+                </div>
                 <p>A Summary of your total nutritional intake for today.</p>
                     <h4><p id='add-food-button'><%= link_to "Add Food", foods_path %></p></h4>
                     <%= render partial: 'foods/daily_total' %>
