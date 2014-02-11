@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://fitbit-service.herokuapp.com/api/v1/activity?request%5Bdate%5D=2014-02-11&request%5Bsecret%5D=5a1c57cc622397a4ccd2fe3c42a24917&request%5Btoken%5D=128e556de6e068c19e29beb380de56f1&request%5Buid%5D=25WQ2X
+    uri: http://localhost:9292/api/v1/activity?request%5Bdate%5D=2014-02-11&request%5Bsecret%5D=5a1c57cc622397a4ccd2fe3c42a24917&request%5Btoken%5D=128e556de6e068c19e29beb380de56f1&request%5Buid%5D=25WQ2X
     body:
       encoding: US-ASCII
       string: ''
@@ -18,37 +18,37 @@ http_interactions:
       code: 200
       message: 'OK '
     headers:
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Tue, 11 Feb 2014 20:38:23 GMT
-      Etag:
-      - '"d4b12a88d75dcd95806b876e697c9a37"'
-      Server:
-      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
-      Set-Cookie:
-      - request_method=GET; path=/
-      X-Content-Type-Options:
-      - nosniff
       X-Frame-Options:
       - SAMEORIGIN
-      X-Request-Id:
-      - e8898e14-db26-4d1f-ad15-f2443b93b988
-      X-Runtime:
-      - '0.363840'
-      X-Ua-Compatible:
-      - chrome=1
       X-Xss-Protection:
       - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"d937242c6b4a937b045e662da887ba9f"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 335a68b8-481f-43bb-b00e-6a1c652d48db
+      X-Runtime:
+      - '1.436724'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-06-27)
+      Date:
+      - Tue, 11 Feb 2014 21:48:22 GMT
       Content-Length:
-      - '59'
+      - '75'
       Connection:
-      - keep-alive
+      - Keep-Alive
+      Set-Cookie:
+      - request_method=GET; path=/
     body:
       encoding: UTF-8
-      string: '{"sleep_on_date":4,"steps_on_date":3155,"status":"success"}'
+      string: '{"sleep_on_date":4.316666666666666,"steps_on_date":3155,"status":"success"}'
     http_version: 
-  recorded_at: Tue, 11 Feb 2014 20:38:24 GMT
+  recorded_at: Tue, 11 Feb 2014 21:48:22 GMT
 recorded_with: VCR 2.8.0
