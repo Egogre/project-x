@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140206232025) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "foods", force: true do |t|
     t.integer  "user_id"
     t.date     "consumed_on"
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140206232025) do
     t.float    "fiber"
   end
 
-  add_index "foods", ["user_id"], name: "index_foods_on_user_id"
+  add_index "foods", ["user_id"], name: "index_foods_on_user_id", using: :btree
 
   create_table "goals", force: true do |t|
     t.integer "steps"
@@ -52,7 +55,7 @@ ActiveRecord::Schema.define(version: 20140206232025) do
     t.datetime "updated_at"
   end
 
-  add_index "stats", ["user_id"], name: "index_stats_on_user_id"
+  add_index "stats", ["user_id"], name: "index_stats_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "provider"
