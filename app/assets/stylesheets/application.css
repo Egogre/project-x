@@ -56,6 +56,19 @@
 
 /*------------Custom CSS-------------*/
 
+footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
 #logo {
   margin-left: -55px;
 }
@@ -63,3 +76,29 @@
 #title-name {
   font-weight: lighter;
 }
+
+#dashboard-header {
+  margin-bottom: -25px;
+}
+
+#goal {
+  color: #1E8CFA;
+}
+
+#actual {
+  color: #76FA11;
+}
+
+#step-chart, #sleep-chart {
+  margin-top: -150px;
+  margin-left: -150px;
+}
+
+#today-food {
+  border-top: 1px solid #eee;
+}
+
+.navbar-right {
+  padding-top: 10px;
+}
+

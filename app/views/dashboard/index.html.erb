@@ -1,196 +1,166 @@
-
 <br>
 <br>
 <br>
 
 
-    <div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12" id="dashboard-header">
+      <h1>Health Dashboard <span id="title-name">for <%= current_user.name %></span></h1>
+      <h4><span id="goal">Goal</span> vs. <span id="actual">Actual</span></h4>
+      <p id="hr"></p>
+    </div>
+  </div>
 
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h1>Health Dashboard <span id="title-name">for <%= current_user.name %></span></h1>
-                <h4><span style="color: #1E8CFA">Goal</span> vs. <span style="color: #76FA11">Actual</span></h4>
-                <hr />
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-6 col-md-6 portfolio-item">
-
-                <h3>Steps</h3>
-                <div id="step-chart" style="
-                margin-top: -150px;
-                margin-left: -150px;
-                ">
-                    <script type="text/javascript">
-                        $(document).ready(function(){
-                            var steps_array = <%= @user.steps_array %>;
-
-                            var colors = function(steps_array){
-                                if(steps_array[0] > steps_array[1]){
-                                    return ["#76FA11", "#1E8CFA"];
-                                }else{
-                                    return ["#1E8CFA", "#76FA11"];
-                                };
-                            };
-                            var steps = new Raphael("step-chart");
-                                steps.piechart(
-                                    320, 
-                                    240, 
-                                    100, 
-                                    steps_array,
-                                    {
-                                        legend: [
-                                            "Steps Taken - <%= @stats.steps %>", 
-                                            "Remaining - <%= @user.steps_array[1] %>"
-                                            ],
-                                        colors: colors(steps_array)
-                                    });
-                            });
-                    </script>
-                </div>
-                <p><%= @stats.steps %> steps today.
-                    <%if @goal.steps == 0 %>
-                        You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
-                    <%else%>
-                        <%= @goal.steps %> is your goal.
-                        <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>Achievement
-                    <%end%>
-                </p>
-            </div>
-
-            <div class="col-lg-6 col-md-6 portfolio-item">
-                <h3>Sleep</h3>
-                <div id="sleep-chart" style="
-                margin-top: -150px;
-                margin-left: -150px;
-                ">
-                    <script type="text/javascript">
-                        $(document).ready(function(){
-                            var sleep_array = <%= @user.sleep_array %>;
-
-                            var colors = function(sleep_array){
-                                if(sleep_array[0] > sleep_array[1]){
-                                    return ["#76FA11", "#1E8CFA"];
-                                }else{
-                                    return ["#1E8CFA", "#76FA11"];
-                                };
-                            };
-                            var sleep = new Raphael("sleep-chart");
-                                sleep.piechart(
-                                    320, 
-                                    240, 
-                                    100, 
-                                    sleep_array,
-                                    {
-                                        legend: [
-                                            "Sleep last night - <%= @stats.sleep %>", 
-                                            "Short of Goal - <%= @user.sleep_array[1].round(1) %>"
-                                            ],
-                                        colors: colors(sleep_array)
-                                    });
-                            });
-                    </script>
-                </div>
-                <p><%= @stats.sleep %> hours of sleep last night.
-                    <%if @no_sleep_goal%>
-                        You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
-                    <%else%>
-                        <%= @goal.sleep %> hours is your goal.
-                        <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>Achvievement. 
-                    <%end%>
-                </p>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-6 col-md-6 portfolio-item">
-                <h3>Nutrition</h3>
-                <canvas id="food-chart" width="500" height="300">
-
-                    <script type="text/javascript">
-                            $(document).ready(function(){
-                                var data = {
-                                    labels : ["Carbs", "Fat", "Protein", "Fiber"],
-                                    datasets : [
-                                        {
-                                            fillColor : "rgba(30,140,250,0.9)",
-                                            strokeColor : "rgba(220,220,220,1)",
-                                            data : <%= @user.food_goals_array %>
-                                        },
-                                        {
-                                            fillColor : "rgba(118,250,17, 0.9)",
-                                            strokeColor : "rgba(151,187,205,1)",
-                                            data : <%= @user.food_eaten_array %>                                    }
-                                    ]
-                                }
-                                var ctx = document.getElementById("food-chart").getContext("2d");
-                                var myNewChart = new Chart(ctx).Bar(data);
-                            });
-                    </script>
-                </canvas>
-                     
-            </div>
-
-            <div class="col-lg-6 col-md-6 portfolio-item">
-                <h3>Calories</h3>
-                <canvas id="calorie-chart" width="500" height="300">
-
-                    <script type="text/javascript">
-                            $(document).ready(function(){
-                                var data = {
-                                    labels : ["Calories"],
-                                    datasets : [
-                                        {
-                                            fillColor : "rgba(30,140,250,0.9)",
-                                            strokeColor : "rgba(220,220,220,1)",
-                                            data : [<%= @goal.calories %>]
-                                        },
-                                        {
-                                            fillColor : "rgba(118,250,17, 0.9)",
-                                            strokeColor : "rgba(151,187,205,1)",
-                                            data : [<%= @user.calorie_total_for(Date.today) %>]                                    }
-                                    ]
-                                }
-                                var ctx = document.getElementById("calorie-chart").getContext("2d");
-                                var myNewChart = new Chart(ctx).Bar(data, { 
-                                    barValueSpacing : 150,
-                                    scaleOverride : true,
-                                    scaleSteps : 10,
-                                    scaleStepWidth : <%= @goal.calories / 5 %>,
-                                    scaleStartValue : 0
-                                });
-                            });
-                    </script>
-                </canvas>
-            </div>
-
-            <div>
-                <h3>Today's foods (<%= link_to "Add Food", foods_path, id:"add-food-button"  %>)</h3>
-                <%= render @food %>
-                
-            </div>
-
-
-
+  <div class="row">
+    <div class="col-lg-6 col-md-6 portfolio-item">
+      <h3>Steps</h3>
+      <div id="step-chart">
+        <script type="text/javascript">
+          $(document).ready(function(){
+            var steps_array = <%= @user.steps_array %>;
+            var colors = function(steps_array){
+              if(steps_array[0] > steps_array[1]){
+                return ["#76FA11", "#1E8CFA"];
+              }else{
+                return ["#1E8CFA", "#76FA11"];
+              };
+            };
+            var steps = new Raphael("step-chart");
+              steps.piechart(
+                320, 
+                240, 
+                70, 
+                steps_array,
+                {
+                  legend: [
+                    "Steps Taken - <%= @stats.steps %>", 
+                    "Remaining - <%= @user.steps_array[1] %>"
+                  ],
+                  colors: colors(steps_array)
+                });
+            });
+        </script>
+      </div>
+      <p><%= @stats.steps %> steps today.
+        <%if @goal.steps == 0 %>
+          You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
+        <%else%>
+          <%= @goal.steps %> is your goal.
+          <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>Achievement
+        <%end%>
+      </p>
     </div>
 
-        <hr>
-
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Company 2013</p>
-                </div>
-            </div>
-        </footer>
-
+    <div class="col-lg-6 col-md-6 portfolio-item">
+      <h3>Sleep</h3>
+        <div id="sleep-chart">
+          <script type="text/javascript">
+            $(document).ready(function(){
+              var sleep_array = <%= @user.sleep_array %>;
+              var colors = function(sleep_array){
+                if(sleep_array[0] > sleep_array[1]){
+                  return ["#76FA11", "#1E8CFA"];
+                }else{
+                  return ["#1E8CFA", "#76FA11"];
+                };
+              };
+              var sleep = new Raphael("sleep-chart");
+              sleep.piechart(
+                320, 
+                240, 
+                70, 
+                sleep_array,
+                {
+                  legend: [
+                    "Sleep last night - <%= @stats.sleep %>", 
+                    "Short of Goal - <%= @user.sleep_array[1].round(1) %>"
+                  ],
+                colors: colors(sleep_array)
+              });
+            });
+          </script>
+        </div>
+        <p><%= @stats.sleep %> hours of sleep last night.
+          <%if @no_sleep_goal%>
+            You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
+          <%else%>
+            <%= @goal.sleep %> hours is your goal.
+            <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>Achvievement. 
+          <%end%>
+        </p>
     </div>
+  </div>
+  <p id="hr"></p>
+        
+
+  <div class="row">
+
+    <div class="col-lg-6 col-md-6 portfolio-item">
+      <h3>Nutrition</h3>
+      <canvas id="food-chart" width="500" height="200">
+        <script type="text/javascript">
+          $(document).ready(function(){
+            var data = {
+              labels : ["Carbs", "Fat", "Protein", "Fiber"],
+              datasets : [
+                {
+                  fillColor : "rgba(30,140,250,0.9)",
+                  strokeColor : "rgba(220,220,220,1)",
+                  data : <%= @user.food_goals_array %>
+                },
+                {
+                  fillColor : "rgba(118,250,17, 0.9)",
+                  strokeColor : "rgba(151,187,205,1)",
+                  data : <%= @user.food_eaten_array %>                                    }
+              ]
+            }
+            var ctx = document.getElementById("food-chart").getContext("2d");
+            var myNewChart = new Chart(ctx).Bar(data);
+          });
+        </script>
+      </canvas>
+             
+    </div>
+
+    <div class="col-lg-6 col-md-6 portfolio-item">
+        <h3>Calories</h3>
+        <canvas id="calorie-chart" width="500" height="200">
+          <script type="text/javascript">
+            $(document).ready(function(){
+              var data = {
+                labels : ["Calories"],
+                datasets : [
+                  {
+                    fillColor : "rgba(30,140,250,0.9)",
+                    strokeColor : "rgba(220,220,220,1)",
+                    data : [<%= @goal.calories %>]
+                  },
+                  {
+                    fillColor : "rgba(118,250,17, 0.9)",
+                    strokeColor : "rgba(151,187,205,1)",
+                    data : [<%= @user.calorie_total_for(Date.today) %>]
+                  }
+                ]
+              }
+              var ctx = document.getElementById("calorie-chart").getContext("2d");
+              var myNewChart = new Chart(ctx).Bar(data, { 
+                  barValueSpacing : 150,
+                  scaleOverride : true,
+                  scaleSteps : 10,
+                  scaleStepWidth : <%= @goal.calories / 5 %>,
+                  scaleStartValue : 0
+              });
+            });
+          </script>
+        </canvas>
+    </div>
+  </div>
+  <div id="today-food">
+    <h3>Today's foods (<%= link_to "Add Food", foods_path, id:"add-food-button"  %>)</h3>
+      <%= render @food %>
+  </div>
+</div>
     <!-- /.container -->
 
     <!-- JavaScript -->

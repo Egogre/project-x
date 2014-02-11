@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProjectX</title>
-
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project X - Snapshot of your daily fitness and nutrition">
+  <title>Walk It Off</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 
   <!-- Optional theme -->
+  <!-- Bootstrap core CSS -->
+  <%= stylesheet_link_tag    "bootstrap", media: "all" %>
+  <%= stylesheet_link_tag    "landing-page", media: "all" %>
+  <%= stylesheet_link_tag    "splash-style", media: "all" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <!-- Custom Google Web Font -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
   <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 
@@ -27,14 +39,13 @@
 
 <body>
 
-<!-- <div class="container"> -->
-<% if current_user %>
-  <%= render partial: 'layouts/navbar' %> 
-<% end %>
+  <% if current_user %>
+    <%= render partial: 'layouts/navbar' %> 
+  <% end %>
 
   <%= yield %>
 
-<!-- </div> -->
+  <%= render partial: 'layouts/footer' %> 
 
 </body>
 </html>
