@@ -15,32 +15,64 @@
   <div class="row">
     <div class="col-lg-6 col-md-6 portfolio-item">
       <h3>Steps</h3>
-      <div id="step-chart">
-        <script type="text/javascript">
-          $(document).ready(function(){
-            var steps_array = <%= @user.steps_array %>;
-            var colors = function(steps_array){
-              if(steps_array[0] > steps_array[1]){
-                return ["#76FA11", "#1E8CFA"];
-              }else{
-                return ["#1E8CFA", "#76FA11"];
-              };
-            };
-            var steps = new Raphael("step-chart");
-              steps.piechart(
-                320, 
-                240, 
-                70, 
-                steps_array,
-                {
-                  legend: [
-                    "Steps Taken - <%= @stats.steps %>", 
-                    "Remaining - <%= @user.steps_array[1] %>"
-                  ],
-                  colors: colors(steps_array)
+      <div>
+        <%if @goal.sleep == 0 %>
+          <div id="step-chart">
+            <script type="text/javascript">
+              $(document).ready(function(){
+                var steps_array = <%= @user.steps_array %>;
+                var colors = function(steps_array){
+                  if(steps_array[0] > steps_array[1]){
+                    return ["#76FA11", "#1E8CFA"];
+                  }else{
+                    return ["#1E8CFA", "#76FA11"];
+                  };
+                };
+                var steps = new Raphael("step-chart");
+                  steps.piechart(
+                    320, 
+                    240, 
+                    70, 
+                    steps_array,
+                    {
+                      legend: [
+                        "Steps Taken - <%= @stats.steps %>", 
+                        "No Goal Set"
+                      ],
+                      colors: colors(steps_array)
+                    });
                 });
-            });
-        </script>
+            </script>
+          </div>
+        <%else%>
+          <div id="step-chart">
+            <script type="text/javascript">
+              $(document).ready(function(){
+                var steps_array = <%= @user.steps_array %>;
+                var colors = function(steps_array){
+                  if(steps_array[0] > steps_array[1]){
+                    return ["#76FA11", "#1E8CFA"];
+                  }else{
+                    return ["#1E8CFA", "#76FA11"];
+                  };
+                };
+                var steps = new Raphael("step-chart");
+                  steps.piechart(
+                    320, 
+                    240, 
+                    70, 
+                    steps_array,
+                    {
+                      legend: [
+                        "Steps Taken - <%= @stats.steps %>", 
+                        "Remaining - <%= @user.steps_array[1] %>"
+                      ],
+                      colors: colors(steps_array)
+                    });
+                });
+            </script>
+          </div>
+        <%end%>
       </div>
       <p><h4><%= @stats.steps %> steps today.
         <%if @goal.steps == 0 %>
