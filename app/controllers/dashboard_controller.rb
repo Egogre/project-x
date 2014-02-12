@@ -6,7 +6,7 @@ class DashboardController < ApplicationController
     else
       @stats = current_user.fitbit_stats
       @user = current_user
-      @goal = Goal.first_or_create(user_id: @user.id)
+      @goal = current_user.goal
       @food = current_user.foods.where(consumed_on: Date.today)
     end
   end
