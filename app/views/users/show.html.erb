@@ -3,11 +3,63 @@
 <br>
 <br>
 
+
 <div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6">
+      <%= @user.name %><br>
+      <%= link_to 'View Goal', goal_path(@goal.id) %>
 
-  <%= @user.name %><br>
-  <%= link_to 'View Goal', goal_path(@goal.id) %>
+      <%= render partial: 'foods/daily_total' %> 
+    </div>
 
-  <%= render partial: 'foods/daily_total' %> 
-
+    <div class="col-lg-6 col-md-6">
+      <canvas id="history-chart" width="600" height="300">
+        <script type="text/javascript">
+          $(document).ready(function(){
+            var data = {
+              labels : ["Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"],
+              datasets : [
+                {
+                  strokeColor : "rgba(123,300,123,1)",
+                  pointColor : "rgba(220,220,220,1)",
+                  pointStrokeColor : "#fff",
+                  data : <%= @user.achievement.calorie_weekly_percent %>
+                },
+                {
+                  strokeColor : "rgba(200,300,20,1)",
+                  pointColor : "rgba(220,220,220,1)",
+                  pointStrokeColor : "#fff",
+                  data : <%= @user.achievement.protein_weekly_percent %>
+                },
+                {
+                  strokeColor : "rgba(12,226,250,1)",
+                  pointColor : "rgba(220,220,220,1)",
+                  pointStrokeColor : "#fff",
+                  data : <%= @user.achievement.fiber_weekly_percent %>
+                },
+                {
+                  strokeColor : "rgba(250,28,12,1)",
+                  pointColor : "rgba(220,220,220,1)",
+                  pointStrokeColor : "#fff",
+                  data : <%= @user.achievement.fat_weekly_percent %>
+                },
+                 {
+                  strokeColor : "rgba(159,110,246,1)",
+                  pointColor : "rgba(220,220,220,1)",
+                  pointStrokeColor : "#fff",
+                  data : <%= @user.achievement.carbs_weekly_percent %>
+                }
+              ]
+            };
+            var ctx = document.getElementById("history-chart").getContext("2d");
+            var myNewChart = new Chart(ctx).Line(data, {
+              datasetFill : false,
+              datasetStrokeWidth : 5
+            });
+          });
+        </script>
+      </canvas>
+    </div>
+  </div>
 </div>

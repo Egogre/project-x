@@ -74,6 +74,7 @@ class User < ActiveRecord::Base
   def average_sleep
     stats.average('sleep').to_f
   end
+  
 
   def achievement
     @achievement ||= Achievement.new(self)
