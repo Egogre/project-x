@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   end
 
   def user_goal
-    @goal ||= Goal.where(user_id: self.id).first
+    @goal ||= self.goal
   end
 
   def calorie_total_for(date)

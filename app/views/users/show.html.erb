@@ -6,12 +6,7 @@
 <div class="container">
 
   <%= @user.name %><br>
-
-  <% if @goal.empty? %>
-    <%= link_to 'Set Goal', new_goal_path %>    
-  <% else %>
-    <%= link_to 'View Goal', goal_path(@goal.id) %>
-  <% end %>
+  <%= link_to 'View Goal', goal_path(@goal.id) %>
 
   <%= render partial: 'foods/daily_total' %> 
 

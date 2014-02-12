@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @goal = @user.user_goal
+    @goal = current_user.goal
   end
 
 end
