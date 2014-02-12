@@ -5,10 +5,10 @@
 
 
 <div class="container">
+  <h2>Weekly Stats for <%= @user.name %></h2> 
+  <%= link_to 'View Goal', goal_path(@goal.id) %>
   <div class="row">
-    <div class="col-lg-6 col-md-6">
-      <%= @user.name %><br>
-      <%= link_to 'View Goal', goal_path(@goal.id) %>
+    <div class="col-lg-3 col-md-3">
 
       <%= render partial: 'foods/daily_total' %> 
     </div>
@@ -18,7 +18,7 @@
         <script type="text/javascript">
           $(document).ready(function(){
             var data = {
-              labels : ["Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"],
+              labels : <%= @user.achievement.last_seven_day_labels.inspect.html_safe %>,
               datasets : [
                 {
                   strokeColor : "rgba(123,300,123,1)",

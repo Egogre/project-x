@@ -1,6 +1,3 @@
-<br>
-<br>
-<br>
 <% if @user.foods.any? %>
   calories: <%= @user.calorie_total_for(Date.today) %>
   	<%if @goal.calories == 0 %>
