@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_many :stats
   has_one :goal
 
+  after_create :setup_goal
+
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
   end
@@ -120,5 +122,9 @@ class User < ActiveRecord::Base
     [self.carb_total_for(Date.today), self.fat_total_for(Date.today), self.protein_total_for(Date.today), self.fiber_total_for(Date.today)]
   end
 
+  private
 
+  def setup_goal
+    Goal.create(user_id: self.id)
+  end
 end
