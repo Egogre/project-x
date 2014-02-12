@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -48,11 +50,17 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'hashie'
   gem 'database_cleaner'
+  gem 'sqlite3'
 end
 
 group :test do
   gem 'vcr'
   gem 'webmock', '<1.16.0'
   gem 'launchy'
+end
+
+group :production do 
+  gem 'rails_12factor'
+  gem 'pg'
 end
 
