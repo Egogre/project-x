@@ -1,5 +1,5 @@
 <% if @user.foods.any? %>
-  calories: <%= @user.calorie_total_for(Date.today) %>
+  <span id="calories">Calories: </span> <%= @user.calorie_total_for(Date.today) %>
   	<%if @goal.calories == 0 %>
   		(no goal set)
   		</br>
@@ -9,7 +9,7 @@
     	(<%= @user.achievement.calories_percentage %>%)	</br>Your goal: <%= @goal.calories %></br>
     <%end%>
   </br>
-  carbohydrates: <%= @user.carb_total_for(Date.today) %> grams 
+  <span id="carbs">Carbs: </span><%= @user.carb_total_for(Date.today) %> grams 
   	<%if @goal.carbohydrates == 0 %>
   		(no goal set)
   		</br>
@@ -19,7 +19,7 @@
     	(<%= @user.achievement.carbs_percentage %>%)</br>Your goal: <%= @goal.carbohydrates %>grams</br>
     <%end%>
   </br>
-  fat: <%= @user.fat_total_for(Date.today) %> grams 
+  <span id="fat">Fat: </span><%= @user.fat_total_for(Date.today) %> grams 
   	<%if @goal.fat == 0 %>
   		(no goal set)
   		</br>
@@ -29,7 +29,7 @@
     	(<%= @user.achievement.fat_percentage %>%)</br>Your goal: <%= @goal.fat %> grams</br>
     <%end%>
   </br>
-  protein: <%= @user.protein_total_for(Date.today) %> grams 
+  <span id="protein">Protein: </span> <%= @user.protein_total_for(Date.today) %> grams 
   	<%if @goal.protein == 0 %>
   		(no goal set)
   		</br>
@@ -39,7 +39,7 @@
     	(<%= @user.achievement.protein_percentage %>%)</br>Your goal: <%= @goal.protein %> grams</br>
     	<%end%>
   </br>
-  fiber: <%= @user.fiber_total_for(Date.today) %> grams 
+  <span id="fiber">Fiber: </span><%= @user.fiber_total_for(Date.today) %> grams 
   	<%if @goal.fiber == 0 %>
   		(no goal set)
   		</br>

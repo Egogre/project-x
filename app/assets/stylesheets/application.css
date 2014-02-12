@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
 * {
   font-family: 'Muli', sans-serif;
  }
@@ -22,6 +23,37 @@
   width:500px; 
   height:400px;
 }
+
+#calories {
+  color: rgb(123,300,123);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#protein {
+  color: rgb(200,300,20);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#fiber {
+  color: rgb(12,226,250);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#fat {
+  color: rgb(250,28,12);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#carbs {
+  color: rgb(159,110,246);
+  font-size: 15px;
+  font-weight: bold;
+}
+
 
 #fitbit-button {
   margin-top: 5px;
@@ -54,7 +86,6 @@
   text-align: middle;
 }
 
-/*------------Custom CSS-------------*/
 
 footer {
   background-color: #f8f8f8;

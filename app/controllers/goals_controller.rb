@@ -20,7 +20,7 @@ class GoalsController < ApplicationController
     @user = current_user
     @goal = Goal.find(params[:id])
     @goal.update_attributes(goal_params)
-    redirect_to goal_path(@goal)
+    redirect_to user_path(@user)
   end
 
   def edit
