@@ -74,7 +74,6 @@ class User < ActiveRecord::Base
   def average_sleep
     stats.average('sleep').to_f
   end
-  
 
   def achievement
     @achievement ||= Achievement.new(self)
@@ -83,7 +82,6 @@ class User < ActiveRecord::Base
   def todays_foods(date)
     foods.where(consumed_on: date)
   end
-
 
   def goal_color
     if steps_array.first > steps_array.last
