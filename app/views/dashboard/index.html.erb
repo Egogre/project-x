@@ -15,80 +15,160 @@
   <div class="row">
     <div class="col-lg-6 col-md-6 portfolio-item">
       <h3>Steps</h3>
-      <div id="step-chart">
-        <script type="text/javascript">
-          $(document).ready(function(){
-            var steps_array = <%= @user.steps_array %>;
-            var colors = function(steps_array){
-              if(steps_array[0] > steps_array[1]){
-                return ["#76FA11", "#1E8CFA"];
-              }else{
-                return ["#1E8CFA", "#76FA11"];
-              };
-            };
-            var steps = new Raphael("step-chart");
-              steps.piechart(
-                320, 
-                240, 
-                70, 
-                steps_array,
-                {
-                  legend: [
-                    "Steps Taken - <%= @stats.steps %>", 
-                    "Remaining - <%= @user.steps_array[1] %>"
-                  ],
-                  colors: colors(steps_array)
+      <div>
+        <%if @goal.sleep == 0 %>
+          <div id="step-chart">
+            <script type="text/javascript">
+              $(document).ready(function(){
+                var steps_array = <%= @user.steps_array %>;
+                var colors = function(steps_array){
+                  if(steps_array[0] > steps_array[1]){
+                    return ["#76FA11", "#1E8CFA"];
+                  }else{
+                    return ["#1E8CFA", "#76FA11"];
+                  };
+                };
+                var steps = new Raphael("step-chart");
+                  steps.piechart(
+                    320, 
+                    240, 
+                    70, 
+                    steps_array,
+                    {
+                      legend: [
+                        "Steps Taken - <%= @stats.steps %>", 
+                        "No Goal Set"
+                      ],
+                      colors: colors(steps_array)
+                    });
                 });
-            });
-        </script>
+            </script>
+          </div>
+        <%else%>
+          <div id="step-chart">
+            <script type="text/javascript">
+              $(document).ready(function(){
+                var steps_array = <%= @user.steps_array %>;
+                var colors = function(steps_array){
+                  if(steps_array[0] > steps_array[1]){
+                    return ["#76FA11", "#1E8CFA"];
+                  }else{
+                    return ["#1E8CFA", "#76FA11"];
+                  };
+                };
+                var steps = new Raphael("step-chart");
+                  steps.piechart(
+                    320, 
+                    240, 
+                    70, 
+                    steps_array,
+                    {
+                      legend: [
+                        "Steps Taken - <%= @stats.steps %>", 
+                        "Remaining - <%= @user.steps_array[1] %>"
+                      ],
+                      colors: colors(steps_array)
+                    });
+                });
+            </script>
+          </div>
+        <%end%>
       </div>
-      <p><%= @stats.steps %> steps today.
+      <p><h4><%= @stats.steps %> steps today.
         <%if @goal.steps == 0 %>
           You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
         <%else%>
-          <%= @goal.steps %> is your goal.
-          <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>Achievement
+          <%= link_to "#{@goal.steps} is your goal.", edit_goal_path(@goal), :class => "hidden-link" %>
+          <b>
+          <% if @user.achievement.steps_percentage >= 100 %>
+            <font color="chartreuse">
+          <%elsif @user.achievement.steps_percentage >= 50 %>
+            <font color="gold">    
+          <%else%>
+            <font color="red">
+          <% end %>
+            <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %></font></b> Achievement
         <%end%>
-      </p>
+      </h4></p>
     </div>
 
     <div class="col-lg-6 col-md-6 portfolio-item">
       <h3>Sleep</h3>
-        <div id="sleep-chart">
-          <script type="text/javascript">
-            $(document).ready(function(){
-              var sleep_array = <%= @user.sleep_array %>;
-              var colors = function(sleep_array){
-                if(sleep_array[0] > sleep_array[1]){
-                  return ["#76FA11", "#1E8CFA"];
-                }else{
-                  return ["#1E8CFA", "#76FA11"];
-                };
-              };
-              var sleep = new Raphael("sleep-chart");
-              sleep.piechart(
-                320, 
-                240, 
-                70, 
-                sleep_array,
-                {
-                  legend: [
-                    "Sleep last night - <%= @stats.sleep_pretty %>", 
-                    "Short of Goal - <%= @user.achievement.sleep_short_pretty %>"
-                  ],
-                colors: colors(sleep_array)
-              });
-            });
-          </script>
+        <div>
+          <%if @goal.sleep == 0 %>
+            <div id="sleep-chart">
+              <script type="text/javascript">
+                $(document).ready(function(){
+                  var sleep_array = <%= @user.sleep_array %>;
+                  var colors = function(sleep_array){
+                    if(sleep_array[0] > sleep_array[1]){
+                      return ["#76FA11", "#1E8CFA"];
+                    }else{
+                      return ["#1E8CFA", "#76FA11"];
+                    };
+                  };
+                  var sleep = new Raphael("sleep-chart");
+                  sleep.piechart(
+                    320, 
+                    240, 
+                    70, 
+                    sleep_array,
+                    {
+                      legend: [
+                        "Sleep last night - <%= @stats.sleep_pretty %>",
+                        "No Goal Set"
+                      ],
+                    colors: colors(sleep_array)
+                  });
+                });
+              </script>
+            </div>
+          <% else %>
+            <div id="sleep-chart">
+              <script type="text/javascript">
+                $(document).ready(function(){
+                  var sleep_array = <%= @user.sleep_array %>;
+                  var colors = function(sleep_array){
+                    if(sleep_array[0] > sleep_array[1]){
+                      return ["#76FA11", "#1E8CFA"];
+                    }else{
+                      return ["#1E8CFA", "#76FA11"];
+                    };
+                  };
+                  var sleep = new Raphael("sleep-chart");
+                  sleep.piechart(
+                    320, 
+                    240, 
+                    70, 
+                    sleep_array,
+                    {
+                      legend: [
+                        "Sleep last night - <%= @stats.sleep_pretty %>", 
+                        "Short of Goal - <%= @user.achievement.sleep_short_pretty %>"
+                      ],
+                    colors: colors(sleep_array)
+                  });
+                });
+              </script>
+            </div>
+          <% end %>
         </div>
-        <p><%= @stats.sleep_pretty %> of sleep last night.
-          <%if @no_sleep_goal%>
-            You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
+        <p><h4><%= @stats.sleep_pretty %> of sleep last night.
+          <%if @goal.sleep == 0 %>
+          You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
           <%else%>
-            <%= @goal.sleep %> hours is your goal.
-            <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>Achvievement. 
+            <%= link_to "#{@goal.sleep} is your goal.", edit_goal_path(@goal), :class => "hidden-link" %>
+            <b>
+            <% if @user.achievement.sleep_percentage >= 100 %>
+              <font color="chartreuse">
+            <%elsif @user.achievement.sleep_percentage >= 50 %>
+              <font color="gold">    
+            <%else%>
+              <font color="red">
+            <% end %>
+            <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %></font></b> Achvievement. 
           <%end%>
-        </p>
+        </h4></p>
     </div>
   </div>
   <p id="hr"></p>

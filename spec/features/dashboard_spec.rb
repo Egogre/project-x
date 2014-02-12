@@ -15,21 +15,20 @@ describe "dashboard index", :vcr do
   end
 
   it "has views for sleep" do
-    expect(page).to have_content 'hours'
+    expect(page).to have_content 'sleep last night'
   end
 
   it "has a View User Profile button" do
     expect(page).to have_content 'View My Profile'
   end
 
-  it "has a User's goals" do
-    expect(page).to have_content(@user.goal.steps)
-    expect(page).to have_content(@user.goal.sleep)
-    expect(page).to have_content(@user.goal.calories)
-    expect(page).to have_content(@user.goal.fat)
-    expect(page).to have_content(@user.goal.protein)
-    expect(page).to have_content(@user.goal.carbohydrates)
-    expect(page).to have_content(@user.goal.fiber)
+  it "has a User's fitbit goals or No Goal Set if goal equals 0" do
+    expect(page).to have_content "You have no goal yet"
+  end
+
+  it "shows Nutrition and Carorie information" do
+    expect(page).to have_content "Nutrition"
+    expect(page).to have_content "Calories"
   end
 
 end
