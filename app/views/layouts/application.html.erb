@@ -29,9 +29,12 @@
 <body>  
 
   <% if current_user %>
-    <%= render partial: 'layouts/navbar' %> 
+    <div id="nav-padding">
+      <%= render partial: 'layouts/navbar' %> 
+    </div>
   <% end %>
-  
+  <%= render 'layouts/messages' %>
+
   <%= yield %>
 
   <%= render partial: 'layouts/footer' %> 

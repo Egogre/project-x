@@ -129,6 +129,10 @@ footer {
   border-top: 1px solid #eee;
 }
 
+#nav-padding {
+  height: 70px;
+}
+
 .navbar-right {
   padding-top: 10px;
 }

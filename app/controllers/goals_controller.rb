@@ -20,6 +20,7 @@ class GoalsController < ApplicationController
     @user = current_user
     @goal = Goal.find(params[:id])
     @goal.update_attributes(goal_params)
+    flash[:notice] = "Goals updated."
     redirect_to user_path(@user)
   end
 

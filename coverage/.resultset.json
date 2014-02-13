@@ -249,8 +249,8 @@
       "/Users/brianwinterling/ruby/project-x/app/helpers/application_helper.rb": [
         1,
         1,
-        0,
-        0,
+        9,
+        9,
         0,
         0,
         null,
@@ -378,6 +378,7 @@
         0,
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -864,16 +865,6 @@
         null,
         null
       ],
-      "/Users/brianwinterling/ruby/project-x/app/models/stat.rb": [
-        1,
-        1,
-        null,
-        1,
-        16,
-        null,
-        null,
-        null
-      ],
       "/Users/brianwinterling/ruby/project-x/app/controllers/sessions_controller.rb": [
         1,
         null,
@@ -928,6 +919,16 @@
         8,
         8,
         8,
+        null,
+        null,
+        null
+      ],
+      "/Users/brianwinterling/ruby/project-x/app/models/stat.rb": [
+        1,
+        1,
+        null,
+        1,
+        16,
         null,
         null,
         null
@@ -1044,6 +1045,6 @@
         null
       ]
     },
-    "timestamp": 1392325378
+    "timestamp": 1392326644
   }
 }
