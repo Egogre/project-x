@@ -157,10 +157,10 @@
         </canvas>
     </div>
   </div>
-  <div id="today-food">
-    <h3>Today's foods (<%= link_to "Add Food", foods_path, id:"add-food-button"  %>)</h3>
-      <%= render @food %>
-  </div>
+<div id="today-food">
+  <h3>Today's foods <span style="font-size: 18px">(<%= link_to "Add Food", foods_path, id:"add-food-button" %>)</span></h3>
+      <%= render partial: 'foods/food' %>
+  </div> 
 </div>
     <!-- /.container -->
 

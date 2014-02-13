@@ -1,5 +1,36 @@
+<table class="table table-striped">
+  <tr>
+    <th>Food</th>
+    <th>Quantity</th>
+    <th>Description</th>
+    <th>calories</th>
+    <th>fat</th>
+    <th>fiber</th>
+    <th>carbs</th>
+    <th>protein</th>
+  </tr>
 
-<p>
-<%= food.quantity %> <%= food.name %> (<%= food.serving_description %>)
-</p>
+  <% @food.each do |food| %>
+  <tr>
+    <td><%= food.name %></td> 
+    <td><%= food.quantity %></td>
+    <td><%= food.serving_description %></td>
+    <td><%= food.calories %></td>
+    <td><%= food.fat %></td>
+    <td><%= food.fiber %></td>
+    <td><%= food.carbs %></td>
+    <td><%= food.protein %></td>
+  </tr>
+  <% end %>
+    <tr class="danger">
+      <td>Total</td>
+      <td></td>
+      <td></td>
+      <td><%=  @user.calorie_total_for(Date.today)%></td>
+      <td><%=  @user.fat_total_for(Date.today)%></td>
+      <td><%=  @user.fiber_total_for(Date.today)%></td>
+      <td><%=  @user.carb_total_for(Date.today)%></td>
+      <td><%=  @user.protein_total_for(Date.today)%></td>
+    </tr>
 
+</table>
