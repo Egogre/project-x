@@ -36,7 +36,7 @@
                 {
                   legend: [
                     "Steps Taken - <%= @stats.steps %>", 
-                    "Remaining - <%= @user.steps_array[1] %>"
+                    "Remaining - <%= @user.steps_array[1].round(0) %>"
                   ],
                   colors: colors(steps_array)
                 });

@@ -1,46 +1,47 @@
 <br>
 <br>
 <br>
+<div class="container">
+  <h1><%= @user.name %>'s Goals</h1>
 
-<h1><%= @user.name %>'s Goals</h1>
-
-<%= form_for(@goal) do |f| %>
-  
-  <table>
-    <tr>
-      <td><%= f.label :steps %>:</td>
-      <td><%= f.text_field :steps %></td>
-    </tr> 
-    <tr>
-      <td><%= f.label :sleep %>:</td>
-      <td><%= f.text_field :sleep %></td>
-    </tr>
+  <%= form_for(@goal) do |f| %>
     
-    <tr>
-      <td><%= f.label :calories %>:</td>
-      <td><%= f.text_field :calories %></td>
-    </tr>
+    <table>
+      <tr>
+        <td><%= f.label :steps %>:</td>
+        <td><%= f.text_field :steps %></td>
+      </tr> 
+      <tr>
+        <td><%= f.label :sleep %>:</td>
+        <td><%= f.text_field :sleep %></td>
+      </tr>
+      
+      <tr>
+        <td><%= f.label :calories %>:</td>
+        <td><%= f.text_field :calories %></td>
+      </tr>
 
-    <tr>
-      <td><%= f.label :carbohydrates %>:</td>
-      <td><%= f.text_field :carbohydrates %></td>
-    </tr>
+      <tr>
+        <td><%= f.label :carbohydrates %>:</td>
+        <td><%= f.text_field :carbohydrates %></td>
+      </tr>
 
-    <tr>
-      <td><%= f.label :fat %>:</td>
-      <td><%= f.text_field :fat %></td>
-    </tr>
-    <tr>
-      <td><%= f.label :protein %>:</td>
-      <td><%= f.text_field :protein %></td>
-    </tr>
-    <tr>
-      <td><%= f.label :fiber %>:</td>
-      <td><%= f.text_field :fiber %></td>
-    </tr>
-    <tr>
-      <td><%= f.submit "Update Goal", class: 'btn btn-primary' %></td>
-    </tr>
+      <tr>
+        <td><%= f.label :fat %>:</td>
+        <td><%= f.text_field :fat %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :protein %>:</td>
+        <td><%= f.text_field :protein %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :fiber %>:</td>
+        <td><%= f.text_field :fiber %></td>
+      </tr>
+      <tr>
+        <td><%= f.submit "Update Goal", class: 'btn btn-primary' %></td>
+      </tr>
 
-  </table>
-<% end %>
+    </table>
+  <% end %>
+</div>

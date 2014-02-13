@@ -2,11 +2,12 @@
 <br>
 <br>
 <br>
+<div class="container">
+  <h3>Search for a food</h3>
 
-<h3>Search for a food</h3>
-
-<%= form_for :food_search, url: food_search_path do |f|%>
-<%= f.label :food %>
-<%= f.text_field :food, :placeholder => 'i.e. pizza, candy' %>
-<%= f.submit "Search" %>
-<% end %>
+  <%= form_for :food_search, url: food_search_path do |f|%>
+  <%= f.label :food %>
+  <%= f.text_field :food, :placeholder => 'i.e. pizza, candy' %>
+  <%= f.submit "Search" %>
+  <% end %>
+</div>

@@ -31,9 +31,8 @@
   <% if current_user %>
     <%= render partial: 'layouts/navbar' %> 
   <% end %>
-  <div class='container'>
-    <%= yield %>
-  </div>
+  
+  <%= yield %>
 
   <%= render partial: 'layouts/footer' %> 
 

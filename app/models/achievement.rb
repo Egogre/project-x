@@ -23,6 +23,9 @@ class Achievement
 
   def sleep_short_pretty
     sec_short = (goal.sleep - todays_stats.sleep)*3600
+    if sec_short <= 0
+      sec_short = 0
+    end
     Time.at(sec_short).utc.strftime("%k:%M")
   end
 
@@ -53,7 +56,7 @@ class Achievement
   end
 
   def protein_weekly_percent
-    if goal.protein == 0 
+    if goal.protein == 0
       [0,0,0,0,0,0,0]
     else
       last_seven_days.map do |date|
