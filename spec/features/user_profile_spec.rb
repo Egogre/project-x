@@ -26,7 +26,7 @@ describe "user profile", :vcr do
   end
  
   it "has a button to set goals" do
-    expect(page).to have_link "View Goal"
+    expect(page).to have_link "Edit Goals"
   end
   
 end
