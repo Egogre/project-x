@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://fitbit-service.herokuapp.com/api/v1/activity?request%5Bdate%5D=2014-02-12&request%5Bsecret%5D=5a1c57cc622397a4ccd2fe3c42a24917&request%5Btoken%5D=128e556de6e068c19e29beb380de56f1&request%5Buid%5D=25WQ2X
+    uri: http://fitbit-service.herokuapp.com/api/v1/activity?request%5Bdate%5D=2014-02-13&request%5Bsecret%5D=5a1c57cc622397a4ccd2fe3c42a24917&request%5Btoken%5D=128e556de6e068c19e29beb380de56f1&request%5Buid%5D=25WQ2X
     body:
       encoding: US-ASCII
       string: ''
@@ -23,9 +23,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 12 Feb 2014 17:08:15 GMT
+      - Thu, 13 Feb 2014 19:12:16 GMT
       Etag:
-      - '"4f20c25a24683a438852180e38721e43"'
+      - '"30550e52d68e17f28c1403cccbc6c545"'
       Server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       Set-Cookie:
@@ -35,20 +35,20 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - ea850b75-414e-495a-8950-ed6059d9467c
+      - f190d9f9-21c4-4710-9b0a-e1b2dc97291e
       X-Runtime:
-      - '0.373264'
+      - '0.417426'
       X-Ua-Compatible:
       - chrome=1
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
-      - '61'
+      - '74'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"sleep_on_date":0.0,"steps_on_date":4219,"status":"success"}'
+      string: '{"sleep_on_date":7.433333333333334,"steps_on_date":122,"status":"success"}'
     http_version: 
-  recorded_at: Wed, 12 Feb 2014 17:08:14 GMT
+  recorded_at: Thu, 13 Feb 2014 19:12:16 GMT
 recorded_with: VCR 2.8.0
