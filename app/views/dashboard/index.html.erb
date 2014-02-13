@@ -47,8 +47,8 @@
         <%if @goal.steps == 0 %>
           You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
         <%else%>
-          <%= @goal.steps %> is your goal.
-          <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %>Achievement
+          <%= @goal.steps %> is your <%= link_to 'goal', edit_goal_path(@goal) %>.
+          <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %> Achievement.
         <%end%>
       </p>
     </div>
@@ -86,8 +86,8 @@
           <%if @no_sleep_goal%>
             You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
           <%else%>
-            <%= @goal.sleep %> hours is your goal.
-            <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %>Achvievement. 
+            <%= @goal.sleep %> hours is your <%= link_to 'goal', edit_goal_path(@goal) %>.
+            <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %> Achievement. 
           <%end%>
         </p>
     </div>

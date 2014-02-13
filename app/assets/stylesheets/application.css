@@ -133,3 +133,7 @@ footer {
   padding-top: 10px;
 }
 
+#search-item {
+  list-style-type: none;
+}
+

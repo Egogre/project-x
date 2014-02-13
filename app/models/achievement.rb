@@ -6,7 +6,7 @@ class Achievement
   end
 
   def goal
-    @goal ||= Goal.first_or_create(user_id: @user.id)
+    @user.goal
   end
 
   def todays_stats

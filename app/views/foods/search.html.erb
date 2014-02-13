@@ -4,8 +4,11 @@
 <br>
 <br>
 
+
+<h3>Choose one of the following</h3>
+
 <div class="search-results">
-  <ul>
+  <ul id="search-item">
   <% @foods.each do |food| %>
     <li>
     <%= link_to "#{food.name}", food_path(food.id) %>
