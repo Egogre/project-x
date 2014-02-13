@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-02-13T12:12:22-07:00">2014-02-13T12:12:22-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-02-13T14:02:58-07:00">2014-02-13T14:02:58-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">84.4%</span></span>
+    (<span class="covered_percent"><span class="yellow">82.85%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.6
+         8.43
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>43</b> files in total.
-    <b>468</b> relevant lines. 
-    <span class="green"><b>395</b> lines covered</span> and
-    <span class="red"><b>73</b> lines missed </span>
+    <b>478</b> relevant lines. 
+    <span class="green"><b>396</b> lines covered</span> and
+    <span class="red"><b>82</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,11 +72,11 @@
       
       <tr>
         <td class="strong"><a href="#d7507aff08c8c0871530bc7598068ee249da26e2" class="src_link" title="app/controllers/foods_controller.rb">app/controllers/foods_controller.rb</a></td>
-        <td class="red strong">42.86 %</td>
-        <td>56</td>
-        <td>21</td>
+        <td class="red strong">36.0 %</td>
+        <td>62</td>
+        <td>25</td>
         <td>9</td>
-        <td>12</td>
+        <td>16</td>
         <td>0.4</td>
       </tr>
       
@@ -112,12 +112,12 @@
       
       <tr>
         <td class="strong"><a href="#db6f19502308b69be5b1c74799ba1c6859294276" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">33.33 %</td>
+        <td>9</td>
+        <td>6</td>
         <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>4</td>
+        <td>0.3</td>
       </tr>
       
       <tr>
@@ -222,11 +222,11 @@
       
       <tr>
         <td class="strong"><a href="#34a8bd431ee8588179320429d89d7e3249c32edd" class="src_link" title="app/services/fatsecret_api.rb">app/services/fatsecret_api.rb</a></td>
-        <td class="red strong">40.68 %</td>
-        <td>120</td>
-        <td>59</td>
+        <td class="red strong">40.0 %</td>
+        <td>124</td>
+        <td>60</td>
         <td>24</td>
-        <td>35</td>
+        <td>36</td>
         <td>0.4</td>
       </tr>
       
@@ -697,11 +697,11 @@
         <div class="source_table" id="d7507aff08c8c0871530bc7598068ee249da26e2">
   <div class="header">
     <h3>app/controllers/foods_controller.rb</h3>
-    <h4><span class="red">42.86 %</span> covered</h4>
+    <h4><span class="red">36.0 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
+      <b>25</b> relevant lines. 
       <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>12</b> lines missed.</span>
+      <span class="red"><b>16</b> lines missed.</span>
     </div>
   </div>
   
@@ -801,244 +801,280 @@
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">    @foods = FatsecretAPI.search(params[&quot;food_search&quot;][&quot;food&quot;])</code>
+          <code class="ruby">    foods = FatsecretAPI.search(URI.encode(params[&quot;food_search&quot;][&quot;food&quot;]))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="missed" data-hits="0" data-linenumber="17">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    if foods.nil?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="missed" data-hits="0" data-linenumber="18">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      flash[:notice] = &quot;No results found.  Try again.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="19">
           
-          <code class="ruby">  def create</code>
+          
+          <code class="ruby">      redirect_to foods_path</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
-          
-          <code class="ruby">    food = Food.new(create_food_params)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
-          
-          <code class="ruby">    if food.save</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
-          
-          <code class="ruby">      flash[:notice] = &quot;Food saved!&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="23">
-          
-          
-          <code class="ruby">      redirect_to root_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
+        <li class="missed" data-hits="0" data-linenumber="21">
           
           
-          <code class="ruby">      flash[:notice] = &quot;Food NOT saved! Please try again.&quot;</code>
+          <code class="ruby">      @foods = foods</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
-          
-          <code class="ruby">      render &#39;foods#show&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update_params</code>
+          <code class="ruby">  def create</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="missed" data-hits="0" data-linenumber="26">
           
           
-          <code class="ruby">    {</code>
+          <code class="ruby">    food = Food.new(create_food_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby">      &quot;utf8&quot;=&gt;&quot;✓&quot;,</code>
+          <code class="ruby">    if food.save</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">      flash[:notice] = &quot;Food saved!&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">      redirect_to root_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">      flash[:notice] = &quot;Food NOT saved! Please try again.&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="32">
+          
+          
+          <code class="ruby">      render &#39;foods#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">      &quot;_method&quot;=&gt;&quot;put&quot;,</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">      &quot;authenticity_token&quot;=&gt;&quot;+ncEpXA4L3XU0/Moch71c2GdrC4yJqIHalzNzgpx9Yw=&quot;,</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">      &quot;serving_size&quot;=&gt;&quot;15826&quot;,</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      &quot;quantity&quot;=&gt;&quot;1&quot;,</code>
+          <code class="ruby">  def update_params</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">      &quot;commit&quot;=&gt;&quot;Submit&quot;,</code>
+          <code class="ruby">    {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">      &quot;action&quot;=&gt;&quot;update&quot;,</code>
+          <code class="ruby">      &quot;utf8&quot;=&gt;&quot;✓&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">      &quot;controller&quot;=&gt;&quot;foods&quot;,</code>
+          <code class="ruby">      &quot;_method&quot;=&gt;&quot;put&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">      &quot;id&quot;=&gt;&quot;4374&quot;</code>
+          <code class="ruby">      &quot;authenticity_token&quot;=&gt;&quot;+ncEpXA4L3XU0/Moch71c2GdrC4yJqIHalzNzgpx9Yw=&quot;,</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby">    }</code>
+          <code class="ruby">      &quot;serving_size&quot;=&gt;&quot;15826&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      &quot;quantity&quot;=&gt;&quot;1&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      &quot;commit&quot;=&gt;&quot;Submit&quot;,</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="44">
           
-          <code class="ruby">  def consumed_on_date</code>
+          
+          <code class="ruby">      &quot;action&quot;=&gt;&quot;update&quot;,</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">    Date.new(params[&quot;food&quot;][&quot;consumed_on(1i)&quot;].to_i,params[&quot;food&quot;][&quot;consumed_on(2i)&quot;].to_i,params[&quot;food&quot;][&quot;consumed_on(3i)&quot;].to_i)</code>
+          <code class="ruby">      &quot;controller&quot;=&gt;&quot;foods&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
+          <code class="ruby">      &quot;id&quot;=&gt;&quot;4374&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
+          
+          <code class="ruby">    }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def consumed_on_date</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
+          
+          <code class="ruby">    Date.new(params[&quot;food&quot;][&quot;consumed_on(1i)&quot;].to_i,params[&quot;food&quot;][&quot;consumed_on(2i)&quot;].to_i,params[&quot;food&quot;][&quot;consumed_on(3i)&quot;].to_i)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
           <code class="ruby">  def food_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="49">
+        <li class="missed" data-hits="0" data-linenumber="55">
           
           
           <code class="ruby">    params.permit(:serving_id, :quantity).merge(user_id: current_user.id, consumed_on: consumed_on_date)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_food_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="53">
+        <li class="missed" data-hits="0" data-linenumber="59">
           
           
           <code class="ruby">    food_params.merge(FatsecretAPI.food_create_params(food_params[:serving_id]))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">end</code>
@@ -1531,11 +1567,11 @@
         <div class="source_table" id="db6f19502308b69be5b1c74799ba1c6859294276">
   <div class="header">
     <h3>app/helpers/application_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">33.33 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -1548,7 +1584,49 @@
           <code class="ruby">module ApplicationHelper</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def flash_class(level)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="3">
+          
+          
+          <code class="ruby">    case level</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">    when :notice then &quot;info&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">    when :error then &quot;error&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">    when :alert then &quot;warning&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
@@ -3619,11 +3697,11 @@
         <div class="source_table" id="34a8bd431ee8588179320429d89d7e3249c32edd">
   <div class="header">
     <h3>app/services/fatsecret_api.rb</h3>
-    <h4><span class="red">40.68 %</span> covered</h4>
+    <h4><span class="red">40.0 %</span> covered</h4>
     <div>
-      <b>59</b> relevant lines. 
+      <b>60</b> relevant lines. 
       <span class="green"><b>24</b> lines covered</span> and
-      <span class="red"><b>35</b> lines missed.</span>
+      <span class="red"><b>36</b> lines missed.</span>
     </div>
   </div>
   
@@ -3825,217 +3903,217 @@
         <li class="missed" data-hits="0" data-linenumber="33">
           
           
-          <code class="ruby">    results[&quot;foods&quot;][&quot;food&quot;].map do |f|</code>
+          <code class="ruby">    if results[&quot;foods&quot;][&quot;food&quot;].nil?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">      Foods::SearchItem.new(f[&quot;food_name&quot;], f[&quot;food_id&quot;], f[&quot;food_description&quot;])</code>
+          <code class="ruby">      return nil</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">      results[&quot;foods&quot;][&quot;food&quot;].map do |f|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">        Foods::SearchItem.new(f[&quot;food_name&quot;], f[&quot;food_id&quot;], f[&quot;food_description&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.get(food_id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
+        <li class="missed" data-hits="0" data-linenumber="43">
           
           
           <code class="ruby">    results = JSON.parse(return_json_get(food_id))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
+        <li class="missed" data-hits="0" data-linenumber="44">
           
           
           <code class="ruby">    f = results[&quot;food&quot;]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="41">
+        <li class="missed" data-hits="0" data-linenumber="45">
           
           
           <code class="ruby">    @food = Foods::SearchItem.new(</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">      f[&quot;food_name&quot;],</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">      f[&quot;food_id&quot;],</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">      f[&quot;food_description&quot;],</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">      f[&quot;servings&quot;][&quot;serving&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">    )</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.return_json_get(food_id)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
-          
-          <code class="ruby">    new_params = {</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">      :method =&gt; &#39;food.get&#39;,</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">      :food_id =&gt; food_id,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">      :format =&gt; &#39;json&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">    }</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="55">
-          
-          
-          <code class="ruby">    make_request(new_params)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.return_json_search(expression)</code>
+          <code class="ruby">  def self.return_json_get(food_id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="59">
+        <li class="missed" data-hits="0" data-linenumber="54">
           
           
           <code class="ruby">    new_params = {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby">      :method =&gt; &#39;foods.search&#39;,</code>
+          <code class="ruby">      :method =&gt; &#39;food.get&#39;,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby">      :search_expression =&gt; expression,</code>
+          <code class="ruby">      :food_id =&gt; food_id,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">      :format =&gt; &#39;json&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">    }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="64">
+        <li class="missed" data-hits="0" data-linenumber="59">
           
           
           <code class="ruby">    make_request(new_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.make_request(new_params)</code>
+          <code class="ruby">  def self.return_json_search(expression)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="63">
+          
+          
+          <code class="ruby">    new_params = {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">      :method =&gt; &#39;foods.search&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">      :search_expression =&gt; expression,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">      :format =&gt; &#39;json&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">    }</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="68">
           
           
-          <code class="ruby">    Net::HTTP.get(build_uri(new_params))</code>
+          <code class="ruby">    make_request(new_params)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
@@ -4053,298 +4131,322 @@
         <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.build_uri(new_params)</code>
+          <code class="ruby">  def self.make_request(new_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="72">
           
           
-          <code class="ruby">    params = new_params.merge(self.common_params)</code>
+          <code class="ruby">    Net::HTTP.get(build_uri(new_params))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">    sorted_params = params.sort {|a, b| a.first.to_s &lt;=&gt; b.first.to_s}</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby">    base = base_string(&quot;GET&quot;, sorted_params)</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    http_params = http_params(&quot;GET&quot;, params)</code>
+          <code class="ruby">  def self.build_uri(new_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="76">
           
           
-          <code class="ruby">    sig = sign(base).esc</code>
+          <code class="ruby">    params = new_params.merge(self.common_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="77">
           
           
+          <code class="ruby">    sorted_params = params.sort {|a, b| a.first.to_s &lt;=&gt; b.first.to_s}</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="78">
+          
+          
+          <code class="ruby">    base = base_string(&quot;GET&quot;, sorted_params)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="79">
+          
+          
+          <code class="ruby">    http_params = http_params(&quot;GET&quot;, params)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="80">
+          
+          
+          <code class="ruby">    sig = sign(base).esc</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="81">
+          
+          
           <code class="ruby">    uri_for(http_params, sig)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="79">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="80">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.common_params</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="81">
-          
-          
-          <code class="ruby">    {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="82">
           
           
-          <code class="ruby">      :oauth_consumer_key =&gt; KEY,</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="83">
           
           
-          <code class="ruby">      :oauth_nonce =&gt; Digest::MD5.hexdigest(rand(11).to_s),</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      :oauth_signature_method =&gt; SHA1,</code>
+          <code class="ruby">  def self.common_params</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="85">
           
           
-          <code class="ruby">      :oauth_timestamp =&gt; Time.now.to_i,</code>
+          <code class="ruby">    {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="86">
           
           
-          <code class="ruby">      :oauth_version =&gt; &quot;1.0&quot;</code>
+          <code class="ruby">      :oauth_consumer_key =&gt; KEY,</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="87">
+        <li class="never" data-hits="" data-linenumber="87">
           
           
-          <code class="ruby">    }</code>
+          <code class="ruby">      :oauth_nonce =&gt; Digest::MD5.hexdigest(rand(11).to_s),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      :oauth_signature_method =&gt; SHA1,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="89">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      :oauth_timestamp =&gt; Time.now.to_i,</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="90">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="90">
           
-          <code class="ruby">  def self.base_string(http_method, param_pairs)</code>
+          
+          <code class="ruby">      :oauth_version =&gt; &quot;1.0&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="91">
           
           
+          <code class="ruby">    }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.base_string(http_method, param_pairs)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="95">
+          
+          
           <code class="ruby">    param_str = param_pairs.collect{|pair| &quot;#{pair.first}=#{pair.last}&quot;}.join(&#39;&amp;&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="92">
+        <li class="missed" data-hits="0" data-linenumber="96">
           
           
           <code class="ruby">    list = [http_method.esc, SITE.esc, param_str.esc]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="93">
+        <li class="missed" data-hits="0" data-linenumber="97">
           
           
           <code class="ruby">    list.join(&quot;&amp;&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="94">
+        <li class="never" data-hits="" data-linenumber="98">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="95">
+        <li class="never" data-hits="" data-linenumber="99">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="96">
+        <li class="covered" data-hits="1" data-linenumber="100">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.http_params(method, args)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="97">
+        <li class="missed" data-hits="0" data-linenumber="101">
           
           
           <code class="ruby">    pairs = args.sort {|a, b| a.first.to_s &lt;=&gt; b.first.to_s}</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="98">
+        <li class="missed" data-hits="0" data-linenumber="102">
           
           
           <code class="ruby">    list = []</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="99">
+        <li class="missed" data-hits="0" data-linenumber="103">
           
           
           <code class="ruby">    pairs.inject(list) {|arr, pair| arr &lt;&lt; &quot;#{pair.first.to_s}=#{pair.last}&quot;}</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="100">
+        <li class="missed" data-hits="0" data-linenumber="104">
           
           
           <code class="ruby">    list.join(&quot;&amp;&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="never" data-hits="" data-linenumber="105">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="102">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="103">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.sign(base, token=&#39;&#39;)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="104">
-          
-          
-          <code class="ruby">    secret = &quot;#{SECRET.esc}&amp;#{token.esc}&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="105">
-          
-          
-          <code class="ruby">    base64 = Base64.encode64(OpenSSL::HMAC.digest(&#39;sha1&#39;,secret, base)).gsub(/\n/,&#39;&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="106">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="107">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="108">
+        <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.uri_for(params, signature)</code>
+          <code class="ruby">  def self.sign(base, token=&#39;&#39;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="108">
+          
+          
+          <code class="ruby">    secret = &quot;#{SECRET.esc}&amp;#{token.esc}&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="109">
           
           
+          <code class="ruby">    base64 = Base64.encode64(OpenSSL::HMAC.digest(&#39;sha1&#39;,secret, base)).gsub(/\n/,&#39;&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.uri_for(params, signature)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="113">
+          
+          
           <code class="ruby">    parts = params.split(&#39;&amp;&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="110">
+        <li class="missed" data-hits="0" data-linenumber="114">
           
           
           <code class="ruby">    parts &lt;&lt; &quot;oauth_signature=#{signature}&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="111">
+        <li class="missed" data-hits="0" data-linenumber="115">
           
           
           <code class="ruby">    URI.parse(&quot;#{SITE}?#{parts.join(&#39;&amp;&#39;)}&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="112">
+        <li class="never" data-hits="" data-linenumber="116">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="113">
+        <li class="never" data-hits="" data-linenumber="117">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="114">
+        <li class="never" data-hits="" data-linenumber="118">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="115">
+        <li class="never" data-hits="" data-linenumber="119">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="116">
+        <li class="covered" data-hits="1" data-linenumber="120">
           <span class="hits">1</span>
           
           <code class="ruby">class String</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="117">
+        <li class="covered" data-hits="1" data-linenumber="121">
           <span class="hits">1</span>
           
           <code class="ruby">  def esc</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="118">
+        <li class="missed" data-hits="0" data-linenumber="122">
           
           
           <code class="ruby">    CGI.escape(self).gsub(&quot;%7E&quot;, &quot;~&quot;).gsub(&quot;+&quot;, &quot;%20&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="119">
+        <li class="never" data-hits="" data-linenumber="123">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="120">
+        <li class="never" data-hits="" data-linenumber="124">
           
           
           <code class="ruby">end</code>

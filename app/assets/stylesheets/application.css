@@ -137,3 +137,8 @@ footer {
   list-style-type: none;
 }
 
+.alert-message {
+  background-color: #FCAEB6;
+  padding-left: 20px;
+}
+

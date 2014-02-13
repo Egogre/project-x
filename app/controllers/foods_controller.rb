@@ -13,7 +13,13 @@ class FoodsController < ApplicationController
 
   #this will run the search
   def search
-    @foods = FatsecretAPI.search(params["food_search"]["food"])
+    foods = FatsecretAPI.search(URI.encode(params["food_search"]["food"]))
+    if foods.nil?
+      flash[:notice] = "No results found.  Try again."
+      redirect_to foods_path
+    else
+      @foods = foods
+    end
   end
 
   def create

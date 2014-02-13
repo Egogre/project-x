@@ -30,8 +30,12 @@ class FatsecretAPI
 
   def self.search(expression)
     results = JSON.parse(return_json_search(expression))
-    results["foods"]["food"].map do |f|
-      Foods::SearchItem.new(f["food_name"], f["food_id"], f["food_description"])
+    if results["foods"]["food"].nil?
+      return nil
+    else
+      results["foods"]["food"].map do |f|
+        Foods::SearchItem.new(f["food_name"], f["food_id"], f["food_description"])
+      end
     end
   end
 
