@@ -3,14 +3,18 @@
 <br>
 <br>
 
-<p><%= @food.name %></p>
+<h4><%= @food.name %></h4>
 <%= form_for :food, url: foods_path do |f|%>
-<%= f.label :consumed_on %>
-<%= f.date_select :consumed_on %>
-<%= f.label :serving_id %>
-<%= select_tag(:serving_id, options_for_select(@food.servings_array)) %>
-<%= f.label :quantity %>
+
+<p><%= f.label :consumed_on %>
+<%= f.date_select :consumed_on %></p>
+
+<p><%= f.label :serving_id %>
+<%= select_tag(:serving_id, options_for_select(@food.servings_array)) %></p>
+
+<p><%= f.label :quantity %>
 <% qty_array = 100.times.map { |i| [i, i] } %>
-<%= select_tag(:quantity, options_for_select(qty_array, 1)) %>
-<%= f.submit "Submit" %>
+<%= select_tag(:quantity, options_for_select(qty_array, 1)) %></p>
+
+<%= f.submit "Submit", class: 'btn btn-primary' %>
 <% end %>
