@@ -146,3 +146,13 @@ footer {
   padding-left: 20px;
 }
 
+.no-goal-set {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.stat {
+  font-size: 1.2em;
+}
+

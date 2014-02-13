@@ -38,12 +38,12 @@
             });
         </script>
       </div>
-      <p><%= @stats.steps %> steps today.
+      <p><span class="stat"><%= @stats.steps %></span> steps today.
         <%if @goal.steps == 0 %>
-          You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
+          <span class="no-goal-set">You have no goal yet. </span><%= link_to "Set Goal", edit_goal_path(@goal) %>
         <%else%>
-          <%= @goal.steps %> is your <%= link_to 'goal', edit_goal_path(@goal) %>.
-          <%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %> Achievement.
+          <span class="stat"><%= @goal.steps %></span> is your <%= link_to 'goal', edit_goal_path(@goal) %>.
+          <span class="stat"><%= number_to_percentage(@user.achievement.steps_percentage, precision: 0) %></span> Achievement.
         <%end%>
       </p>
     </div>
@@ -77,12 +77,12 @@
             });
           </script>
         </div>
-        <p><%= @stats.sleep_pretty %> of sleep last night.
-          <%if @no_sleep_goal%>
-            You have no goal yet. <%= link_to "Set Goal", edit_goal_path(@goal) %>
+        <p><span class="stat"><%= @stats.sleep_pretty %></span> of sleep last night.
+          <%if @goal.sleep == 0 %>
+            <span class="no-goal-set">You have no goal yet. </span> <%= link_to "Set Goal", edit_goal_path(@goal) %>
           <%else%>
-            <%= @goal.sleep %> hours is your <%= link_to 'goal', edit_goal_path(@goal) %>.
-            <%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %> Achievement. 
+            <span class="stat"><%= @goal.sleep %></span> hours is your <%= link_to 'goal', edit_goal_path(@goal) %>.
+            <span class="stat"><%= number_to_percentage(@user.achievement.sleep_percentage, precision: 0) %></span> Achievement. 
           <%end%>
         </p>
     </div>
