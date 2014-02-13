@@ -23,9 +23,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 13 Feb 2014 19:12:19 GMT
+      - Thu, 13 Feb 2014 22:07:05 GMT
       Etag:
-      - '"30550e52d68e17f28c1403cccbc6c545"'
+      - '"19a615a1e45645e308a3d1570f03be39"'
       Server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       Set-Cookie:
@@ -35,9 +35,9 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - d7fe5a80-7417-45cf-8fae-4e3e734bbba5
+      - e4c70a74-a112-497f-b7ff-6de391081c73
       X-Runtime:
-      - '0.472690'
+      - '0.485300'
       X-Ua-Compatible:
       - chrome=1
       X-Xss-Protection:
@@ -48,7 +48,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"sleep_on_date":7.433333333333334,"steps_on_date":122,"status":"success"}'
+      string: '{"sleep_on_date":7.433333333333334,"steps_on_date":966,"status":"success"}'
     http_version: 
-  recorded_at: Thu, 13 Feb 2014 19:12:19 GMT
+  recorded_at: Thu, 13 Feb 2014 22:07:05 GMT
 recorded_with: VCR 2.8.0
